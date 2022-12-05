@@ -66,7 +66,13 @@ const Hero = ({
 							</p>
 							<div className="reveal-from-bottom" data-reveal-delay="600">
 								<ButtonGroup>
-									<Button tag="a" color="primary" wideMobile href="#">
+									<Button
+										tag="a"
+										color="primary"
+										wideMobile
+										href="https://chrome.google.com/webstore/detail/ctu-management-system-ext/hjebklffcldkmldbcbmipcmfifebonfc"
+										target="_blank"
+									>
 										Tải ngay
 									</Button>
 									<Button

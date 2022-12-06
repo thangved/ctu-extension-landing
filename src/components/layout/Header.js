@@ -104,7 +104,7 @@ const Header = ({
 										<ul className="list-reset header-nav-right">
 											<li>
 												<Link
-													to="//chrome.google.com/webstore/detail/ctu-management-system-ext/hjebklffcldkmldbcbmipcmfifebonfc"
+													to="//chrome.google.com/webstore/detail/ctu-management-system-ext/lggkifjaacghbpebpcbaneimpogjbnmf"
 													target="_blank"
 													className="button button-primary button-wide-mobile button-sm"
 													onClick={closeMenu}

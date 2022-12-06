@@ -70,7 +70,7 @@ const Hero = ({
 										tag="a"
 										color="primary"
 										wideMobile
-										href="https://chrome.google.com/webstore/detail/ctu-management-system-ext/hjebklffcldkmldbcbmipcmfifebonfc"
+										href="//chrome.google.com/webstore/detail/ctu-management-system-ext/lggkifjaacghbpebpcbaneimpogjbnmf"
 										target="_blank"
 									>
 										Tải ngay

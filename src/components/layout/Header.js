@@ -95,7 +95,7 @@ const Header = ({
 										)}
 									>
 										<li>
-											<Link to="#0" onClick={closeMenu}>
+											<Link to="/docs" onClick={closeMenu}>
 												Tài liệu
 											</Link>
 										</li>

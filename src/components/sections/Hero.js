@@ -5,6 +5,7 @@ import ButtonGroup from "../elements/ButtonGroup";
 import Button from "../elements/Button";
 import Image from "../elements/Image";
 import Modal from "../elements/Modal";
+import chromeStoreIcon from "../../assets/images/chrome-store.svg";
 
 const propTypes = {
 	...SectionProps.types,
@@ -73,7 +74,8 @@ const Hero = ({
 										href="//chrome.google.com/webstore/detail/ctu-management-system-ext/lggkifjaacghbpebpcbaneimpogjbnmf"
 										target="_blank"
 									>
-										Tải ngay
+										<span style={{ marginRight: 10 }}>Tải ngay</span>
+										<Image src={chromeStoreIcon} />
 									</Button>
 									<Button
 										tag="a"

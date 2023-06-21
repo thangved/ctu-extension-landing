@@ -109,7 +109,7 @@ const Header = ({
 													className="button button-primary button-wide-mobile button-sm"
 													onClick={closeMenu}
 												>
-													Tải về
+													Cài đặt
 												</Link>
 											</li>
 										</ul>

@@ -1,8 +1,13 @@
 import React from "react";
 import styles from "./Docs.module.css";
 
+import ss00 from "../assets/images/screenshots/00.png";
 import ss01 from "../assets/images/screenshots/01.png";
 import ss02 from "../assets/images/screenshots/02.png";
+import ss03 from "../assets/images/screenshots/03.png";
+import ss04 from "../assets/images/screenshots/04.png";
+import ss05 from "../assets/images/screenshots/05.png";
+import ss06 from "../assets/images/screenshots/06.png";
 
 import Image from "../components/elements/Image";
 
@@ -17,6 +22,8 @@ const Docs = () => {
 					thời khóa biểu dựa trên kế hoạch học tập và bỏ qua captcha khi đăng nhập vào hệ thống quản
 					lý
 				</p>
+
+				<Image src={ss00} alt="CTU Extension thumbnail" />
 
 				<h3>Cài đặt</h3>
 
@@ -100,6 +107,75 @@ const Docs = () => {
 					<li>Bỏ qua captcha khi đăng nhập</li>
 					<li>Xem kế hoạch học tập</li>
 					<li>Gợi ý xếp thời khóa biểu</li>
+				</ol>
+
+				<h4>Bỏ qua captcha khi đăng nhập</h4>
+
+				<p>
+					Đây là tính năng đầu tiên được phát triển cho tiện ích này, nó sẽ giúp bạn bỏ qua bước xác
+					thực captcha khi đăng nhập vào hệ thống quản lý
+				</p>
+
+				<Image src={ss03} alt="Bỏ qua captcha khi đăng nhập" />
+
+				<h4>Xem kế hoạch học tập</h4>
+
+				<p>
+					Tính năng này sẽ giúp bạn xem kế hoạch học tập của mình, bạn có thể xem kế hoạch học tập
+					theo các học kỳ hoặc xem toàn bộ kế hoạch học tập của mình
+				</p>
+
+				<Image src={ss04} alt="Xem kế hoạch học tập" />
+
+				<h4>Gợi ý xếp thời khóa biểu</h4>
+
+				<p>Tính năng này sẽ giúp bạn xếp thời khóa biểu dựa trên kế hoạch học tập của mình</p>
+
+				<Image src={ss05} alt="Gợi ý xếp thời khóa biểu" />
+
+				<Image src={ss06} alt="Gợi ý xếp thời khóa biểu" />
+
+				<p></p>
+
+				<p>Với chức năng này chúng ta có rất nhiều tùy chọn như trong hình</p>
+
+				<ol>
+					<li>
+						<b className="text-color-primary">Chọn năm học - học kỳ</b>: Chọn học kỳ bạn muốn xếp
+						thời khóa biểu
+					</li>
+
+					<li>
+						<b className="text-color-primary">Xóa ngày</b>: Với mỗi học phần, bạn có thể xóa những
+						ngày trong tuần mà bạn không muốn học học phần đó. Ví dụ: Ai mà lại muốn học Vi tích
+						phân vào thứ 7 chứ!
+					</li>
+
+					<li>
+						<b className="text-color-primary">Chọn nhóm học phần</b>: Với mỗi học phần, bạn có thể
+						chọn nhóm học phần mà bạn muốn học. Ví dụ: Bạn có hẹn với đứa bạn sẽ học chung môn Cơ sở
+						dữ liệu nhóm 2 thì bạn có thể chọn nhóm 3 để khỏi học chung nó nhé :))
+					</li>
+
+					<li>
+						<b className="text-color-primary">Xóa học phần</b>: Bạn có thể xóa những học phần mà bạn
+						không muốn học trong kế hoạch học tập của mình. Ví dụ: Bạn chưa muốn học Cơ sở dữ liệu
+						nhưng nó có trong kế hoạch học tập thì bạn có thể xóa nó đi để không bị gợi ý xếp thời
+						khóa biểu cho bạn.
+					</li>
+
+					<li>
+						<b className="text-color-primary">Giới hạn tính</b>: Tính năng giới hạn giúp bạn kiểm
+						soát được số lượng thời khóa biểu được gợi ý cho bạn do việc tính toán nhiều với số
+						lượng tổ hợp rất lớn có thể dẫn đến ứng dụng bị crash. Mặc định, giá trị này là{" "}
+						<strong>1000</strong> và bạn có thể thay đổi nó theo ý muốn của mình. Lưu ý là bạn không
+						nên để chỉ số này quá cao vì có thể gây treo máy!
+					</li>
+
+					<li>
+						<b className="text-color-primary">Duyệt lịch học</b>: Bạn có thể duyệt qua tất cả lịch
+						học mà tiện ích gợi ý cho bạn và chọn một thời khóa biểu để lưu lại.
+					</li>
 				</ol>
 			</div>
 		</div>

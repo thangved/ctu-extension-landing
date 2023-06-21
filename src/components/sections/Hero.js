@@ -74,7 +74,7 @@ const Hero = ({
 										href="//chrome.google.com/webstore/detail/ctu-management-system-ext/lggkifjaacghbpebpcbaneimpogjbnmf"
 										target="_blank"
 									>
-										<span style={{ marginRight: 10 }}>Tải ngay</span>
+										<span style={{ marginRight: 10 }}>Cài đặt</span>
 										<Image src={chromeStoreIcon} />
 									</Button>
 									<Button

@@ -9,16 +9,7 @@ const FooterNav = ({ className, ...props }) => {
 		<nav {...props} className={classes}>
 			<ul className="list-reset">
 				<li>
-					<Link to="#0">Liên hệ</Link>
-				</li>
-				<li>
-					<Link to="#0">Về chúng tôi</Link>
-				</li>
-				<li>
-					<Link to="#0">FAQ's</Link>
-				</li>
-				<li>
-					<Link to="#0">Hỗ trợ</Link>
+					<Link to="/privacy">Quyền riêng tư</Link>
 				</li>
 			</ul>
 		</nav>

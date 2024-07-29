@@ -1,5 +1,5 @@
 {
-	"name": "open-react-template",
+	"name": "ctu-extension",
 	"version": "0.1.0",
 	"private": true,
 	"type": "module",
@@ -45,7 +45,7 @@
 		"@types/history": "^5.0.0",
 		"@vite-pwa/assets-generator": "^0.2.4",
 		"cross-env": "^7.0.3",
-		"pwa-asset-generator": "^6.3.1",
+		"pwa-asset-generator": "^5.0.0",
 		"vite-imagetools": "^7.0.4"
 	}
 }

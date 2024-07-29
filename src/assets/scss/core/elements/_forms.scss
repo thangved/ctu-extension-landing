@@ -59,19 +59,21 @@ fieldset {
 
 .form-input,
 .form-select {
-	display: block;
 	@include font-size(input);
 	@include font-weight(input);
-	padding: (
-			($button-form--height - get-line-height(input) - ($button-form--border-width * 2)) * 0.5
-		)
-		($form--padding-h - $button-form--border-width);
-	height: $button-form--height;
-	border-radius: $form--radius;
-	color: color(input);
-	box-shadow: none;
-	max-width: 100%;
-	width: 100%;
+	& {
+		display: block;
+		padding: (
+				($button-form--height - get-line-height(input) - ($button-form--border-width * 2)) * 0.5
+			)
+			($form--padding-h - $button-form--border-width);
+		height: $button-form--height;
+		border-radius: $form--radius;
+		color: color(input);
+		box-shadow: none;
+		max-width: 100%;
+		width: 100%;
+	}
 }
 
 .form-input {

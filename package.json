@@ -1,27 +1,32 @@
 {
-	"name": "open-react-template",
+	"name": "ctu-extension",
 	"version": "0.1.0",
 	"private": true,
+	"type": "module",
 	"dependencies": {
+		"@million/lint": "^1.0.0-rc.84",
+		"@vitejs/plugin-react-swc": "^3.7.0",
 		"classnames": "^2.2.6",
 		"lodash": "^4.17.15",
-		"react": "^16.13.1",
-		"react-dom": "^16.13.1",
-		"react-ga": "^2.7.0",
 		"react-router-dom": "^5.1.2",
 		"react-scripts": "^5.0.1",
-		"sass": "^1.49.7"
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-ga": "^3.3.1",
+		"sass": "^1.49.7",
+		"vite": "^5.3.5",
+		"vite-plugin-svgr": "^4.2.0",
+		"vite-tsconfig-paths": "^4.3.2"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/cruip/open-react-template.git"
+		"url": "https://github.com/thangved/ctu-extension-landing"
 	},
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject",
-		"postbuild": "react-snapshot"
+		"start": "vite",
+		"build": "vite build",
+		"serve": "vite preview",
+		"generate-pwa-assets": "pwa-assets-generator --preset minimal-2023 public/logo.png"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
@@ -39,7 +44,12 @@
 		]
 	},
 	"devDependencies": {
+		"@types/history": "5.0.0",
+		"@types/react-router-dom": "5.1.2",
+		"@vite-pwa/assets-generator": "^0.2.4",
 		"cross-env": "^7.0.3",
-		"react-snapshot": "^1.3.0"
+		"eslint": "^9.8.0",
+		"eslint-plugin-react": "^7.35.0",
+		"vite-imagetools": "^7.0.4"
 	}
 }

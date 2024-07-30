@@ -30,10 +30,12 @@ h6,
 .h6 {
 	@include font-family(heading);
 	@include font-weight(heading);
-	clear: both;
-	color: color(heading);
-	word-wrap: break-word;
-	overflow-wrap: break-word;
+	& {
+		clear: both;
+		color: color(heading);
+		word-wrap: break-word;
+		overflow-wrap: break-word;
+	}
 }
 
 h1,
@@ -90,13 +92,17 @@ a {
 	&.button-link {
 		@include anchor-aspect(button-link);
 		@include font-weight(button-link);
-		text-transform: $link-button--transform;
+		& {
+			text-transform: $link-button--transform;
+		}
 	}
 
 	&.func-link {
 		@include anchor-aspect(func-link);
 		@include font-weight(func-link);
-		text-transform: $link-func--transform;
+		& {
+			text-transform: $link-func--transform;
+		}
 	}
 }
 

@@ -12,8 +12,7 @@ import Home from "./views/Home";
 import Docs from "./views/Docs";
 import Privacy from "./views/Privacy";
 
-// Initialize Google Analytics
-ReactGA.initialize(process.env.REACT_APP_GA_CODE);
+ReactGA.initialize(import.meta.env.VITE_APP_GA_CODE);
 
 const trackPage = (page) => {
 	ReactGA.set({ page });

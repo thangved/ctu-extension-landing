@@ -6,6 +6,7 @@ import Button from "../elements/Button";
 import Image from "../elements/Image";
 import Modal from "../elements/Modal";
 import chromeStoreIcon from "../../assets/images/chrome-store.svg";
+import videoPlaceholder from "../../assets/images/video-placeholder.jpg";
 
 const propTypes = {
 	...SectionProps.types,
@@ -103,7 +104,7 @@ const Hero = ({
 						>
 							<Image
 								className="has-shadow"
-								src={require("./../../assets/images/video-placeholder.jpg")}
+								src={videoPlaceholder}
 								alt="Hero"
 								width={896}
 								height={504}

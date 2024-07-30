@@ -1,6 +1,6 @@
 import { createBrowserHistory } from "history";
 import React from "react";
-import { render } from "react-dom";
+import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import App from "./App";
@@ -12,9 +12,8 @@ const history = createBrowserHistory();
 
 const rootElement = document.getElementById("root");
 
-render(
+ReactDOM.createRoot(rootElement).render(
 	<Router history={history}>
 		<App />
-	</Router>,
-	rootElement
+	</Router>
 );

@@ -100,7 +100,9 @@ tr {
 
 th {
 	@include font-weight(strong);
-	text-align: left;
+	& {
+		text-align: left;
+	}
 }
 
 th,

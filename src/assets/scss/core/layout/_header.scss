@@ -53,8 +53,10 @@
 		display: block;
 		@include anchor-aspect(header);
 		@include font-weight(header-link);
-		text-transform: $link-header--transform;
-		padding: 0 $header-nav--padding-h;
+		& {
+			text-transform: $link-header--transform;
+			padding: 0 $header-nav--padding-h;
+		}
 
 		.invert-color & {
 			@include anchor-aspect(header, inverse);
@@ -117,8 +119,10 @@
 				a:not(.button) {
 					display: inline-flex;
 					@include anchor-aspect(header-mobile);
-					padding-top: $header-nav--padding-v__mobile * 0.5;
-					padding-bottom: $header-nav--padding-v__mobile * 0.5;
+					& {
+						padding-top: $header-nav--padding-v__mobile * 0.5;
+						padding-bottom: $header-nav--padding-v__mobile * 0.5;
+					}
 				}
 			}
 

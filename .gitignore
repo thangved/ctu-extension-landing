@@ -24,3 +24,5 @@ yarn-error.log*
 
 # Million Lint
 .million
+
+package-lock.json

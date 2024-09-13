@@ -22,7 +22,7 @@ export default function Navbar({ hideSignin, navPosition }) {
 
 	const closeMenu = useCallback(() => {
 		document.body.classList.remove("off-nav-is-active");
-		
+
 		setIsActive(false);
 	}, []);
 

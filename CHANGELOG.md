@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/thangved/ctu-extension-landing/compare/v1.0.1...v1.0.2) (2024-09-13)
+
+
+### Bug Fixes
+
+* interactive elements should be focusable ([a7cd360](https://github.com/thangved/ctu-extension-landing/commit/a7cd360f7bc2e34e236e8a4a24a6eb73a90723c7))
+* prefer to accompany onClick with some elements ([111acfa](https://github.com/thangved/ctu-extension-landing/commit/111acfa4784be50a1bb465988209d56ff36ebbca))
+
 ## [1.0.1](https://github.com/thangved/ctu-extension-landing/compare/v1.0.0...v1.0.1) (2024-09-13)
 
 ### Bug Fixes

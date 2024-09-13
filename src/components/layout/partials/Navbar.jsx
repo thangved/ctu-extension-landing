@@ -28,7 +28,7 @@ export default function Navbar({ hideSignin, navPosition }) {
 
 	const closeMenu = useCallback(() => {
 		document.body.classList.remove("off-nav-is-active");
-		nav.current && (nav.current.style.maxHeight = null);
+
 		setIsActive(false);
 	}, []);
 
@@ -65,7 +65,7 @@ export default function Navbar({ hideSignin, navPosition }) {
 			>
 				<span className="screen-reader">Menu</span>
 				<span className="hamburger">
-					<span className="hamburger-inner"></span>
+					<span className="hamburger-inner" />
 				</span>
 			</button>
 			<nav ref={nav} className={classNames("header-nav", isActive && "is-active")}>

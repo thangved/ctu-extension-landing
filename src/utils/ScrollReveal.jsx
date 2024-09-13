@@ -17,12 +17,12 @@ const ScrollReveal = React.forwardRef(function ScrollReveal(props, ref) {
 	const revealElements = () => {
 		if (checkComplete()) return;
 		for (let i = 0; i < revealEl.length; i++) {
-			let el = revealEl[i];
-			let revealDelay = el.getAttribute("data-reveal-delay");
-			let revealOffset = el.getAttribute("data-reveal-offset")
+			const el = revealEl[i];
+			const revealDelay = el.getAttribute("data-reveal-delay");
+			const revealOffset = el.getAttribute("data-reveal-offset")
 				? el.getAttribute("data-reveal-offset")
 				: "200";
-			let listenedEl = el.getAttribute("data-reveal-container")
+			const listenedEl = el.getAttribute("data-reveal-container")
 				? el.closest(el.getAttribute("data-reveal-container"))
 				: el;
 			if (elementIsVisible(listenedEl, revealOffset) && !el.classList.contains("is-revealed")) {

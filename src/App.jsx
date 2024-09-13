@@ -29,7 +29,7 @@ const children = () => (
 
 const App = () => {
 	const childRef = useRef();
-	let location = useLocation();
+	const location = useLocation();
 
 	useEffect(() => {
 		const page = location.pathname;

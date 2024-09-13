@@ -12,7 +12,6 @@
 		"react-dom": "^18.3.1",
 		"react-ga": "^3.3.1",
 		"react-router-dom": "^5.1.2",
-		"react-scripts": "^5.0.1",
 		"sass": "^1.49.7",
 		"vite": "^5.3.5",
 		"vite-plugin-svgr": "^4.2.0",
@@ -55,5 +54,6 @@
 		"eslint-plugin-react": "^7.35.0",
 		"husky": "^9.1.4",
 		"vite-imagetools": "^7.0.4"
-	}
+	},
+	"packageManager": "npm@10.8.3+sha512.d08425c8062f56d43bb8e84315864218af2492eb769e1f1ca40740f44e85bd148969382d651660363942e5909cb7ffcbef7ca0ae963ddc2c57a51243b4da8f56"
 }

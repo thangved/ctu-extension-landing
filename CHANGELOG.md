@@ -2,11 +2,10 @@
 
 ## [1.0.3](https://github.com/thangved/ctu-extension-landing/compare/v1.0.2...v1.0.3) (2024-09-13)
 
-
 ### Bug Fixes
 
-* missing `&lt;track&gt;` in `<video>`  element ([048ae87](https://github.com/thangved/ctu-extension-landing/commit/048ae87da6c521999c0525cb406e1fe491a53b2e))
-* missing `&lt;track&gt;` in `<video>`  element ([a03de60](https://github.com/thangved/ctu-extension-landing/commit/a03de606cf06f21a592e284643bde3934262da33))
+- missing `&lt;track&gt;` in `<video>` element ([048ae87](https://github.com/thangved/ctu-extension-landing/commit/048ae87da6c521999c0525cb406e1fe491a53b2e))
+- missing `&lt;track&gt;` in `<video>` element ([a03de60](https://github.com/thangved/ctu-extension-landing/commit/a03de606cf06f21a592e284643bde3934262da33))
 
 ## [1.0.2](https://github.com/thangved/ctu-extension-landing/compare/v1.0.1...v1.0.2) (2024-09-13)
 

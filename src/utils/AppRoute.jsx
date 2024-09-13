@@ -1,5 +1,12 @@
 import React, { useCallback } from "react";
 import { Route } from "react-router-dom";
+import PropTypes from "prop-types";
+
+const propTypes = {
+	component: PropTypes.func,
+	layout: PropTypes.func,
+	children: PropTypes.node,
+};
 
 const AppRoute = ({ component: Component, layout: Layout, ...rest }) => {
 	Layout = Layout === undefined ? (props) => props.children : Layout;
@@ -15,5 +22,7 @@ const AppRoute = ({ component: Component, layout: Layout, ...rest }) => {
 
 	return <Route {...rest} render={renderer} />;
 };
+
+AppRoute.propTypes = propTypes;
 
 export default AppRoute;

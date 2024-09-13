@@ -8,6 +8,7 @@ import FooterSocial from "./partials/FooterSocial";
 const propTypes = {
 	topOuterDivider: PropTypes.bool,
 	topDivider: PropTypes.bool,
+	className: PropTypes.string,
 };
 
 const defaultProps = {

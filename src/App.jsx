@@ -36,10 +36,9 @@ const App = () => {
 		document.body.classList.add("is-loaded");
 		childRef.current.init();
 		trackPage(page);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [location]);
 
-	return <ScrollReveal ref={childRef} children={children} />;
+	return <ScrollReveal ref={childRef}>{children}</ScrollReveal>;
 };
 
 export default App;

@@ -2,7 +2,7 @@ import React, { useState, useEffect, useImperativeHandle } from "react";
 import PropTypes from "prop-types";
 import { throttle } from "lodash";
 
-const ScrollReveal = React.forwardRef((props, ref) => {
+const ScrollReveal = React.forwardRef(function ScrollReveal(props, ref) {
 	const [viewportHeight, setViewportheight] = useState(window.innerHeight);
 	const [revealEl, setRevealel] = useState([]);
 
@@ -51,7 +51,6 @@ const ScrollReveal = React.forwardRef((props, ref) => {
 			}
 			revealElements();
 		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [revealEl]);
 
 	const handleListeners = () => {
@@ -72,7 +71,6 @@ const ScrollReveal = React.forwardRef((props, ref) => {
 	useEffect(() => {
 		handleListeners();
 		revealElements();
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [viewportHeight]);
 
 	return <>{props.children()}</>;

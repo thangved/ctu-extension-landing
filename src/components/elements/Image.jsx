@@ -6,6 +6,7 @@ const propTypes = {
 	width: PropTypes.number,
 	height: PropTypes.number,
 	alt: PropTypes.string,
+	className: PropTypes.string,
 };
 
 const defaultProps = {
@@ -22,7 +23,6 @@ const Image = ({ className, src, width, height, alt, ...props }) => {
 
 	useEffect(() => {
 		handlePlaceholder(image.current);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	const placeholderSrc = (w, h) => {

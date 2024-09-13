@@ -7,6 +7,7 @@ const propTypes = {
 	to: PropTypes.string.isRequired,
 	duration: PropTypes.number,
 	onLinkClick: PropTypes.func,
+	className: PropTypes.string,
 };
 
 const SmoothScroll = ({ className, children, to, duration, onLinkClick, ...props }) => {

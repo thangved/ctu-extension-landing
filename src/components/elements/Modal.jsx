@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 
 const propTypes = {
+	className: PropTypes.string,
 	children: PropTypes.node,
 	handleClose: PropTypes.func.isRequired,
 	show: PropTypes.bool.isRequired,

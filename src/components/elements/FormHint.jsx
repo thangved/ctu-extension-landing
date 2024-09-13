@@ -5,6 +5,7 @@ import classNames from "classnames";
 const propTypes = {
 	children: PropTypes.node,
 	status: PropTypes.string,
+	className: PropTypes.string,
 };
 
 const defaultProps = {

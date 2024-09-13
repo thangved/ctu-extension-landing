@@ -3,6 +3,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/images/logo.png";
 import Image from "../../elements/Image";
+import PropTypes from "prop-types";
+
+const propTypes = {
+	className: PropTypes.string,
+};
 
 const Logo = ({ className, ...props }) => {
 	const classes = classNames("brand", className);
@@ -18,4 +23,5 @@ const Logo = ({ className, ...props }) => {
 	);
 };
 
+Logo.propTypes = propTypes;
 export default Logo;

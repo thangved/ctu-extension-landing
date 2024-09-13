@@ -1,6 +1,11 @@
 import React from "react";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+
+const propTypes = {
+	className: PropTypes.string,
+};
 
 const FooterNav = ({ className, ...props }) => {
 	const classes = classNames("footer-nav", className);
@@ -16,4 +21,5 @@ const FooterNav = ({ className, ...props }) => {
 	);
 };
 
+FooterNav.propTypes = propTypes;
 export default FooterNav;

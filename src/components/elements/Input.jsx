@@ -5,6 +5,7 @@ import FormLabel from "./FormLabel";
 import FormHint from "./FormHint";
 
 const propTypes = {
+	className: PropTypes.string,
 	children: PropTypes.node,
 	label: PropTypes.string,
 	labelHidden: PropTypes.bool,
@@ -31,6 +32,7 @@ const propTypes = {
 	placeholder: PropTypes.string,
 	rows: PropTypes.number,
 	hint: PropTypes.string,
+	id: PropTypes.string,
 };
 
 const defaultProps = {

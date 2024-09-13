@@ -7,7 +7,7 @@ import { imagetools } from "vite-imagetools";
 const _plugins = [
 	react(),
 	imagetools({
-		defaultDirectives: (url) => {
+		defaultDirectives: () => {
 			return new URLSearchParams({
 				format: "webp",
 			});

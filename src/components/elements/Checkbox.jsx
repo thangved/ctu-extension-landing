@@ -8,6 +8,7 @@ const propTypes = {
 	value: PropTypes.string,
 	disabled: PropTypes.bool,
 	checked: PropTypes.bool,
+	className: PropTypes.string,
 };
 
 const defaultProps = {

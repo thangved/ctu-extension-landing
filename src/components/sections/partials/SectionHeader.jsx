@@ -9,6 +9,7 @@ const propTypes = {
 	}).isRequired,
 	children: PropTypes.node,
 	tag: PropTypes.oneOf(["h1", "h2", "h3"]),
+	className: PropTypes.string,
 };
 
 const defaultProps = {

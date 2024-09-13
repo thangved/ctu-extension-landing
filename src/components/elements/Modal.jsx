@@ -9,6 +9,7 @@ const propTypes = {
 	closeHidden: PropTypes.bool,
 	video: PropTypes.string,
 	videoTag: PropTypes.oneOf(["iframe", "video"]),
+	subtitle: PropTypes.string,
 };
 
 const defaultProps = {
@@ -17,6 +18,7 @@ const defaultProps = {
 	closeHidden: false,
 	video: "",
 	videoTag: "iframe",
+	subtitle: null,
 };
 
 const Modal = ({
@@ -27,6 +29,7 @@ const Modal = ({
 	closeHidden,
 	video,
 	videoTag,
+	subtitle,
 	...props
 }) => {
 	useEffect(() => {
@@ -69,7 +72,9 @@ const Modal = ({
 							{videoTag === "iframe" ? (
 								<iframe title="video" src={video} frameBorder="0" allowFullScreen></iframe>
 							) : (
-								<video v-else controls src={video}></video>
+								<video controls src={video}>
+									<track default kind="captions" srclang="en" src={subtitle} />
+								</video>
 							)}
 						</div>
 					) : (

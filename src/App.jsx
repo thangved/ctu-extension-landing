@@ -19,6 +19,14 @@ const trackPage = (page) => {
 	ReactGA.pageview(page);
 };
 
+const children = () => (
+	<Switch>
+		<AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+		<AppRoute exact path="/docs" component={Docs} layout={LayoutDefault} />
+		<AppRoute exact path="/privacy" component={Privacy} layout={LayoutDefault} />
+	</Switch>
+);
+
 const App = () => {
 	const childRef = useRef();
 	let location = useLocation();
@@ -31,18 +39,7 @@ const App = () => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [location]);
 
-	return (
-		<ScrollReveal
-			ref={childRef}
-			children={() => (
-				<Switch>
-					<AppRoute exact path="/" component={Home} layout={LayoutDefault} />
-					<AppRoute exact path="/docs" component={Docs} layout={LayoutDefault} />
-					<AppRoute exact path="/privacy" component={Privacy} layout={LayoutDefault} />
-				</Switch>
-			)}
-		/>
-	);
+	return <ScrollReveal ref={childRef} children={children} />;
 };
 
 export default App;

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
@@ -42,21 +42,21 @@ const Modal = ({
 		handleBodyClass();
 	}, [props.show]);
 
-	const handleBodyClass = () => {
+	const handleBodyClass = useCallback(() => {
 		if (document.querySelectorAll(".modal.is-active").length) {
 			document.body.classList.add("modal-is-active");
 		} else {
 			document.body.classList.remove("modal-is-active");
 		}
-	};
+	}, []);
 
-	const keyPress = (e) => {
+	const keyPress = useCallback((e) => {
 		e.keyCode === 27 && handleClose(e);
-	};
+	}, []);
 
-	const stopProgagation = (e) => {
+	const stopProgagation = useCallback((e) => {
 		e.stopPropagation();
-	};
+	}, []);
 
 	const classes = classNames("modal", show && "is-active", video && "modal-video", className);
 

@@ -76,7 +76,7 @@ const Modal = ({
 						<div className="responsive-video">
 							{videoTag === "iframe" ? (
 								<iframe
-									sandbox="allow-scripts allow-same-origin"
+									sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
 									title="video"
 									src={video}
 									frameBorder="0"

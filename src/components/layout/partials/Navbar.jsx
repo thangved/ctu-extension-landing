@@ -8,6 +8,12 @@ const propTypes = {
 	navPosition: PropTypes.string,
 };
 
+/**
+ * @description Navbar component
+ * @param {boolean} props.hideSignin - Hide the sign in button
+ * @param {string} props.navPosition - The position of the navbar
+ * @returns
+ */
 export default function Navbar({ hideSignin, navPosition }) {
 	const [isActive, setIsActive] = useState(false);
 

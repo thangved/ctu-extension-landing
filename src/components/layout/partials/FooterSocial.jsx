@@ -5,6 +5,10 @@ const propTypes = {
 	className: PropTypes.string,
 };
 
+/**
+ * @description Footer social component
+ * @param {object} props
+ */
 const FooterSocial = ({ className, ...props }) => {
 	const classes = classNames("footer-social", className);
 

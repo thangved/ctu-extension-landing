@@ -91,7 +91,7 @@ const Header = ({
 									<ul
 										className={classNames(
 											"list-reset text-xs",
-											navPosition && `header-nav-${navPosition}`
+											navPosition && `header-nav-${navPosition}`,
 										)}
 									>
 										<li>

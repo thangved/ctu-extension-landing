@@ -8,7 +8,10 @@
 	margin: 0 auto;
 	border: 1px solid #ffffff20;
 	border-radius: 10px;
-	box-shadow: 0 100px 1000px #ffffff20, 0 -100px 1000px #0000ff38, 100px 100px 1000px #ffff0020,
+	box-shadow:
+		0 100px 1000px #ffffff20,
+		0 -100px 1000px #0000ff38,
+		100px 100px 1000px #ffff0020,
 		100px -100px 1000px #ff000020;
 }
 

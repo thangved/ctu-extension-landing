@@ -44,13 +44,13 @@ const Hero = ({
 		bottomOuterDivider && "has-bottom-divider",
 		hasBgColor && "has-bg-color",
 		invertColor && "invert-color",
-		className
+		className,
 	);
 
 	const innerClasses = classNames(
 		"hero-inner section-inner",
 		topDivider && "has-top-divider",
-		bottomDivider && "has-bottom-divider"
+		bottomDivider && "has-bottom-divider",
 	);
 
 	return (

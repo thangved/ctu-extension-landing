@@ -35,20 +35,20 @@ const FeaturesSplit = ({
 		bottomOuterDivider && "has-bottom-divider",
 		hasBgColor && "has-bg-color",
 		invertColor && "invert-color",
-		className
+		className,
 	);
 
 	const innerClasses = classNames(
 		"features-split-inner section-inner",
 		topDivider && "has-top-divider",
-		bottomDivider && "has-bottom-divider"
+		bottomDivider && "has-bottom-divider",
 	);
 
 	const splitClasses = classNames(
 		"split-wrap",
 		invertMobile && "invert-mobile",
 		invertDesktop && "invert-desktop",
-		alignTop && "align-top"
+		alignTop && "align-top",
 	);
 
 	const sectionHeader = {
@@ -81,7 +81,7 @@ const FeaturesSplit = ({
 							<div
 								className={classNames(
 									"split-item-image center-content-mobile reveal-from-bottom",
-									imageFill && "split-item-image-fill"
+									imageFill && "split-item-image-fill",
 								)}
 								data-reveal-container=".split-item"
 							>
@@ -107,7 +107,7 @@ const FeaturesSplit = ({
 							<div
 								className={classNames(
 									"split-item-image center-content-mobile reveal-from-bottom",
-									imageFill && "split-item-image-fill"
+									imageFill && "split-item-image-fill",
 								)}
 								data-reveal-container=".split-item"
 							>
@@ -133,7 +133,7 @@ const FeaturesSplit = ({
 							<div
 								className={classNames(
 									"split-item-image center-content-mobile reveal-from-bottom",
-									imageFill && "split-item-image-fill"
+									imageFill && "split-item-image-fill",
 								)}
 								data-reveal-container=".split-item"
 							>

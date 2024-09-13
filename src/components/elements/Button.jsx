@@ -30,7 +30,7 @@ const Button = ({ className, tag, color, size, loading, wide, wideMobile, disabl
 		loading && "is-loading",
 		wide && "button-block",
 		wideMobile && "button-wide-mobile",
-		className
+		className,
 	);
 
 	const Component = tag;

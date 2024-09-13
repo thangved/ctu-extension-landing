@@ -72,14 +72,14 @@ const Input = ({
 		formGroup &&
 			formGroup !== "" &&
 			(formGroup === "desktop" ? "form-group-desktop" : "form-group"),
-		hasIcon && hasIcon !== "" && "has-icon-" + hasIcon
+		hasIcon && hasIcon !== "" && "has-icon-" + hasIcon,
 	);
 
 	const classes = classNames(
 		"form-input",
 		size && `form-input-${size}`,
 		status && `form-${status}`,
-		className
+		className,
 	);
 
 	const Component = type === "textarea" ? "textarea" : "input";

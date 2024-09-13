@@ -47,7 +47,7 @@
 		"@commitlint/cli": "^19.4.0",
 		"@commitlint/config-conventional": "^19.2.2",
 		"@types/history": "5.0.0",
-		"@types/react-router-dom": "5.1.2",
+		"@types/react-router-dom": "5.3.3",
 		"@vite-pwa/assets-generator": "^0.2.4",
 		"cross-env": "^7.0.3",
 		"eslint": "^9.8.0",

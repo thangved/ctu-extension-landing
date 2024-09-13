@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/thangved/ctu-extension-landing/compare/v1.0.0...v1.0.1) (2024-09-13)
+
+
+### Bug Fixes
+
+* remove unnecessary fragments ([136b10b](https://github.com/thangved/ctu-extension-landing/commit/136b10b1d420b717925d04e1bab930a25f6142ad))
+
 ## 1.0.0 (2024-09-13)
 
 

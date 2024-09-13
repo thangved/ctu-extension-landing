@@ -22,6 +22,10 @@ const defaultProps = {
 	subtitle: null,
 };
 
+/**
+ * @description Modal component
+ * @param {object} props
+ */
 const Modal = ({
 	className,
 	children,

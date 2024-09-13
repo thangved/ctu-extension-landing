@@ -6,6 +6,10 @@ const propTypes = {
 	children: PropTypes.node,
 };
 
+/**
+ * @description Default layout
+ * @param {object*} props
+ */
 const LayoutDefault = ({ children }) => (
 	<>
 		<Header navPosition="right" className="reveal-from-bottom" />

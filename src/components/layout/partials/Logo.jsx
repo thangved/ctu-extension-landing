@@ -8,6 +8,10 @@ const propTypes = {
 	className: PropTypes.string,
 };
 
+/**
+ * @description Logo component
+ * @param {object} props
+ */
 const Logo = ({ className, ...props }) => {
 	const classes = classNames("brand", className);
 

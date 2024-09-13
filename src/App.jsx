@@ -14,11 +14,18 @@ import Privacy from "./views/Privacy";
 
 ReactGA.initialize(import.meta.env.VITE_APP_GA_CODE);
 
+/**
+ * @description Track page view
+ * @param {string} page
+ */
 const trackPage = (page) => {
 	ReactGA.set({ page });
 	ReactGA.pageview(page);
 };
 
+/**
+ * @description App children
+ */
 const children = () => (
 	<Switch>
 		<AppRoute exact path="/" component={Home} layout={LayoutDefault} />
@@ -27,6 +34,9 @@ const children = () => (
 	</Switch>
 );
 
+/**
+ * @description App component
+ */
 const App = () => {
 	const childRef = useRef();
 	const location = useLocation();

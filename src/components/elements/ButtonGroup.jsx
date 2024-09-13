@@ -5,6 +5,10 @@ const propTypes = {
 	className: PropTypes.string,
 };
 
+/**
+ * @description Button group component
+ * @param {object} props
+ */
 const ButtonGroup = ({ className, ...props }) => {
 	const classes = classNames("button-group", className);
 

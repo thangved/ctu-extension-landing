@@ -15,6 +15,10 @@ const defaultProps = {
 	alt: undefined,
 };
 
+/**
+ * @description Image component
+ * @param {object} props
+ */
 const Image = ({ className, src, width, height, alt, ...props }) => {
 	const [loaded, setLoaded] = useState(false);
 

@@ -8,6 +8,10 @@ const propTypes = {
 	children: PropTypes.node,
 };
 
+/**
+ * @description AppRoute component
+ * @param {object} props
+ */
 const AppRoute = ({ component: Component, layout: Layout, ...rest }) => {
 	Layout = Layout === undefined ? (props) => props.children : Layout;
 

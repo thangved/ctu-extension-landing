@@ -6,6 +6,10 @@ const propTypes = {
 	className: PropTypes.string,
 };
 
+/**
+ * @description Footer navigation component
+ * @param {object} props
+ */
 const FooterNav = ({ className, ...props }) => {
 	const classes = classNames("footer-nav", className);
 

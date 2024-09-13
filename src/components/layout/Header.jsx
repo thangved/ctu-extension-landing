@@ -20,6 +20,10 @@ const defaultProps = {
 	bottomDivider: false,
 };
 
+/**
+ * @description Header component
+ * @param {object} props
+ */
 const Header = ({
 	className,
 	navPosition,

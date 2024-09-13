@@ -71,7 +71,13 @@ const Modal = ({
 					{video ? (
 						<div className="responsive-video">
 							{videoTag === "iframe" ? (
-								<iframe title="video" src={video} frameBorder="0" allowFullScreen />
+								<iframe
+									sandbox="allow-scripts allow-same-origin"
+									title="video"
+									src={video}
+									frameBorder="0"
+									allowFullScreen
+								/>
 							) : (
 								<video controls src={video}>
 									<track default kind="captions" srcLang="en" src={subtitle} />

@@ -1,5 +1,5 @@
-import React, { useState, useRef, useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const propTypes = {
 	src: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,

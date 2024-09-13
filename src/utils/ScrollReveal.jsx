@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useImperativeHandle } from "react";
-import PropTypes from "prop-types";
 import { throttle } from "lodash";
+import PropTypes from "prop-types";
+import React, { useEffect, useImperativeHandle, useState } from "react";
 
 const ScrollReveal = React.forwardRef(function ScrollReveal(props, ref) {
 	const [viewportHeight, setViewportheight] = useState(window.innerHeight);

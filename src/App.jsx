@@ -1,15 +1,15 @@
-import React, { useRef, useEffect } from "react";
-import { useLocation, Switch } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import ReactGA from "react-ga";
+import { Switch, useLocation } from "react-router-dom";
 import AppRoute from "./utils/AppRoute";
 import ScrollReveal from "./utils/ScrollReveal";
-import ReactGA from "react-ga";
 
 // Layouts
 import LayoutDefault from "./layouts/LayoutDefault";
 
 // Views
-import Home from "./views/Home";
 import Docs from "./views/Docs";
+import Home from "./views/Home";
 import Privacy from "./views/Privacy";
 
 ReactGA.initialize(import.meta.env.VITE_APP_GA_CODE);

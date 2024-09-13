@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 
 const Banner = ({ ...props }) => {
 	const [bannerOpen, setBannerOpen] = useState(true);

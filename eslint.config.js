@@ -1,6 +1,6 @@
-import globals from "globals";
 import pluginJs from "@eslint/js";
 import pluginReact from "eslint-plugin-react";
+import globals from "globals";
 
 export default [
 	{ files: ["**/*.{js,mjs,cjs,jsx}"] },

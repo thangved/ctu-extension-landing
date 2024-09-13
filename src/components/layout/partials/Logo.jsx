@@ -1,9 +1,8 @@
 import classNames from "classnames";
-import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/images/logo.png";
 import Image from "../../elements/Image";
-import PropTypes from "prop-types";
 
 const propTypes = {
 	className: PropTypes.string,

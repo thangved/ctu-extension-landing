@@ -1,8 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
 import classNames from "classnames";
-import FormLabel from "./FormLabel";
+import PropTypes from "prop-types";
 import FormHint from "./FormHint";
+import FormLabel from "./FormLabel";
 
 const propTypes = {
 	className: PropTypes.string,

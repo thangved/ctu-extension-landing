@@ -33,18 +33,22 @@ const Modal = ({
 	subtitle,
 	...props
 }) => {
-	useEffect(() => {
-		document.addEventListener("keydown", keyPress);
-		document.addEventListener("click", stopProgagation);
-		return () => {
-			document.removeEventListener("keydown", keyPress);
-			document.removeEventListener("click", stopProgagation);
-		};
-	});
+	const stopPropagation = useCallback((e) => {
+		e.stopPropagation();
+	}, []);
+
+	const keyPress = useCallback((e) => {
+		e.keyCode === 27 && handleClose(e);
+	}, []);
 
 	useEffect(() => {
-		handleBodyClass();
-	}, [props.show]);
+		document.addEventListener("keydown", keyPress);
+		document.addEventListener("click", stopPropagation);
+		return () => {
+			document.removeEventListener("keydown", keyPress);
+			document.removeEventListener("click", stopPropagation);
+		};
+	});
 
 	const handleBodyClass = useCallback(() => {
 		if (document.querySelectorAll(".modal.is-active").length) {
@@ -54,20 +58,16 @@ const Modal = ({
 		}
 	}, []);
 
-	const keyPress = useCallback((e) => {
-		e.keyCode === 27 && handleClose(e);
-	}, []);
-
-	const stopProgagation = useCallback((e) => {
-		e.stopPropagation();
-	}, []);
+	useEffect(() => {
+		handleBodyClass();
+	}, [props.show]);
 
 	const classes = classNames("modal", show && "is-active", video && "modal-video", className);
 
 	return (
 		show && (
 			<div {...props} className={classes} onClick={handleClose} aria-hidden>
-				<div className="modal-inner" onClick={stopProgagation} aria-hidden>
+				<div className="modal-inner" onClick={stopPropagation} aria-hidden>
 					{video ? (
 						<div className="responsive-video">
 							{videoTag === "iframe" ? (

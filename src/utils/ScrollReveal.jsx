@@ -52,17 +52,26 @@ const ScrollReveal = React.forwardRef(function ScrollReveal(props, ref) {
 		},
 	}));
 
+	/**
+	 * @description Handle listeners
+	 */
 	const handleListeners = () => {
 		if (!checkComplete()) return;
 		window.removeEventListener("scroll", handleScroll);
 		window.removeEventListener("resize", handleResize);
 	};
 
+	/**
+	 * @description Throttle function
+	 */
 	const handleScroll = throttle(() => {
 		handleListeners();
 		revealElements();
 	}, 30);
 
+	/**
+	 * @description Throttle function
+	 */
 	const handleResize = throttle(() => {
 		setViewportheight(window.innerHeight);
 	}, 30);

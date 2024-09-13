@@ -62,8 +62,8 @@ const Modal = ({
 
 	return (
 		show && (
-			<div {...props} className={classes} onClick={handleClose}>
-				<div className="modal-inner" onClick={stopProgagation}>
+			<div {...props} className={classes} onClick={handleClose} aria-hidden>
+				<div className="modal-inner" onClick={stopProgagation} aria-hidden>
 					{video ? (
 						<div className="responsive-video">
 							{videoTag === "iframe" ? (

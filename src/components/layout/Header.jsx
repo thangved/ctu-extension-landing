@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import PropTypes from "prop-types";
-import React from "react";
 import Logo from "./partials/Logo";
 import Navbar from "./partials/Navbar";
 

@@ -9,4 +9,9 @@ export default [
 	pluginReact.configs.flat.recommended,
 	{ settings: { react: { version: "detect" } } },
 	{ ignores: ["build/*"] },
+	{
+		rules: {
+			"react/react-in-jsx-scope": "off",
+		},
+	},
 ];

@@ -1,7 +1,7 @@
 import classNames from "classnames";
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 const propTypes = {
 	hideSignin: PropTypes.bool,

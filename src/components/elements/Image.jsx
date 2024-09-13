@@ -10,7 +10,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-	src: undefined,
 	width: undefined,
 	height: undefined,
 	alt: undefined,

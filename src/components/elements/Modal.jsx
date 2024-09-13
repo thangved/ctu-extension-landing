@@ -6,7 +6,7 @@ const propTypes = {
 	className: PropTypes.string,
 	children: PropTypes.node,
 	handleClose: PropTypes.func.isRequired,
-	show: PropTypes.bool.isRequired,
+	show: PropTypes.bool,
 	closeHidden: PropTypes.bool,
 	video: PropTypes.string,
 	videoTag: PropTypes.oneOf(["iframe", "video"]),

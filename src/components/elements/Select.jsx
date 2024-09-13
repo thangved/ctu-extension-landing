@@ -48,7 +48,7 @@ const Select = ({
 		"form-select",
 		size && `form-select-${size}`,
 		status && `form-${status}`,
-		className
+		className,
 	);
 
 	return (

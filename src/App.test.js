@@ -12,7 +12,7 @@ it("renders without crashing", () => {
 		<Router history={history}>
 			<App />
 		</Router>,
-		div
+		div,
 	);
 	ReactDOM.unmountComponentAtNode(div);
 });

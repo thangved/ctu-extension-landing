@@ -31,14 +31,14 @@ const Cta = ({
 		bottomOuterDivider && "has-bottom-divider",
 		hasBgColor && "has-bg-color",
 		invertColor && "invert-color",
-		className
+		className,
 	);
 
 	const innerClasses = classNames(
 		"cta-inner section-inner",
 		topDivider && "has-top-divider",
 		bottomDivider && "has-bottom-divider",
-		split && "cta-split"
+		split && "cta-split",
 	);
 
 	return (

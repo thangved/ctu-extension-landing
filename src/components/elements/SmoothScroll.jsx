@@ -31,7 +31,7 @@ const SmoothScroll = ({ className, children, to, duration, onLinkClick, ...props
 				});
 			}
 		},
-		[]
+		[],
 	);
 
 	const smoothScroll = useCallback(
@@ -56,7 +56,7 @@ const SmoothScroll = ({ className, children, to, duration, onLinkClick, ...props
 				scrollToEl(start, stamp, timing, scrollEndElemTop, startScrollOffset);
 			});
 		},
-		[scrollToEl]
+		[scrollToEl],
 	);
 
 	const classes = classNames(className);

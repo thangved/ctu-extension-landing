@@ -39,7 +39,8 @@
 
 		&.is-loaded {
 			[class*="reveal-"] {
-				transition: opacity $scroll-reveal--transition-duration $scroll-reveal--transition-timing,
+				transition:
+					opacity $scroll-reveal--transition-duration $scroll-reveal--transition-timing,
 					transform $scroll-reveal--transition-duration $scroll-reveal--transition-timing;
 
 				&.is-revealed {

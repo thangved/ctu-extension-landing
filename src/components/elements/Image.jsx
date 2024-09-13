@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
 
 const propTypes = {
@@ -47,9 +47,9 @@ const Image = ({ className, src, width, height, alt, ...props }) => {
 		}
 	};
 
-	function onLoad() {
+	const onLoad = useCallback(() => {
 		setLoaded(true);
-	}
+	}, []);
 
 	return (
 		<img

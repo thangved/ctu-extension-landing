@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Link } from "react-router-dom";
@@ -45,17 +45,17 @@ const Header = ({
 		};
 	});
 
-	const openMenu = () => {
+	const openMenu = useCallback(() => {
 		document.body.classList.add("off-nav-is-active");
 		nav.current.style.maxHeight = nav.current.scrollHeight + "px";
 		setIsactive(true);
-	};
+	}, []);
 
-	const closeMenu = () => {
+	const closeMenu = useCallback(() => {
 		document.body.classList.remove("off-nav-is-active");
 		nav.current && (nav.current.style.maxHeight = null);
 		setIsactive(false);
-	};
+	}, []);
 
 	const keyPress = (e) => {
 		isActive && e.keyCode === 27 && closeMenu();

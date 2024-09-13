@@ -31,7 +31,7 @@ const SmoothScroll = ({ className, children, to, duration, onLinkClick, ...props
 				});
 			}
 		},
-		[]
+		[],
 	);
 
 	const smoothScroll = useCallback(
@@ -44,7 +44,7 @@ const SmoothScroll = ({ className, children, to, duration, onLinkClick, ...props
 
 			if (!target) return;
 
-			onLinkClick && onLinkClick();
+			onLinkClick?.();
 
 			window.requestAnimationFrame((timestamp) => {
 				const stamp = timestamp || new Date().getTime();
@@ -56,13 +56,13 @@ const SmoothScroll = ({ className, children, to, duration, onLinkClick, ...props
 				scrollToEl(start, stamp, timing, scrollEndElemTop, startScrollOffset);
 			});
 		},
-		[scrollToEl]
+		[scrollToEl],
 	);
 
 	const classes = classNames(className);
 
 	return (
-		<a {...props} className={classes} href={"#" + to} onClick={smoothScroll}>
+		<a {...props} className={classes} href={`#${to}`} onClick={smoothScroll}>
 			{children}
 		</a>
 	);

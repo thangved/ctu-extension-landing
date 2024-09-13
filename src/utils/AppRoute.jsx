@@ -10,7 +10,7 @@ const AppRoute = ({ component: Component, layout: Layout, ...rest }) => {
 				<Component {...props} />
 			</Layout>
 		),
-		[Layout, Component]
+		[Layout, Component],
 	);
 
 	return <Route {...rest} render={renderer} />;

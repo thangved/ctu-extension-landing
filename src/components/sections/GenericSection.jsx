@@ -30,13 +30,13 @@ const GenericSection = ({
 		bottomOuterDivider && "has-bottom-divider",
 		hasBgColor && "has-bg-color",
 		invertColor && "invert-color",
-		className
+		className,
 	);
 
 	const innerClasses = classNames(
 		"section-inner",
 		topDivider && "has-top-divider",
-		bottomDivider && "has-bottom-divider"
+		bottomDivider && "has-bottom-divider",
 	);
 
 	return (

@@ -36,7 +36,7 @@ const Image = ({ className, src, width, height, alt, ...props }) => {
 			img.before(placeholder);
 			placeholder.src = placeholderSrc(
 				img.getAttribute("width") || 0,
-				img.getAttribute("height") || 0
+				img.getAttribute("height") || 0,
 			);
 			placeholder.width = img.getAttribute("width");
 			placeholder.height = img.getAttribute("height");

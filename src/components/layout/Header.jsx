@@ -47,7 +47,7 @@ const Header = ({
 
 	const openMenu = useCallback(() => {
 		document.body.classList.add("off-nav-is-active");
-		nav.current.style.maxHeight = nav.current.scrollHeight + "px";
+		nav.current.style.maxHeight = `${nav.current.scrollHeight}px`;
 		setIsactive(true);
 	}, []);
 
@@ -91,7 +91,7 @@ const Header = ({
 									<ul
 										className={classNames(
 											"list-reset text-xs",
-											navPosition && `header-nav-${navPosition}`
+											navPosition && `header-nav-${navPosition}`,
 										)}
 									>
 										<li>

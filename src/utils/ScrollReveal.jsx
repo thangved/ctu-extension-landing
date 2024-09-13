@@ -52,6 +52,12 @@ const ScrollReveal = React.forwardRef(function ScrollReveal(props, ref) {
 		},
 	}));
 
+	const handleListeners = () => {
+		if (!checkComplete()) return;
+		window.removeEventListener("scroll", handleScroll);
+		window.removeEventListener("resize", handleResize);
+	};
+
 	const handleScroll = throttle(() => {
 		handleListeners();
 		revealElements();
@@ -74,11 +80,6 @@ const ScrollReveal = React.forwardRef(function ScrollReveal(props, ref) {
 	/**
 	 * @description Remove listeners if all elements are revealed
 	 */
-	const handleListeners = () => {
-		if (!checkComplete()) return;
-		window.removeEventListener("scroll", handleScroll);
-		window.removeEventListener("resize", handleResize);
-	};
 
 	useEffect(() => {
 		handleListeners();

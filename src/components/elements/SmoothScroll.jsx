@@ -44,7 +44,7 @@ const SmoothScroll = ({ className, children, to, duration, onLinkClick, ...props
 
 			if (!target) return;
 
-			onLinkClick && onLinkClick();
+			onLinkClick?.();
 
 			window.requestAnimationFrame((timestamp) => {
 				const stamp = timestamp || new Date().getTime();
@@ -62,7 +62,7 @@ const SmoothScroll = ({ className, children, to, duration, onLinkClick, ...props
 	const classes = classNames(className);
 
 	return (
-		<a {...props} className={classes} href={"#" + to} onClick={smoothScroll}>
+		<a {...props} className={classes} href={`#${to}`} onClick={smoothScroll}>
 			{children}
 		</a>
 	);

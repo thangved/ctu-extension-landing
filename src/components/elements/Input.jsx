@@ -72,7 +72,7 @@ const Input = ({
 		formGroup &&
 			formGroup !== "" &&
 			(formGroup === "desktop" ? "form-group-desktop" : "form-group"),
-		hasIcon && hasIcon !== "" && "has-icon-" + hasIcon
+		hasIcon && hasIcon !== "" && `has-icon-${hasIcon}`
 	);
 
 	const classes = classNames(

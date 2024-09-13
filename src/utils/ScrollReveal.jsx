@@ -53,15 +53,6 @@ const ScrollReveal = React.forwardRef(function ScrollReveal(props, ref) {
 	}));
 
 	/**
-	 * @description Handle listeners
-	 */
-	const handleListeners = () => {
-		if (!checkComplete()) return;
-		window.removeEventListener("scroll", handleScroll);
-		window.removeEventListener("resize", handleResize);
-	};
-
-	/**
 	 * @description Throttle function
 	 */
 	const handleScroll = throttle(() => {
@@ -75,6 +66,15 @@ const ScrollReveal = React.forwardRef(function ScrollReveal(props, ref) {
 	const handleResize = throttle(() => {
 		setViewportheight(window.innerHeight);
 	}, 30);
+
+	/**
+	 * @description Handle listeners
+	 */
+	function handleListeners() {
+		if (!checkComplete()) return;
+		window.removeEventListener("scroll", handleScroll);
+		window.removeEventListener("resize", handleResize);
+	}
 
 	useEffect(() => {
 		if (typeof revealEl !== "undefined" && revealEl.length > 0) {

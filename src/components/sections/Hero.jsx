@@ -1,12 +1,12 @@
-import React, { useCallback, useState } from "react";
 import classNames from "classnames";
-import { SectionProps } from "../../utils/SectionProps";
-import ButtonGroup from "../elements/ButtonGroup";
-import Button from "../elements/Button";
-import Image from "../elements/Image";
-import Modal from "../elements/Modal";
+import { useCallback, useState } from "react";
 import chromeStoreIcon from "../../assets/images/chrome-store.svg";
 import videoPlaceholder from "../../assets/images/video-placeholder.jpg";
+import { SectionProps } from "../../utils/SectionProps";
+import Button from "../elements/Button";
+import ButtonGroup from "../elements/ButtonGroup";
+import Image from "../elements/Image";
+import Modal from "../elements/Modal";
 
 const propTypes = {
 	...SectionProps.types,

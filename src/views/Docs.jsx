@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Docs.module.css";
 
 import ss00 from "../assets/images/screenshots/00.png";

@@ -1,4 +1,3 @@
-import React from "react";
 // import sections
 import Cta from "../components/sections/Cta";
 import Hero from "../components/sections/Hero";

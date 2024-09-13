@@ -1,6 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
 import classNames from "classnames";
+import PropTypes from "prop-types";
 import { SectionProps } from "../../utils/SectionProps";
 import Input from "../elements/Input";
 

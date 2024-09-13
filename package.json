@@ -1,7 +1,7 @@
 {
 	"name": "ctu-extension",
 	"version": "1.0.3",
-	"private": true,
+	"private": false,
 	"type": "module",
 	"dependencies": {
 		"@million/lint": "^1.0.0-rc.84",
@@ -28,9 +28,6 @@
 		"generate-pwa-assets": "pwa-assets-generator --preset minimal-2023 public/logo.png",
 		"prepare": "husky"
 	},
-	"eslintConfig": {
-		"extends": "react-app"
-	},
 	"browserslist": {
 		"production": [
 			">0.2%",
@@ -46,14 +43,17 @@
 	"devDependencies": {
 		"@commitlint/cli": "^19.4.0",
 		"@commitlint/config-conventional": "^19.2.2",
+		"@eslint/js": "^9.10.0",
 		"@types/history": "5.0.0",
 		"@types/react-router-dom": "5.1.2",
 		"@vite-pwa/assets-generator": "^0.2.4",
 		"cross-env": "^7.0.3",
-		"eslint": "^9.8.0",
-		"eslint-plugin-react": "^7.35.0",
+		"eslint": "^9.10.0",
+		"eslint-plugin-react": "^7.36.1",
+		"globals": "^15.9.0",
 		"husky": "^9.1.4",
 		"prettier": "^3.3.3",
+		"prettier-plugin-organize-imports": "^4.0.0",
 		"vite-imagetools": "^7.0.4"
 	},
 	"packageManager": "npm@10.8.3+sha512.d08425c8062f56d43bb8e84315864218af2492eb769e1f1ca40740f44e85bd148969382d651660363942e5909cb7ffcbef7ca0ae963ddc2c57a51243b4da8f56"

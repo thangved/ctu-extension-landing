@@ -1,24 +1,31 @@
-import React, { useRef, useEffect } from "react";
-import { useLocation, Switch } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import ReactGA from "react-ga";
+import { Switch, useLocation } from "react-router-dom";
 import AppRoute from "./utils/AppRoute";
 import ScrollReveal from "./utils/ScrollReveal";
-import ReactGA from "react-ga";
 
 // Layouts
 import LayoutDefault from "./layouts/LayoutDefault";
 
 // Views
-import Home from "./views/Home";
 import Docs from "./views/Docs";
+import Home from "./views/Home";
 import Privacy from "./views/Privacy";
 
 ReactGA.initialize(import.meta.env.VITE_APP_GA_CODE);
 
+/**
+ * @description Track page view
+ * @param {string} page
+ */
 const trackPage = (page) => {
 	ReactGA.set({ page });
 	ReactGA.pageview(page);
 };
 
+/**
+ * @description App children
+ */
 const children = () => (
 	<Switch>
 		<AppRoute exact path="/" component={Home} layout={LayoutDefault} />
@@ -27,19 +34,21 @@ const children = () => (
 	</Switch>
 );
 
+/**
+ * @description App component
+ */
 const App = () => {
 	const childRef = useRef();
-	let location = useLocation();
+	const location = useLocation();
 
 	useEffect(() => {
 		const page = location.pathname;
 		document.body.classList.add("is-loaded");
 		childRef.current.init();
 		trackPage(page);
-		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [location]);
 
-	return <ScrollReveal ref={childRef} children={children} />;
+	return <ScrollReveal ref={childRef}>{children}</ScrollReveal>;
 };
 
 export default App;

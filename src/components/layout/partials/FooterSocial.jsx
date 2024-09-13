@@ -1,6 +1,14 @@
-import React from "react";
 import classNames from "classnames";
+import PropTypes from "prop-types";
 
+const propTypes = {
+	className: PropTypes.string,
+};
+
+/**
+ * @description Footer social component
+ * @param {object} props
+ */
 const FooterSocial = ({ className, ...props }) => {
 	const classes = classNames("footer-social", className);
 
@@ -33,4 +41,5 @@ const FooterSocial = ({ className, ...props }) => {
 	);
 };
 
+FooterSocial.propTypes = propTypes;
 export default FooterSocial;

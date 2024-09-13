@@ -1,11 +1,10 @@
-import React from "react";
 import classNames from "classnames";
-import { SectionSplitProps } from "../../utils/SectionProps";
-import SectionHeader from "./partials/SectionHeader";
-import Image from "../elements/Image";
 import feature1 from "../../assets/images/features-split-image-01.png";
 import feature2 from "../../assets/images/features-split-image-02.png";
 import feature3 from "../../assets/images/features-split-image-03.png";
+import { SectionSplitProps } from "../../utils/SectionProps";
+import Image from "../elements/Image";
+import SectionHeader from "./partials/SectionHeader";
 
 const propTypes = {
 	...SectionSplitProps.types,

@@ -1,14 +1,13 @@
-import React from "react";
 import classNames from "classnames";
-import { SectionTilesProps } from "../../utils/SectionProps";
-import SectionHeader from "./partials/SectionHeader";
-import Image from "../elements/Image";
 import featureTile01 from "../../assets/images/feature-tile-icon-01.svg";
 import featureTile02 from "../../assets/images/feature-tile-icon-02.svg";
 import featureTile03 from "../../assets/images/feature-tile-icon-03.svg";
 import featureTile04 from "../../assets/images/feature-tile-icon-04.svg";
 import featureTile05 from "../../assets/images/feature-tile-icon-05.svg";
 import featureTile06 from "../../assets/images/feature-tile-icon-06.svg";
+import { SectionTilesProps } from "../../utils/SectionProps";
+import Image from "../elements/Image";
+import SectionHeader from "./partials/SectionHeader";
 
 const propTypes = {
 	...SectionTilesProps.types,

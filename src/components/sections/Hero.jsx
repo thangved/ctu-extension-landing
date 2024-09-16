@@ -91,6 +91,7 @@ const Hero = ({
 					>
 						<a
 							data-video="https://www.youtube.com/embed/dYY9RVNuwuY"
+							aria-hidden
 							href="#0"
 							aria-controls="video-modal"
 							style={{

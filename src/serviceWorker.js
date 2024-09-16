@@ -42,9 +42,7 @@ export function register(config) {
 
 				// Add some additional logging to localhost, pointing developers to the
 				// service worker/PWA documentation.
-				navigator.serviceWorker.ready.then(() => {
-					
-				});
+				navigator.serviceWorker.ready.then(() => {});
 			} else {
 				// Is not localhost. Just register service worker
 				registerValidSW(swUrl, config);

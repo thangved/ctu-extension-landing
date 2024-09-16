@@ -15,6 +15,7 @@ export default [
 		rules: {
 			"react/react-in-jsx-scope": "off",
 			"react/jsx-max-depth": [2, { max: 4 }],
+			"max-depth": [2, 4],
 		},
 	},
 ];

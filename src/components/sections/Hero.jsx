@@ -1,11 +1,7 @@
 import classNames from "classnames";
-import { useCallback, useState } from "react";
-import videoPlaceholder from "../../assets/images/video-placeholder.jpg";
-import CrIcon from "../../icons/Cr";
 import { SectionProps } from "../../utils/SectionProps";
-import Button from "../elements/Button";
-import ButtonGroup from "../elements/ButtonGroup";
-import Modal from "../elements/Modal";
+import HeroButtons from "./partials/HeroButtons";
+import HeroVideo from "./partials/HeroVideo";
 
 const propTypes = {
 	...SectionProps.types,
@@ -25,18 +21,6 @@ const Hero = ({
 	invertColor,
 	...props
 }) => {
-	const [videoModalActive, setVideomodalactive] = useState(false);
-
-	const openModal = useCallback((e) => {
-		e.preventDefault();
-		setVideomodalactive(true);
-	}, []);
-
-	const closeModal = useCallback((e) => {
-		e.preventDefault();
-		setVideomodalactive(false);
-	}, []);
-
 	const outerClasses = classNames(
 		"hero section center-content",
 		topOuterDivider && "has-top-divider",
@@ -63,53 +47,8 @@ const Hero = ({
 						Công cụ này được phát triển với mục đích ban đầu để bỏ qua captcha khi đăng nhập của hệ
 						thống quản lý CTU và đang bổ sung thêm nhiều tính năng tiện lợi hơn.
 					</p>
-					<ButtonGroup className="reveal-from-bottom" data-reveal-delay="600">
-						<Button
-							tag="a"
-							color="primary"
-							wideMobile
-							href="//chrome.google.com/webstore/detail/ctu-management-system-ext/lggkifjaacghbpebpcbaneimpogjbnmf"
-							target="_blank"
-							icon={<CrIcon />}
-						>
-							Cài đặt
-						</Button>
-						<Button
-							tag="a"
-							color="dark"
-							wideMobile
-							href="https://github.com/thangved/ctu-management-system-extension"
-							target="_blank"
-						>
-							Xem trên Github
-						</Button>
-					</ButtonGroup>
-					<div
-						className="hero-figure reveal-from-bottom illustration-element-01"
-						data-reveal-value="20px"
-						data-reveal-delay="800"
-					>
-						<a
-							data-video="https://www.youtube.com/embed/dYY9RVNuwuY"
-							aria-hidden
-							href="#0"
-							aria-controls="video-modal"
-							style={{
-								background: `url(${videoPlaceholder}) no-repeat center/cover`,
-								display: "block",
-								width: "100%",
-								aspectRatio: "16/9",
-							}}
-							onClick={openModal}
-						/>
-					</div>
-					<Modal
-						id="video-modal"
-						show={videoModalActive}
-						handleClose={closeModal}
-						video="https://www.youtube.com/embed/NEAMNjOCixU"
-						videoTag="iframe"
-					/>
+					<HeroButtons />
+					<HeroVideo />
 				</div>
 			</div>
 		</section>

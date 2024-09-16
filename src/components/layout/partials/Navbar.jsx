@@ -76,17 +76,17 @@ export default function Navbar({ hideSignin, navPosition }) {
 						<Link to="/docs" onClick={closeMenu}>
 							Tài liệu
 						</Link>
+						{!hideSignin && (
+							<Link
+								to="//chrome.google.com/webstore/detail/ctu-management-system-ext/lggkifjaacghbpebpcbaneimpogjbnmf"
+								target="_blank"
+								className="button button-primary button-wide-mobile button-sm"
+								onClick={closeMenu}
+							>
+								Cài đặt
+							</Link>
+						)}
 					</ul>
-					{!hideSignin && (
-						<Link
-							to="//chrome.google.com/webstore/detail/ctu-management-system-ext/lggkifjaacghbpebpcbaneimpogjbnmf"
-							target="_blank"
-							className="button button-primary button-wide-mobile button-sm"
-							onClick={closeMenu}
-						>
-							Cài đặt
-						</Link>
-					)}
 				</div>
 			</nav>
 		</>

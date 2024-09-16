@@ -1,11 +1,10 @@
 import classNames from "classnames";
 import { useCallback, useState } from "react";
-import chromeStoreIcon from "../../assets/images/chrome-store.svg";
 import videoPlaceholder from "../../assets/images/video-placeholder.jpg";
+import CrIcon from "../../icons/Cr";
 import { SectionProps } from "../../utils/SectionProps";
 import Button from "../elements/Button";
 import ButtonGroup from "../elements/ButtonGroup";
-import Image from "../elements/Image";
 import Modal from "../elements/Modal";
 
 const propTypes = {
@@ -57,40 +56,34 @@ const Hero = ({
 		<section {...props} className={outerClasses}>
 			<div className="container-sm">
 				<div className={innerClasses}>
-					<div className="hero-content">
-						<h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
-							Một công cụ hữu ích dành cho <span className="text-color-primary">sinh viên CTU</span>
-						</h1>
-						<div className="container-xs">
-							<p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
-								Công cụ này được phát triển với mục đích ban đầu để bỏ qua captcha khi đăng nhập của
-								hệ thống quản lý CTU và đang bổ sung thêm nhiều tính năng tiện lợi hơn.
-							</p>
-							<div className="reveal-from-bottom" data-reveal-delay="600">
-								<ButtonGroup>
-									<Button
-										tag="a"
-										color="primary"
-										wideMobile
-										href="//chrome.google.com/webstore/detail/ctu-management-system-ext/lggkifjaacghbpebpcbaneimpogjbnmf"
-										target="_blank"
-									>
-										<span style={{ marginRight: 10 }}>Cài đặt</span>
-										<Image src={chromeStoreIcon} />
-									</Button>
-									<Button
-										tag="a"
-										color="dark"
-										wideMobile
-										href="https://github.com/thangved/ctu-management-system-extension"
-										target="_blank"
-									>
-										Xem trên Github
-									</Button>
-								</ButtonGroup>
-							</div>
-						</div>
-					</div>
+					<h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">
+						Một công cụ hữu ích dành cho <span className="text-color-primary">sinh viên CTU</span>
+					</h1>
+					<p className="m-0 mb-32 reveal-from-bottom" data-reveal-delay="400">
+						Công cụ này được phát triển với mục đích ban đầu để bỏ qua captcha khi đăng nhập của hệ
+						thống quản lý CTU và đang bổ sung thêm nhiều tính năng tiện lợi hơn.
+					</p>
+					<ButtonGroup className="reveal-from-bottom" data-reveal-delay="600">
+						<Button
+							tag="a"
+							color="primary"
+							wideMobile
+							href="//chrome.google.com/webstore/detail/ctu-management-system-ext/lggkifjaacghbpebpcbaneimpogjbnmf"
+							target="_blank"
+							icon={<CrIcon />}
+						>
+							Cài đặt
+						</Button>
+						<Button
+							tag="a"
+							color="dark"
+							wideMobile
+							href="https://github.com/thangved/ctu-management-system-extension"
+							target="_blank"
+						>
+							Xem trên Github
+						</Button>
+					</ButtonGroup>
 					<div
 						className="hero-figure reveal-from-bottom illustration-element-01"
 						data-reveal-value="20px"
@@ -100,16 +93,14 @@ const Hero = ({
 							data-video="https://www.youtube.com/embed/dYY9RVNuwuY"
 							href="#0"
 							aria-controls="video-modal"
+							style={{
+								background: `url(${videoPlaceholder}) no-repeat center/cover`,
+								display: "block",
+								width: "100%",
+								aspectRatio: "16/9",
+							}}
 							onClick={openModal}
-						>
-							<Image
-								className="has-shadow"
-								src={videoPlaceholder}
-								alt="Hero"
-								width={896}
-								height={504}
-							/>
-						</a>
+						/>
 					</div>
 					<Modal
 						id="video-modal"

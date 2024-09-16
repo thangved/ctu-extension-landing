@@ -1,6 +1,6 @@
-import React from "react";
 import classNames from "classnames";
 import { SectionTilesProps } from "../../utils/SectionProps";
+import FeedbackCard from "../elements/FeedbackCard";
 import SectionHeader from "./partials/SectionHeader";
 
 const propTypes = {
@@ -50,55 +50,23 @@ const Testimonial = ({
 				<div className={innerClasses}>
 					<SectionHeader data={sectionHeader} className="center-content" />
 					<div className={tilesClasses}>
-						<div className="tiles-item reveal-from-right" data-reveal-delay="200">
-							<div className="tiles-item-inner">
-								<div className="testimonial-item-content">
-									<p className="text-sm mb-0">— Pru pruu pru pruuu pruuuu pru pruuuuuuuuuuu</p>
-								</div>
-								<div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
-									<span className="testimonial-item-name text-color-high">Chim cánh cụt</span>
-									<span className="text-color-low"> / </span>
-									<span className="testimonial-item-link">
-										<a href="#0">CTU Extension</a>
-									</span>
-								</div>
-							</div>
-						</div>
+						<FeedbackCard
+							title="Pru pruu pru pruu pruuuu pru pruuuuuuuuuuu"
+							author="Chim cánh cụt"
+							company="CTU Extension"
+						/>
 
-						<div className="tiles-item reveal-from-bottom">
-							<div className="tiles-item-inner">
-								<div className="testimonial-item-content">
-									<p className="text-sm mb-0">
-										— Pip pip pip pip pip pip pip, pip pip pip pip pip pip pip pip pip pip pip pip.
-										Pip pip pip pip pip pip pip.
-									</p>
-								</div>
-								<div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
-									<span className="testimonial-item-name text-color-high">Gà giấu tên</span>
-									<span className="text-color-low"> / </span>
-									<span className="testimonial-item-link">
-										<a href="#0">CTU Extension</a>
-									</span>
-								</div>
-							</div>
-						</div>
+						<FeedbackCard
+							title="Pip pip pip pip pip pip pip, pip pip pip pip pip pip pip pip pip pip pip pip. Pip pip pip pip pip pip pip."
+							author="Gà giấu tên"
+							company="CTU Extension"
+						/>
 
-						<div className="tiles-item reveal-from-left" data-reveal-delay="200">
-							<div className="tiles-item-inner">
-								<div className="testimonial-item-content">
-									<p className="text-sm mb-0">
-										— Quack quack quack quack quack quack quack quack quack quack quack quack quack.
-									</p>
-								</div>
-								<div className="testimonial-item-footer text-xs mt-32 mb-0 has-top-divider">
-									<span className="testimonial-item-name text-color-high">Zịt hacker</span>
-									<span className="text-color-low"> / </span>
-									<span className="testimonial-item-link">
-										<a href="#0">CTU Extension</a>
-									</span>
-								</div>
-							</div>
-						</div>
+						<FeedbackCard
+							title="Quack quack quack quack quack quack quack quack quack quack quack quack quack."
+							author="Zịt hacker"
+							company="CTU Extension"
+						/>
 					</div>
 				</div>
 			</div>

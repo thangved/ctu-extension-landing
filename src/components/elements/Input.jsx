@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
 import classNames from "classnames";
-import FormLabel from "./FormLabel";
+import PropTypes from "prop-types";
 import FormHint from "./FormHint";
+import FormLabel from "./FormLabel";
 
 const propTypes = {
+	className: PropTypes.string,
 	children: PropTypes.node,
 	label: PropTypes.string,
 	labelHidden: PropTypes.bool,
@@ -31,6 +31,7 @@ const propTypes = {
 	placeholder: PropTypes.string,
 	rows: PropTypes.number,
 	hint: PropTypes.string,
+	id: PropTypes.string,
 };
 
 const defaultProps = {

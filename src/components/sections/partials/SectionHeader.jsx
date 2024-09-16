@@ -1,6 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
 import classNames from "classnames";
+import PropTypes from "prop-types";
 
 const propTypes = {
 	data: PropTypes.shape({
@@ -9,6 +8,7 @@ const propTypes = {
 	}).isRequired,
 	children: PropTypes.node,
 	tag: PropTypes.oneOf(["h1", "h2", "h3"]),
+	className: PropTypes.string,
 };
 
 const defaultProps = {

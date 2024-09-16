@@ -1,6 +1,10 @@
 import React from "react";
 import styles from "./Docs.module.css";
 
+/**
+ * Privacy component
+ * @returns {React.ReactElement} Privacy
+ */
 export default function Privacy() {
 	return (
 		<div className="container-sm">

@@ -1,12 +1,13 @@
-import React, { useCallback } from "react";
-import PropTypes from "prop-types";
 import classNames from "classnames";
+import PropTypes from "prop-types";
+import { useCallback } from "react";
 
 const propTypes = {
 	children: PropTypes.node,
 	to: PropTypes.string.isRequired,
 	duration: PropTypes.number,
 	onLinkClick: PropTypes.func,
+	className: PropTypes.string,
 };
 
 const SmoothScroll = ({ className, children, to, duration, onLinkClick, ...props }) => {
@@ -15,19 +16,19 @@ const SmoothScroll = ({ className, children, to, duration, onLinkClick, ...props
 	};
 
 	const scrollToEl = useCallback(
-		(startTime, currentTime, duration, scrollEndElemTop, startScrollOffset) => {
+		(startTime, currentTime, timing, scrollEndElemTop, startScrollOffset) => {
 			const runtime = currentTime - startTime;
-			let progress = runtime / duration;
+			let progress = runtime / timing;
 
 			progress = Math.min(progress, 1);
 
 			const ease = easeInOutQuad(progress);
 
 			window.scroll(0, startScrollOffset + scrollEndElemTop * ease);
-			if (runtime < duration) {
+			if (runtime < timing) {
 				window.requestAnimationFrame((timestamp) => {
-					const currentTime = timestamp || new Date().getTime();
-					scrollToEl(startTime, currentTime, duration, scrollEndElemTop, startScrollOffset);
+					currentTime = timestamp || new Date().getTime();
+					scrollToEl(startTime, currentTime, timing, scrollEndElemTop, startScrollOffset);
 				});
 			}
 		},

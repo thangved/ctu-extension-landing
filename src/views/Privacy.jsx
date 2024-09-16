@@ -1,9 +1,8 @@
-import React from "react";
 import styles from "./Docs.module.css";
 
 /**
  * Privacy component
- * @returns {React.ReactElement} Privacy
+ * @returns {import("react").ReactElement} Privacy
  */
 export default function Privacy() {
 	return (

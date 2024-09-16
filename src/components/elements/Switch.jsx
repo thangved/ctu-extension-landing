@@ -33,7 +33,7 @@ const Switch = ({ className, children, name, value, rightLabel, disabled, checke
 				disabled={disabled}
 				checked={checked}
 			/>
-			<span className="form-switch-icon"></span>
+			<span className="form-switch-icon" />
 			<span>{children}</span>
 			{rightLabel && <span>{rightLabel}</span>}
 		</label>

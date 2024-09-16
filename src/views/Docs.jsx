@@ -134,7 +134,7 @@ const Docs = () => {
 
 				<Image src={ss06} alt="Gợi ý xếp thời khóa biểu" />
 
-				<p></p>
+				<p />
 
 				<p>Với chức năng này chúng ta có rất nhiều tùy chọn như trong hình</p>
 

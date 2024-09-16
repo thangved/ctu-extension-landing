@@ -1,6 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
 import classNames from "classnames";
+import PropTypes from "prop-types";
 
 const propTypes = {
 	children: PropTypes.node,
@@ -9,6 +8,7 @@ const propTypes = {
 	rightLabel: PropTypes.string,
 	disabled: PropTypes.bool,
 	checked: PropTypes.bool,
+	className: PropTypes.string,
 };
 
 const defaultProps = {

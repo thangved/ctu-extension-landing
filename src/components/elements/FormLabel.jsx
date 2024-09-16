@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
 import classNames from "classnames";
+import PropTypes from "prop-types";
 
 const propTypes = {
+	className: PropTypes.string,
 	children: PropTypes.node,
 	labelHidden: PropTypes.bool,
 	id: PropTypes.string,

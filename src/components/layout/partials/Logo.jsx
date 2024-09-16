@@ -1,9 +1,19 @@
 import classNames from "classnames";
-import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import logo from "../../../assets/images/logo.png";
 import Image from "../../elements/Image";
 
+const propTypes = {
+	className: PropTypes.string,
+};
+
+/**
+ * Logo component
+ * @param {object} props - The props
+ * @param {string} props.className - The class name
+ * @returns {import("react").ReactElement} - The logo component
+ */
 const Logo = ({ className, ...props }) => {
 	const classes = classNames("brand", className);
 
@@ -18,4 +28,5 @@ const Logo = ({ className, ...props }) => {
 	);
 };
 
+Logo.propTypes = propTypes;
 export default Logo;

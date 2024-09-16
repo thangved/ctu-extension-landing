@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
 import classNames from "classnames";
+import PropTypes from "prop-types";
 
 const propTypes = {
+	className: PropTypes.string,
 	tag: PropTypes.elementType,
 	color: PropTypes.string,
 	size: PropTypes.string,
@@ -10,6 +10,8 @@ const propTypes = {
 	wide: PropTypes.bool,
 	wideMobile: PropTypes.bool,
 	disabled: PropTypes.bool,
+	icon: PropTypes.node,
+	children: PropTypes.node,
 };
 
 const defaultProps = {
@@ -22,7 +24,19 @@ const defaultProps = {
 	disabled: false,
 };
 
-const Button = ({ className, tag, color, size, loading, wide, wideMobile, disabled, ...props }) => {
+const Button = ({
+	className,
+	tag,
+	color,
+	size,
+	loading,
+	wide,
+	wideMobile,
+	disabled,
+	icon,
+	children,
+	...props
+}) => {
 	const classes = classNames(
 		"button",
 		color && `button-${color}`,
@@ -34,7 +48,11 @@ const Button = ({ className, tag, color, size, loading, wide, wideMobile, disabl
 	);
 
 	const Component = tag;
-	return <Component {...props} className={classes} disabled={disabled} />;
+	return (
+		<Component {...props} className={classes} disabled={disabled}>
+			{children} {icon}
+		</Component>
+	);
 };
 
 Button.propTypes = propTypes;

@@ -1,7 +1,6 @@
-import React, { useState, useRef, useEffect, useCallback } from "react";
-import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import HeaderNavbar from "./partials/HeaderNavbar";
 import Logo from "./partials/Logo";
 
 const propTypes = {
@@ -10,6 +9,7 @@ const propTypes = {
 	hideSignin: PropTypes.bool,
 	bottomOuterDivider: PropTypes.bool,
 	bottomDivider: PropTypes.bool,
+	className: PropTypes.string,
 };
 
 const defaultProps = {
@@ -20,6 +20,17 @@ const defaultProps = {
 	bottomDivider: false,
 };
 
+/**
+ * Header component
+ * @param {object} props - Header component props
+ * @param {string} props.className - Additional classes
+ * @param {string} props.navPosition - Navigation position
+ * @param {boolean} props.hideNav - Hide navigation
+ * @param {boolean} props.hideSignin - Hide sign in
+ * @param {boolean} props.bottomOuterDivider - Bottom outer divider
+ * @param {boolean} props.bottomDivider - Bottom divider
+ * @returns {import("react").ReactElement} Header component
+ */
 const Header = ({
 	className,
 	navPosition,
@@ -29,44 +40,6 @@ const Header = ({
 	bottomDivider,
 	...props
 }) => {
-	const [isActive, setIsactive] = useState(false);
-
-	const nav = useRef(null);
-	const hamburger = useRef(null);
-
-	useEffect(() => {
-		isActive && openMenu();
-		document.addEventListener("keydown", keyPress);
-		document.addEventListener("click", clickOutside);
-		return () => {
-			document.removeEventListener("keydown", keyPress);
-			document.removeEventListener("click", clickOutside);
-			closeMenu();
-		};
-	});
-
-	const openMenu = useCallback(() => {
-		document.body.classList.add("off-nav-is-active");
-		nav.current.style.maxHeight = `${nav.current.scrollHeight}px`;
-		setIsactive(true);
-	}, []);
-
-	const closeMenu = useCallback(() => {
-		document.body.classList.remove("off-nav-is-active");
-		nav.current && (nav.current.style.maxHeight = null);
-		setIsactive(false);
-	}, []);
-
-	const keyPress = (e) => {
-		isActive && e.keyCode === 27 && closeMenu();
-	};
-
-	const clickOutside = (e) => {
-		if (!nav.current) return;
-		if (!isActive || nav.current.contains(e.target) || e.target === hamburger.current) return;
-		closeMenu();
-	};
-
 	const classes = classNames("site-header", bottomOuterDivider && "has-bottom-divider", className);
 
 	return (
@@ -74,50 +47,7 @@ const Header = ({
 			<div className="container">
 				<div className={classNames("site-header-inner", bottomDivider && "has-bottom-divider")}>
 					<Logo />
-					{!hideNav && (
-						<>
-							<button
-								ref={hamburger}
-								className="header-nav-toggle"
-								onClick={isActive ? closeMenu : openMenu}
-							>
-								<span className="screen-reader">Menu</span>
-								<span className="hamburger">
-									<span className="hamburger-inner"></span>
-								</span>
-							</button>
-							<nav ref={nav} className={classNames("header-nav", isActive && "is-active")}>
-								<div className="header-nav-inner">
-									<ul
-										className={classNames(
-											"list-reset text-xs",
-											navPosition && `header-nav-${navPosition}`,
-										)}
-									>
-										<li>
-											<Link to="/docs" onClick={closeMenu}>
-												Tài liệu
-											</Link>
-										</li>
-									</ul>
-									{!hideSignin && (
-										<ul className="list-reset header-nav-right">
-											<li>
-												<Link
-													to="//chrome.google.com/webstore/detail/ctu-management-system-ext/lggkifjaacghbpebpcbaneimpogjbnmf"
-													target="_blank"
-													className="button button-primary button-wide-mobile button-sm"
-													onClick={closeMenu}
-												>
-													Cài đặt
-												</Link>
-											</li>
-										</ul>
-									)}
-								</div>
-							</nav>
-						</>
-					)}
+					{!hideNav && <HeaderNavbar navPosition={navPosition} hideSignin={hideSignin} />}
 				</div>
 			</div>
 		</header>

@@ -15,7 +15,7 @@ const propTypes = {
  * @param {string} props.navPosition - The position of the navbar
  * @returns {import("react").ReactElement} Navbar component
  */
-export default function Navbar({ hideSignin, navPosition }) {
+export default function HeaderNavbar({ hideSignin, navPosition }) {
 	const [isActive, setIsActive] = useState(false);
 
 	const hamburger = useRef(null);
@@ -94,4 +94,4 @@ export default function Navbar({ hideSignin, navPosition }) {
 	);
 }
 
-Navbar.propTypes = propTypes;
+HeaderNavbar.propTypes = propTypes;

@@ -26,16 +26,16 @@ export default function HeroVideo() {
 				data-reveal-value="20px"
 				data-reveal-delay="800"
 			>
-				<a
+				<div
 					data-video="https://www.youtube.com/embed/dYY9RVNuwuY"
-					aria-hidden
-					href="#0"
 					aria-controls="video-modal"
+					aria-hidden
 					style={{
 						background: `url(${videoPlaceholder}) no-repeat center/cover`,
 						display: "block",
 						width: "100%",
 						aspectRatio: "16/9",
+						cursor: "pointer",
 					}}
 					onClick={openModal}
 				/>

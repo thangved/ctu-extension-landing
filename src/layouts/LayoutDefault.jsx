@@ -7,8 +7,10 @@ const propTypes = {
 };
 
 /**
- * @description Default layout
- * @param {object*} props
+ * Default layout component
+ * @param {object} props - LayoutDefault component props
+ * @param {import("react").ReactNode} props.children - Children
+ * @returns {import("react").ReactNode} - LayoutDefault component
  */
 const LayoutDefault = ({ children }) => (
 	<>

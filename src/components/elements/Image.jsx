@@ -16,8 +16,14 @@ const defaultProps = {
 };
 
 /**
- * @description Image component
- * @param {object} props
+ * Image component
+ * @param {object} props - The props
+ * @param {string} props.className - The class name
+ * @param {string} props.src - The image source
+ * @param {number} props.width - The image width
+ * @param {number} props.height - The image height
+ * @param {string} props.alt - The image alt text
+ * @returns {import("react").ReactElement} - The image component
  */
 const Image = ({ className, src, width, height, alt, ...props }) => {
 	const [loaded, setLoaded] = useState(false);

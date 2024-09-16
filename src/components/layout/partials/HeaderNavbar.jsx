@@ -9,12 +9,13 @@ const propTypes = {
 };
 
 /**
- * @description Navbar component
+ * Navbar component
+ * @param {object} props - The props
  * @param {boolean} props.hideSignin - Hide the sign in button
  * @param {string} props.navPosition - The position of the navbar
- * @returns
+ * @returns {import("react").ReactElement} Navbar component
  */
-export default function Navbar({ hideSignin, navPosition }) {
+export default function HeaderNavbar({ hideSignin, navPosition }) {
 	const [isActive, setIsActive] = useState(false);
 
 	const hamburger = useRef(null);
@@ -73,30 +74,24 @@ export default function Navbar({ hideSignin, navPosition }) {
 					<ul
 						className={classNames("list-reset text-xs", navPosition && `header-nav-${navPosition}`)}
 					>
-						<li>
-							<Link to="/docs" onClick={closeMenu}>
-								Tài liệu
+						<Link to="/docs" onClick={closeMenu}>
+							Tài liệu
+						</Link>
+						{!hideSignin && (
+							<Link
+								to="//chrome.google.com/webstore/detail/ctu-management-system-ext/lggkifjaacghbpebpcbaneimpogjbnmf"
+								target="_blank"
+								className="button button-primary button-wide-mobile button-sm"
+								onClick={closeMenu}
+							>
+								Cài đặt
 							</Link>
-						</li>
+						)}
 					</ul>
-					{!hideSignin && (
-						<ul className="list-reset header-nav-right">
-							<li>
-								<Link
-									to="//chrome.google.com/webstore/detail/ctu-management-system-ext/lggkifjaacghbpebpcbaneimpogjbnmf"
-									target="_blank"
-									className="button button-primary button-wide-mobile button-sm"
-									onClick={closeMenu}
-								>
-									Cài đặt
-								</Link>
-							</li>
-						</ul>
-					)}
 				</div>
 			</nav>
 		</>
 	);
 }
 
-Navbar.propTypes = propTypes;
+HeaderNavbar.propTypes = propTypes;

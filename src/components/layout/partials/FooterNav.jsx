@@ -7,8 +7,10 @@ const propTypes = {
 };
 
 /**
- * @description Footer navigation component
- * @param {object} props
+ * Footer navigation component
+ * @param {object} props - FooterNav component props
+ * @param {string} props.className - Additional classes
+ * @returns {import("react").ReactElement} FooterNav component
  */
 const FooterNav = ({ className, ...props }) => {
 	const classes = classNames("footer-nav", className);

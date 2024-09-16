@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import PropTypes from "prop-types";
+import HeaderNavbar from "./partials/HeaderNavbar";
 import Logo from "./partials/Logo";
-import Navbar from "./partials/Navbar";
 
 const propTypes = {
 	navPosition: PropTypes.string,
@@ -21,8 +21,15 @@ const defaultProps = {
 };
 
 /**
- * @description Header component
- * @param {object} props
+ * Header component
+ * @param {object} props - Header component props
+ * @param {string} props.className - Additional classes
+ * @param {string} props.navPosition - Navigation position
+ * @param {boolean} props.hideNav - Hide navigation
+ * @param {boolean} props.hideSignin - Hide sign in
+ * @param {boolean} props.bottomOuterDivider - Bottom outer divider
+ * @param {boolean} props.bottomDivider - Bottom divider
+ * @returns {import("react").ReactElement} Header component
  */
 const Header = ({
 	className,
@@ -40,7 +47,7 @@ const Header = ({
 			<div className="container">
 				<div className={classNames("site-header-inner", bottomDivider && "has-bottom-divider")}>
 					<Logo />
-					{!hideNav && <Navbar navPosition={navPosition} hideSignin={hideSignin} />}
+					{!hideNav && <HeaderNavbar navPosition={navPosition} hideSignin={hideSignin} />}
 				</div>
 			</div>
 		</header>

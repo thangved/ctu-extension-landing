@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import PropTypes from "prop-types";
+import FooterCopyright from "./partials/FooterCopyright";
 import FooterNav from "./partials/FooterNav";
 import FooterSocial from "./partials/FooterSocial";
 import Logo from "./partials/Logo";
@@ -32,9 +33,7 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
 					</div>
 					<div className="footer-bottom space-between text-xxs invert-order-desktop">
 						<FooterNav />
-						<div className="footer-copyright">
-							Dev by <a href="https://github.com/thangved">Minh Thang</a>. All right reserved
-						</div>
+						<FooterCopyright />
 					</div>
 				</div>
 			</div>

@@ -33,7 +33,7 @@ const FormLabel = ({ className, children, labelHidden, id, ...props }) => {
 	};
 
 	const classes = useMemo(
-		() => classNames("form-label", !!labelHidden && "screen-reader", className),
+		() => classNames("form-label", Boolean(labelHidden) && "screen-reader", className),
 		[labelHidden, className],
 	);
 

@@ -22,6 +22,11 @@ const propTypes = {
  * @returns {import("react").ReactElement} A link element that smoothly scrolls to a specified element on the page.
  */
 const SmoothScroll = ({ className, children, to, duration, onLinkClick, ...props }) => {
+	/**
+	 * Quadratic easing function for smooth scrolling animation
+	 * @param {number} t - The current progress of the animation
+	 * @returns {number} The eased progress of the animation
+	 */
 	const easeInOutQuad = (t) => {
 		return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
 	};

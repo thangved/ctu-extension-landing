@@ -9,7 +9,7 @@ const propTypes = {
 };
 
 /**
- * @description Navbar component
+ * Navbar component
  * @param {boolean} props.hideSignin - Hide the sign in button
  * @param {string} props.navPosition - The position of the navbar
  * @returns

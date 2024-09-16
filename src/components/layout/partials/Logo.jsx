@@ -9,7 +9,7 @@ const propTypes = {
 };
 
 /**
- * @description Logo component
+ * Logo component
  * @param {object} props
  */
 const Logo = ({ className, ...props }) => {

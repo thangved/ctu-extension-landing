@@ -50,6 +50,7 @@
 		"@vite-pwa/assets-generator": "^0.2.4",
 		"cross-env": "^7.0.3",
 		"eslint": "^9.10.0",
+		"eslint-plugin-jsdoc": "^50.2.3",
 		"eslint-plugin-react": "^7.36.1",
 		"globals": "^15.9.0",
 		"husky": "^9.1.4",

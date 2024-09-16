@@ -6,7 +6,7 @@ const propTypes = {
 };
 
 /**
- * @description Button group component
+ * Button group component
  * @param {object} props
  */
 const ButtonGroup = ({ className, ...props }) => {

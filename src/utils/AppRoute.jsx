@@ -9,7 +9,7 @@ const propTypes = {
 };
 
 /**
- * @description AppRoute component
+ * AppRoute component
  * @param {object} props
  */
 const AppRoute = ({ component: Component, layout: Layout, ...rest }) => {

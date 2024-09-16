@@ -16,7 +16,7 @@ const defaultProps = {
 };
 
 /**
- * @description Image component
+ * Image component
  * @param {object} props
  */
 const Image = ({ className, src, width, height, alt, ...props }) => {

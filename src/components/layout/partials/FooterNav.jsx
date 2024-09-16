@@ -7,7 +7,7 @@ const propTypes = {
 };
 
 /**
- * @description Footer navigation component
+ * Footer navigation component
  * @param {object} props
  */
 const FooterNav = ({ className, ...props }) => {

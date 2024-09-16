@@ -21,7 +21,7 @@ const defaultProps = {
 };
 
 /**
- * @description Header component
+ * Header component
  * @param {object} props
  */
 const Header = ({

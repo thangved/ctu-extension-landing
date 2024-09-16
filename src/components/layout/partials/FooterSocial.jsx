@@ -8,7 +8,7 @@ const propTypes = {
 };
 
 /**
- * @description Footer social component
+ * Footer social component
  * @param {object} props
  */
 const FooterSocial = ({ className, ...props }) => {

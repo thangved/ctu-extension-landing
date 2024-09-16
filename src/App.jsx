@@ -15,7 +15,7 @@ import Privacy from "./views/Privacy";
 ReactGA.initialize(import.meta.env.VITE_APP_GA_CODE);
 
 /**
- * @description Track page view
+ * Track page view
  * @param {string} page
  */
 const trackPage = (page) => {
@@ -24,7 +24,7 @@ const trackPage = (page) => {
 };
 
 /**
- * @description App children
+ * App children
  */
 const children = () => (
 	<Switch>
@@ -35,7 +35,7 @@ const children = () => (
 );
 
 /**
- * @description App component
+ * App component
  */
 const App = () => {
 	const childRef = useRef();

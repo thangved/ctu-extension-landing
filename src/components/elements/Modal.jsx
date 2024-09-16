@@ -24,7 +24,7 @@ const defaultProps = {
 };
 
 /**
- * @description Modal component
+ * Modal component
  * @param {object} props
  */
 const Modal = ({ className, children, handleClose, show, closeHidden, video, ...props }) => {

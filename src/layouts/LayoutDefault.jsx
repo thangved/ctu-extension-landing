@@ -7,7 +7,7 @@ const propTypes = {
 };
 
 /**
- * @description Default layout
+ * Default layout
  * @param {object*} props
  */
 const LayoutDefault = ({ children }) => (

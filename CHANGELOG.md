@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.0.4](https://github.com/thangved/ctu-extension-landing/compare/v1.0.3...v1.0.4) (2024-09-16)
+
+
+### Bug Fixes
+
+* add `sandbox` to `&lt;iframe&gt;` ([b41052b](https://github.com/thangved/ctu-extension-landing/commit/b41052becb0d9f2e8dde9f0a158285195d25b783))
+* change to use react-player ([910d3c9](https://github.com/thangved/ctu-extension-landing/commit/910d3c939af1d1c3387821341880e81a9f3d61e1))
+* change video placeholder to `&lt;div&gt;` ([eb9ddc8](https://github.com/thangved/ctu-extension-landing/commit/eb9ddc8019fc396c4b3ad8fa20747b0aef89a3bc))
+* local variable name shadows variable in outer scope ([16d16ab](https://github.com/thangved/ctu-extension-landing/commit/16d16ab4194cf7599bf8dff43431797d8e536e09))
+* missing default values for non-required properties ([e6608fe](https://github.com/thangved/ctu-extension-landing/commit/e6608fe774d3017cfb4925909cf5701849477c08))
+* prefer that anchors have content and the content is accessible to screen readers ([926f3af](https://github.com/thangved/ctu-extension-landing/commit/926f3af148ced0fcb0018418ba98c45293c473d6))
+* reduce jsx depth ([9573ff3](https://github.com/thangved/ctu-extension-landing/commit/9573ff350123295ec79de5e0cf6619b508d09837))
+* reduce jsx depth ([be7e72f](https://github.com/thangved/ctu-extension-landing/commit/be7e72ff600540411a21c464509f75e309f00735))
+* reduced jsx depth ([82f1ebb](https://github.com/thangved/ctu-extension-landing/commit/82f1ebb519bdfe04dc61ab17b8b3e5d6422742be))
+* remove used before definition variables ([d5aafb0](https://github.com/thangved/ctu-extension-landing/commit/d5aafb040b8d57b43a803e810de47c948dfce8cb))
+* remove used before definition variables ([340bf35](https://github.com/thangved/ctu-extension-landing/commit/340bf35013494aea3660631342a980f4a2b928e1))
+* update `sandbox` field ([0d09961](https://github.com/thangved/ctu-extension-landing/commit/0d0996145713a020c45abbba66ccbdfb7741c57f))
+* validation of JSX maximum depth ([be5ceb6](https://github.com/thangved/ctu-extension-landing/commit/be5ceb67fc9e18c6b487de56cd39c4d1ccaa21bf))
+
 ## [1.0.3](https://github.com/thangved/ctu-extension-landing/compare/v1.0.2...v1.0.3) (2024-09-13)
 
 ### Bug Fixes

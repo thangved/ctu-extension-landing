@@ -83,7 +83,7 @@ const Header = ({
 							>
 								<span className="screen-reader">Menu</span>
 								<span className="hamburger">
-									<span className="hamburger-inner"></span>
+									<span className="hamburger-inner" />
 								</span>
 							</button>
 							<nav ref={nav} className={classNames("header-nav", isActive && "is-active")}>

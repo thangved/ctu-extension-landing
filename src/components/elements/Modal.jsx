@@ -70,7 +70,7 @@ const Modal = ({
 					{video ? (
 						<div className="responsive-video">
 							{videoTag === "iframe" ? (
-								<iframe title="video" src={video} frameBorder="0" allowFullScreen></iframe>
+								<iframe title="video" src={video} frameBorder="0" allowFullScreen />
 							) : (
 								<video controls src={video}>
 									<track default kind="captions" srcLang="en" src={subtitle} />
@@ -80,7 +80,7 @@ const Modal = ({
 					) : (
 						<>
 							{!closeHidden && (
-								<button className="modal-close" aria-label="close" onClick={handleClose}></button>
+								<button className="modal-close" aria-label="close" onClick={handleClose} />
 							)}
 							<div className="modal-content">{children}</div>
 						</>

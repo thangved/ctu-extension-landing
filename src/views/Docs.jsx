@@ -10,6 +10,12 @@ import ss06 from "../assets/images/screenshots/06.png";
 
 import Image from "../components/elements/Image";
 
+/**
+ * Renders the documentation page for using the CTU Extension.
+ * Provides information on installing the extension, its interface, and features like bypassing captcha, viewing study plans, and scheduling timetables.
+ * Utilizes images to illustrate the extension's interface and functionalities.
+ * @returns {import("react").ReactElement} The rendered documentation page.
+ */
 const Docs = () => {
 	return (
 		<div className="container-sm">

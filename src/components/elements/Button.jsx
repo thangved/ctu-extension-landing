@@ -24,6 +24,21 @@ const defaultProps = {
 	disabled: false,
 };
 
+/**
+ * Button component
+ * @param {object} props - Component Props
+ * @param {string} props.className - Additional class name
+ * @param {string} props.tag - HTML tag
+ * @param {string} props.color - Button color
+ * @param {string} props.size - Button size
+ * @param {boolean} props.loading - Loading state
+ * @param {boolean} props.wide - Wide button
+ * @param {boolean} props.wideMobile - Wide button on mobile
+ * @param {boolean} props.disabled - Disabled button
+ * @param {import("react").ReactNode} props.icon - Button icon
+ * @param {import("react").ReactNode} props.children - Button children
+ * @returns {import("react").ReactElement} - React component element
+ */
 const Button = ({
 	className,
 	tag,

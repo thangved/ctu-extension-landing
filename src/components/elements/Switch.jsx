@@ -20,6 +20,18 @@ const defaultProps = {
 	checked: undefined,
 };
 
+/**
+ * Functional component for a custom switch element.
+ * @param {object} props - Additional props to spread on the input element.
+ * @param {string} props.className - Additional CSS class for styling.
+ * @param {import("react").ReactNode} props.children - The content of the switch element.
+ * @param {string} props.name - The name attribute of the input element.
+ * @param {string} props.value - The value attribute of the input element.
+ * @param {string} props.rightLabel - The label displayed on the right side of the switch.
+ * @param {boolean} props.disabled - Indicates if the switch is disabled.
+ * @param {boolean} props.checked - Indicates if the switch is checked.
+ * @returns {import("react").ReactElement} A custom switch element with specified properties.
+ */
 const Switch = ({ className, children, name, value, rightLabel, disabled, checked, ...props }) => {
 	const classes = classNames("form-switch", className);
 

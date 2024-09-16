@@ -12,6 +12,19 @@ const defaultProps = {
 	...SectionProps.defaults,
 };
 
+/**
+ * Functional component for rendering a generic section with customizable dividers, background color, and text color.
+ * @param {object} props - Additional props to be spread on the section element.
+ * @param {string} props.className - Additional CSS class names for the section.
+ * @param {import("react").ReactNode} props.children - The content to be displayed within the section.
+ * @param {boolean} props.topOuterDivider - Whether the section has a top outer divider.
+ * @param {boolean} props.bottomOuterDivider - Whether the section has a bottom outer divider.
+ * @param {boolean} props.topDivider - Whether the section has a top inner divider.
+ * @param {boolean} props.bottomDivider - Whether the section has a bottom inner divider.
+ * @param {boolean} props.hasBgColor - Whether the section has a background color.
+ * @param {boolean} props.invertColor - Whether to invert the text color.
+ * @returns {import("react").ReactElement} React component
+ */
 const GenericSection = ({
 	className,
 	children,

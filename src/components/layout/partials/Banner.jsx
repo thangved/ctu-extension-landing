@@ -1,8 +1,15 @@
 import { useCallback, useState } from "react";
 
-const Banner = ({ ...props }) => {
+/**
+ * Functional component for rendering a banner with dynamic content.
+ * @param {object} props - Additional properties to be spread on the banner element.
+ * @returns {import("react").ReactElement} Rendered banner component.
+ */ const Banner = ({ ...props }) => {
 	const [bannerOpen, setBannerOpen] = useState(true);
 
+	/**
+	 * Toggles the visibility of the banner.
+	 */
 	const toggleBanner = useCallback(() => setBannerOpen((open) => !open), []);
 
 	return (

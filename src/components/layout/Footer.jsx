@@ -15,7 +15,14 @@ const defaultProps = {
 	topOuterDivider: false,
 	topDivider: false,
 };
-
+/**
+ * Renders the footer component with specified class, outer divider, and inner divider.
+ * @param {object} props - Additional props to be spread on the footer element.
+ * @param {string} props.className - The class name for the footer component.
+ * @param {boolean} props.topOuterDivider - Whether to include an outer divider at the top.
+ * @param {boolean} props.topDivider - Whether to include an inner divider at the top.
+ * @returns {import("react").ReactElement} Footer component with logo, social links, navigation, and copyright information.
+ */
 const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
 	const classes = classNames(
 		"site-footer center-content-mobile",

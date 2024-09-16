@@ -11,6 +11,18 @@ const defaultProps = {
 	...SectionProps.defaults,
 };
 
+/**
+ * Functional component for rendering a Hero section.
+ * @param {object} props - Additional props to spread.
+ * @param {string} props.className - Additional CSS class for customization.
+ * @param {boolean} props.topOuterDivider - Whether to include top outer divider.
+ * @param {boolean} props.bottomOuterDivider - Whether to include bottom outer divider.
+ * @param {boolean} props.topDivider - Whether to include top divider.
+ * @param {boolean} props.bottomDivider - Whether to include bottom divider.
+ * @param {boolean} props.hasBgColor - Whether to have background color.
+ * @param {boolean} props.invertColor - Whether to invert the color scheme.
+ * @returns {import("react").ReactElement} Hero section with title, description, buttons, and video.
+ */
 const Hero = ({
 	className,
 	topOuterDivider,

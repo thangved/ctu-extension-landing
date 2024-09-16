@@ -10,7 +10,9 @@ const propTypes = {
 
 /**
  * Logo component
- * @param {object} props
+ * @param {object} props - The props
+ * @param {string} props.className - The class name
+ * @returns {import("react").ReactElement} - The logo component
  */
 const Logo = ({ className, ...props }) => {
 	const classes = classNames("brand", className);

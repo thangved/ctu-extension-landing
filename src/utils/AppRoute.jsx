@@ -10,7 +10,10 @@ const propTypes = {
 
 /**
  * AppRoute component
- * @param {object} props
+ * @param {object} props - Component, layout, children
+ * @param {import("react").FC} props.component - Component
+ * @param {import("react").FC} props.layout - Layout
+ * @returns {import("react").ReactElement} - AppRoute component
  */
 const AppRoute = ({ component: Component, layout: Layout, ...rest }) => {
 	Layout = Layout === undefined ? (props) => props.children : Layout;

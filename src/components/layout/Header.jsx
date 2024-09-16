@@ -22,7 +22,14 @@ const defaultProps = {
 
 /**
  * Header component
- * @param {object} props
+ * @param {object} props - Header component props
+ * @param {string} props.className - Additional classes
+ * @param {string} props.navPosition - Navigation position
+ * @param {boolean} props.hideNav - Hide navigation
+ * @param {boolean} props.hideSignin - Hide sign in
+ * @param {boolean} props.bottomOuterDivider - Bottom outer divider
+ * @param {boolean} props.bottomDivider - Bottom divider
+ * @returns {import("react").ReactElement} Header component
  */
 const Header = ({
 	className,

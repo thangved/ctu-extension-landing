@@ -7,7 +7,9 @@ const propTypes = {
 
 /**
  * Button group component
- * @param {object} props
+ * @param {object} props - The props
+ * @param {string} props.className - The class name
+ * @returns {import("react").ReactElement} - The button group component
  */
 const ButtonGroup = ({ className, ...props }) => {
 	const classes = classNames("button-group", className);

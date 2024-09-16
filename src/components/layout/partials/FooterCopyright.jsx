@@ -1,3 +1,7 @@
+/**
+ * Footer copyright component
+ * @returns {import("react").ReactElement} - Footer copyright component
+ */
 export default function FooterCopyright() {
 	return (
 		<div className="footer-copyright">

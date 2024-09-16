@@ -10,9 +10,10 @@ const propTypes = {
 
 /**
  * Navbar component
+ * @param {object} props - The props
  * @param {boolean} props.hideSignin - Hide the sign in button
  * @param {string} props.navPosition - The position of the navbar
- * @returns
+ * @returns {import("react").ReactElement} Navbar component
  */
 export default function Navbar({ hideSignin, navPosition }) {
 	const [isActive, setIsActive] = useState(false);

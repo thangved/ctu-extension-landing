@@ -1,3 +1,7 @@
+/**
+ * Chrome web store icon
+ * @returns {import("react").ReactElement} Chrome web store icon
+ */
 export default function CrIcon() {
 	return (
 		<svg

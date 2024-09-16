@@ -25,7 +25,14 @@ const defaultProps = {
 
 /**
  * Modal component
- * @param {object} props
+ * @param {object} props - Modal component props
+ * @param {string} props.className - Additional classes
+ * @param {import("react").ReactNode} props.children - Modal content
+ * @param {import("react").ReactEventHandler} props.handleClose - Close modal function
+ * @param {boolean} props.show - Show modal
+ * @param {boolean} props.closeHidden - Hide close button
+ * @param {string} props.video - Video URL
+ * @returns {import("react").ReactElement} Modal component
  */
 const Modal = ({ className, children, handleClose, show, closeHidden, video, ...props }) => {
 	const stopPropagation = useCallback((e) => {

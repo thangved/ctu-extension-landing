@@ -8,6 +8,7 @@ const ScrollReveal = React.forwardRef(function ScrollReveal(props, ref) {
 
 	/**
 	 * Check if all elements are revealed
+	 * @returns {boolean} - True if all elements are revealed
 	 */
 	const checkComplete = () => {
 		return revealEl.length <= document.querySelectorAll("[class*=reveal-].is-revealed").length;
@@ -15,6 +16,9 @@ const ScrollReveal = React.forwardRef(function ScrollReveal(props, ref) {
 
 	/**
 	 * Check if element is visible
+	 * @param {HTMLElement} el - The element to check
+	 * @param {number} offset - The offset
+	 * @returns {boolean} - True if element is visible
 	 */
 	const elementIsVisible = (el, offset) => {
 		return el.getBoundingClientRect().top <= viewportHeight - offset;
@@ -22,6 +26,7 @@ const ScrollReveal = React.forwardRef(function ScrollReveal(props, ref) {
 
 	/**
 	 * Reveal elements
+	 * @returns {void}
 	 */
 	const revealElements = () => {
 		if (checkComplete()) return;
@@ -54,6 +59,7 @@ const ScrollReveal = React.forwardRef(function ScrollReveal(props, ref) {
 
 	/**
 	 * Throttle function
+	 * @returns {void}
 	 */
 	const handleScroll = throttle(() => {
 		handleListeners();
@@ -62,6 +68,7 @@ const ScrollReveal = React.forwardRef(function ScrollReveal(props, ref) {
 
 	/**
 	 * Throttle function
+	 * @returns {void}
 	 */
 	const handleResize = throttle(() => {
 		setViewportheight(window.innerHeight);
@@ -69,6 +76,7 @@ const ScrollReveal = React.forwardRef(function ScrollReveal(props, ref) {
 
 	/**
 	 * Handle listeners
+	 * @returns {void}
 	 */
 	function handleListeners() {
 		if (!checkComplete()) return;

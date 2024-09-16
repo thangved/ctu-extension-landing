@@ -16,7 +16,7 @@ ReactGA.initialize(import.meta.env.VITE_APP_GA_CODE);
 
 /**
  * Track page view
- * @param {string} page
+ * @param {string} page - The page to track
  */
 const trackPage = (page) => {
 	ReactGA.set({ page });
@@ -25,6 +25,7 @@ const trackPage = (page) => {
 
 /**
  * App children
+ * @returns {import("react").ReactElement} App children
  */
 const children = () => (
 	<Switch>
@@ -36,6 +37,7 @@ const children = () => (
 
 /**
  * App component
+ * @returns {import("react").ReactElement} App component
  */
 const App = () => {
 	const childRef = useRef();

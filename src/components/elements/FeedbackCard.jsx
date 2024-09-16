@@ -1,5 +1,13 @@
 import PropTypes from "prop-types";
 
+/**
+ * Feedback card component
+ * @param {object} props - FeedbackCard component props
+ * @param {string} props.title - The feedback
+ * @param {string} props.author - The author
+ * @param {string} props.company - The company
+ * @returns {import("react").ReactElement} - The feedback card
+ */
 export default function FeedbackCard({ title, author, company }) {
 	return (
 		<div className="tiles-item reveal-from-right" data-reveal-delay="200">

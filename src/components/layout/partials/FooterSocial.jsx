@@ -9,7 +9,9 @@ const propTypes = {
 
 /**
  * Footer social component
- * @param {object} props
+ * @param {object} props - The props
+ * @param {string} props.className - The class name
+ * @returns {import("react").ReactElement} - The footer social component
  */
 const FooterSocial = ({ className, ...props }) => {
 	const classes = classNames("footer-social", className);

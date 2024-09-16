@@ -73,25 +73,19 @@ export default function Navbar({ hideSignin, navPosition }) {
 					<ul
 						className={classNames("list-reset text-xs", navPosition && `header-nav-${navPosition}`)}
 					>
-						<li>
-							<Link to="/docs" onClick={closeMenu}>
-								Tài liệu
-							</Link>
-						</li>
+						<Link to="/docs" onClick={closeMenu}>
+							Tài liệu
+						</Link>
 					</ul>
 					{!hideSignin && (
-						<ul className="list-reset header-nav-right">
-							<li>
-								<Link
-									to="//chrome.google.com/webstore/detail/ctu-management-system-ext/lggkifjaacghbpebpcbaneimpogjbnmf"
-									target="_blank"
-									className="button button-primary button-wide-mobile button-sm"
-									onClick={closeMenu}
-								>
-									Cài đặt
-								</Link>
-							</li>
-						</ul>
+						<Link
+							to="//chrome.google.com/webstore/detail/ctu-management-system-ext/lggkifjaacghbpebpcbaneimpogjbnmf"
+							target="_blank"
+							className="button button-primary button-wide-mobile button-sm"
+							onClick={closeMenu}
+						>
+							Cài đặt
+						</Link>
 					)}
 				</div>
 			</nav>

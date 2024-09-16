@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.5](https://github.com/thangved/ctu-extension-landing/compare/v1.0.4...v1.0.5) (2024-09-16)
+
+
+### Bug Fixes
+
+* remove unused variables ([9055d24](https://github.com/thangved/ctu-extension-landing/commit/9055d2407e2b20cc7aedff4116bbf7a3ed092829))
+* use `Boolean()` instead of `!!` ([ed5b78b](https://github.com/thangved/ctu-extension-landing/commit/ed5b78b931a5d18e2f7fa62c61b93d7794d27fe6))
+
 ## [1.0.4](https://github.com/thangved/ctu-extension-landing/compare/v1.0.3...v1.0.4) (2024-09-16)
 
 ### Bug Fixes

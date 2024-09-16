@@ -11,6 +11,19 @@ const defaultProps = {
 	...SectionTilesProps.defaults,
 };
 
+/**
+ * Testimonial component for displaying user feedback.
+ * @param {object} props - Additional props to spread to the component.
+ * @param {string} props.className - The CSS class name for the component.
+ * @param {boolean} props.topOuterDivider - Whether to display a top outer divider.
+ * @param {boolean} props.bottomOuterDivider - Whether to display a bottom outer divider.
+ * @param {boolean} props.topDivider - Whether to display a top divider.
+ * @param {boolean} props.bottomDivider - Whether to display a bottom divider.
+ * @param {boolean} props.hasBgColor - Whether the component has a background color.
+ * @param {boolean} props.invertColor - Whether to invert the color scheme.
+ * @param {boolean} props.pushLeft - Whether to push the content to the left.
+ * @returns {import("react").ReactElement} React component representing the testimonial section with user feedback.
+ */
 const Testimonial = ({
 	className,
 	topOuterDivider,

@@ -51,6 +51,26 @@ const defaultProps = {
 	hint: null,
 };
 
+/**
+ * Functional component for rendering an input element with label, hint, and optional icon.
+ * @param {object} props - The properties object containing:
+ * @param {string} props.className - Additional CSS class for the input element.
+ * @param {string} props.children - Additional elements to be rendered inside the input component.
+ * @param {string} props.label - The label text for the input element.
+ * @param {boolean} props.labelHidden - Determines if the label is hidden.
+ * @param {string} props.type - The type of input element (e.g., text, password).
+ * @param {string} props.name - The name attribute of the input element.
+ * @param {string} props.status - The status of the input element (e.g., success, error).
+ * @param {boolean} props.disabled - Indicates if the input element is disabled.
+ * @param {string} props.value - The value of the input element.
+ * @param {string} props.formGroup - The form group style for the input element.
+ * @param {string} props.hasIcon - The icon class for the input element.
+ * @param {string} props.size - The size of the input element.
+ * @param {string} props.placeholder - The placeholder text for the input element.
+ * @param {number} props.rows - The number of rows for a textarea element.
+ * @param {string} props.hint - The hint text for the input element.
+ * @returns {import("react").ReactElement} React component representing an input element with label, hint, and optional icon.
+ */
 const Input = ({
 	className,
 	children,

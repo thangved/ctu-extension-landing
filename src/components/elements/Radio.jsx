@@ -18,6 +18,17 @@ const defaultProps = {
 	checked: false,
 };
 
+/**
+ * Functional component for rendering a radio input element.
+ * @param {object} props - Additional props to be spread on the input element.
+ * @param {string} props.className - Additional CSS class for styling.
+ * @param {import("react").ReactNode} props.children - The content to be displayed next to the radio input.
+ * @param {string} props.name - The name of the radio input.
+ * @param {string} props.value - The value of the radio input.
+ * @param {boolean} props.disabled - Indicates if the radio input is disabled.
+ * @param {boolean} props.checked - Indicates if the radio input is checked.
+ * @returns {import("react").ReactElement} Radio input component with label.
+ */
 const Radio = ({ className, children, name, value, disabled, checked, ...props }) => {
 	const classes = classNames("form-radio", className);
 

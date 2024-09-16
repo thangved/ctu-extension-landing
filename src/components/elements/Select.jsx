@@ -31,6 +31,22 @@ const defaultProps = {
 	hint: null,
 };
 
+/**
+ * Renders a custom select component with optional label, hint, and various styling options.
+ * @param {object} props - Additional props to spread on the select element.
+ * @param {string} props.className - Additional CSS class for the select component.
+ * @param {import("react").ReactNode} props.children - The options to be displayed within the select element.
+ * @param {string} props.label - The text label for the select component.
+ * @param {boolean} props.labelHidden - Determines if the label is hidden.
+ * @param {string} props.name - The name attribute of the select element.
+ * @param {string} props.status - The status of the select component.
+ * @param {boolean} props.disabled - Indicates if the select component is disabled.
+ * @param {any} props.value - The selected value of the select component.
+ * @param {string} props.size - The size of the select component.
+ * @param {string} props.placeholder - The placeholder text for the select component.
+ * @param {string} props.hint - The hint text to display below the select component.
+ * @returns {import("react").ReactElement} A custom select component with specified properties.
+ */
 const Select = ({
 	className,
 	children,

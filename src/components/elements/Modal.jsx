@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import { useCallback, useEffect } from "react";
+import ReactPlayer from "react-player";
 
 const propTypes = {
 	className: PropTypes.string,
@@ -26,17 +27,7 @@ const defaultProps = {
  * @description Modal component
  * @param {object} props
  */
-const Modal = ({
-	className,
-	children,
-	handleClose,
-	show,
-	closeHidden,
-	video,
-	videoTag,
-	subtitle,
-	...props
-}) => {
+const Modal = ({ className, children, handleClose, show, closeHidden, video, ...props }) => {
 	const stopPropagation = useCallback((e) => {
 		e.stopPropagation();
 	}, []);
@@ -74,19 +65,7 @@ const Modal = ({
 				<div className="modal-inner" onClick={stopPropagation} aria-hidden>
 					{video ? (
 						<div className="responsive-video">
-							{videoTag === "iframe" ? (
-								<iframe
-									sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
-									title="video"
-									src={video}
-									frameBorder="0"
-									allowFullScreen
-								/>
-							) : (
-								<video controls src={video}>
-									<track default kind="captions" srcLang="en" src={subtitle} />
-								</video>
-							)}
+							<ReactPlayer url={video} controls width="100%" height="100%" />
 						</div>
 					) : (
 						<>

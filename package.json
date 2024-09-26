@@ -4,7 +4,6 @@
 	"private": false,
 	"type": "module",
 	"dependencies": {
-		"@million/lint": "^1.0.0-rc.84",
 		"@vitejs/plugin-react-swc": "^3.7.0",
 		"classnames": "^2.2.6",
 		"lodash": "^4.17.15",
@@ -27,7 +26,8 @@
 		"build": "vite build",
 		"serve": "vite preview",
 		"generate-pwa-assets": "pwa-assets-generator --preset minimal-2023 public/logo.png",
-		"prepare": "husky"
+		"prepare": "husky",
+		"postbuild": "node ./scripts/postbuild.js"
 	},
 	"browserslist": {
 		"production": [

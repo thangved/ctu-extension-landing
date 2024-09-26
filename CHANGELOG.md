@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.6](https://github.com/thangved/ctu-extension-landing/compare/v1.0.5...v1.0.6) (2024-09-26)
+
+### Bug Fixes
+
+- **deps:** update dependency vite-tsconfig-paths to v5 ([08a43c6](https://github.com/thangved/ctu-extension-landing/commit/08a43c628548d1a0d37433d78923f07a65cab8e7))
+
 ## [1.0.5](https://github.com/thangved/ctu-extension-landing/compare/v1.0.4...v1.0.5) (2024-09-16)
 
 ### Bug Fixes

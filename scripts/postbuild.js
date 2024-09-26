@@ -9,7 +9,6 @@ const buildDir = path.resolve(__dirname, "../build");
 const indexHtmlPath = path.resolve(buildDir, "index.html");
 
 for (const targetFile of targetFiles) {
-	console.log(`Copying ${targetFile} to ${buildDir}`);
 	const targetPath = path.resolve(buildDir, targetFile);
 	fs.copyFileSync(indexHtmlPath, targetPath);
 }

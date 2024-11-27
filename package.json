@@ -13,7 +13,7 @@
 		"react-player": "^2.16.0",
 		"react-router-dom": "^5.1.2",
 		"sass": "^1.49.7",
-		"vite": "^5.3.5",
+		"vite": "^6.0.0",
 		"vite-plugin-svgr": "^4.2.0",
 		"vite-tsconfig-paths": "^5.0.0"
 	},

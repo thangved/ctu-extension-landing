@@ -13,7 +13,7 @@
 		"react-player": "^2.16.0",
 		"react-router-dom": "^5.1.2",
 		"sass": "^1.49.7",
-		"vite": "^5.3.5",
+		"vite": "^6.0.0",
 		"vite-plugin-svgr": "^4.2.0",
 		"vite-tsconfig-paths": "^5.0.0"
 	},
@@ -59,5 +59,5 @@
 		"prettier-plugin-organize-imports": "^4.0.0",
 		"vite-imagetools": "^7.0.4"
 	},
-	"packageManager": "npm@10.9.0+sha512.65a9c38a8172948f617a53619762cd77e12b9950fe1f9239debcb8d62c652f2081824b986fee7c0af6c0a7df615becebe4bf56e17ec27214a87aa29d9e038b4b"
+	"packageManager": "npm@10.9.1+sha512.c89530d37c4baa38afd43e76a077a84b9aa63840b986426584fd5c5a54ab0a0b21bb1595c851042b733784b0b43706d36a494b4d8ae1a086a762cb8d3f95942a"
 }

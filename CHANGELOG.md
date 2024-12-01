@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.7](https://github.com/thangved/ctu-extension-landing/compare/v1.0.6...v1.0.7) (2024-12-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency vite to v6 ([66920c2](https://github.com/thangved/ctu-extension-landing/commit/66920c2383724c102eaa40acbfa8b49ed9d43aec))
+
 ## [1.0.6](https://github.com/thangved/ctu-extension-landing/compare/v1.0.5...v1.0.6) (2024-09-26)
 
 ### Bug Fixes

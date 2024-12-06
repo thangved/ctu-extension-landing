@@ -2,10 +2,9 @@
 
 ## [1.0.8](https://github.com/thangved/ctu-extension-landing/compare/v1.0.7...v1.0.8) (2024-12-06)
 
-
 ### Bug Fixes
 
-* **deps:** update react monorepo to v19 ([57e17a0](https://github.com/thangved/ctu-extension-landing/commit/57e17a02d10b4e1fa593e075f7f9c9c230192cd7))
+- **deps:** update react monorepo to v19 ([57e17a0](https://github.com/thangved/ctu-extension-landing/commit/57e17a02d10b4e1fa593e075f7f9c9c230192cd7))
 
 ## [1.0.7](https://github.com/thangved/ctu-extension-landing/compare/v1.0.6...v1.0.7) (2024-12-01)
 

@@ -25,7 +25,7 @@
 		"start": "vite",
 		"build": "vite build",
 		"serve": "vite preview",
-		"generate-pwa-assets": "pwa-assets-generator --preset minimal-2023 public/logo.png",
+		"generate-pwa-assets": "pwa-assets-generator --preset minimal-2023 public/logo.svg",
 		"prepare": "husky",
 		"postbuild": "node ./scripts/postbuild.js"
 	},

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/thangved/ctu-extension-landing/compare/v1.1.0...v1.2.0) (2024-12-21)
+
+
+### Features
+
+* sitemap ([78d45dd](https://github.com/thangved/ctu-extension-landing/commit/78d45dd06ad260cda1eaf3ecf2d3b0fc44a6db33))
+
 ## [1.1.0](https://github.com/thangved/ctu-extension-landing/compare/v1.0.8...v1.1.0) (2024-12-21)
 
 ### Features

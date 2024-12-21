@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/thangved/ctu-extension-landing/compare/v1.0.8...v1.1.0) (2024-12-21)
+
+
+### Features
+
+* add keywords ([2ba9b54](https://github.com/thangved/ctu-extension-landing/commit/2ba9b54eb24973c4da4012b074bed00fcf6b5b0c))
+* add pwa assets ([9afed99](https://github.com/thangved/ctu-extension-landing/commit/9afed997142c8da48332dfd1630fed1400af428b))
+
 ## [1.0.8](https://github.com/thangved/ctu-extension-landing/compare/v1.0.7...v1.0.8) (2024-12-06)
 
 ### Bug Fixes

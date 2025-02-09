@@ -1,14 +1,14 @@
-import styles from "./Docs.module.css";
+import styles from './Docs.module.css';
 
-import ss00 from "../assets/images/screenshots/00.png";
-import ss01 from "../assets/images/screenshots/01.png";
-import ss02 from "../assets/images/screenshots/02.png";
-import ss03 from "../assets/images/screenshots/03.png";
-import ss04 from "../assets/images/screenshots/04.png";
-import ss05 from "../assets/images/screenshots/05.png";
-import ss06 from "../assets/images/screenshots/06.png";
+import ss00 from '../assets/images/screenshots/00.png';
+import ss01 from '../assets/images/screenshots/01.png';
+import ss02 from '../assets/images/screenshots/02.png';
+import ss03 from '../assets/images/screenshots/03.png';
+import ss04 from '../assets/images/screenshots/04.png';
+import ss05 from '../assets/images/screenshots/05.png';
+import ss06 from '../assets/images/screenshots/06.png';
 
-import Image from "../components/elements/Image";
+import Image from '../components/elements/Image';
 
 /**
  * Renders the documentation page for using the CTU Extension.
@@ -36,7 +36,7 @@ const Docs = () => {
 
         <ol>
           <li>
-            Cài đặt tự động từ{" "}
+            Cài đặt tự động từ{' '}
             <a
               href="https://chrome.google.com/webstore/detail/ctu-extension/lggkifjaacghbpebpcbaneimpogjbnmf"
               target="_blank"
@@ -48,7 +48,7 @@ const Docs = () => {
           </li>
 
           <li>
-            Cài đặt thủ công từ mã nguồn trên{" "}
+            Cài đặt thủ công từ mã nguồn trên{' '}
             <a
               href="https://github.com/thangved/ctu-extension"
               target="_blank"
@@ -76,11 +76,11 @@ const Docs = () => {
 
         <p>
           <i>
-            Giao diện của tiện ích được xây dựng trên nền thư viện{" "}
+            Giao diện của tiện ích được xây dựng trên nền thư viện{' '}
             <a href="//react.dev" target="_blank" rel="noopener noreferrer">
               React
-            </a>{" "}
-            và{" "}
+            </a>{' '}
+            và{' '}
             <a href="//ant.design" target="_blank" rel="noopener noreferrer">
               Ant Design
             </a>
@@ -172,7 +172,7 @@ const Docs = () => {
           <li>
             <b className="text-color-primary">Giới hạn tính</b>: Tính năng giới hạn giúp bạn kiểm
             soát được số lượng thời khóa biểu được gợi ý cho bạn do việc tính toán nhiều với số
-            lượng tổ hợp rất lớn có thể dẫn đến ứng dụng bị crash. Mặc định, giá trị này là{" "}
+            lượng tổ hợp rất lớn có thể dẫn đến ứng dụng bị crash. Mặc định, giá trị này là{' '}
             <strong>1000</strong> và bạn có thể thay đổi nó theo ý muốn của mình. Lưu ý là bạn không
             nên để chỉ số này quá cao vì có thể gây treo máy!
           </li>

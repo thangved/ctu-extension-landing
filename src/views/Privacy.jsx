@@ -1,4 +1,4 @@
-import styles from "./Docs.module.css";
+import styles from './Docs.module.css';
 
 /**
  * Privacy component
@@ -42,7 +42,7 @@ export default function Privacy() {
 
         <p>
           CTU Extension là một công cụ nguồn mở, vì vậy các bạn có thể xác thực các thông tin trong
-          văn bản này tại{" "}
+          văn bản này tại{' '}
           <a
             href="https://github.com/thangved/ctu-extension"
             target="_blank"

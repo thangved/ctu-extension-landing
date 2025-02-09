@@ -45,7 +45,7 @@
       border-radius: 50%;
       border-right-color: transparent !important;
       border-top-color: transparent !important;
-      content: "";
+      content: '';
       display: block;
       height: get-line-height(button);
       left: 50%;
@@ -152,12 +152,12 @@
     margin-bottom: ($button-group-padding * 0.5);
   }
 
-  > [class*="button"] {
+  > [class*='button'] {
     margin: $button-group-padding * 0.5;
   }
 }
 
-@include media("<=medium") {
+@include media('<=medium') {
   .button-wide-mobile {
     max-width: $button--max-size-mobile;
     width: 100%;

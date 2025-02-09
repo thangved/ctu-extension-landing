@@ -1,7 +1,7 @@
-import classNames from "classnames";
-import PropTypes from "prop-types";
-import FormHint from "./FormHint";
-import FormLabel from "./FormLabel";
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import FormHint from './FormHint';
+import FormLabel from './FormLabel';
 
 const propTypes = {
   className: PropTypes.string,
@@ -9,17 +9,17 @@ const propTypes = {
   label: PropTypes.string,
   labelHidden: PropTypes.bool,
   type: PropTypes.oneOf([
-    "textarea",
-    "text",
-    "email",
-    "tel",
-    "password",
-    "number",
-    "search",
-    "color",
-    "date",
-    "time",
-    "datetime-local",
+    'textarea',
+    'text',
+    'email',
+    'tel',
+    'password',
+    'number',
+    'search',
+    'color',
+    'date',
+    'time',
+    'datetime-local',
   ]),
   name: PropTypes.string,
   status: PropTypes.string,
@@ -36,17 +36,17 @@ const propTypes = {
 
 const defaultProps = {
   children: null,
-  label: "",
+  label: '',
   labelHidden: false,
-  type: "text",
+  type: 'text',
   name: undefined,
-  status: "",
+  status: '',
   disabled: false,
   value: undefined,
   formGroup: null,
   hasIcon: null,
-  size: "",
-  placeholder: "",
+  size: '',
+  placeholder: '',
   rows: 3,
   hint: null,
 };
@@ -91,19 +91,19 @@ const Input = ({
 }) => {
   const wrapperClasses = classNames(
     formGroup &&
-      formGroup !== "" &&
-      (formGroup === "desktop" ? "form-group-desktop" : "form-group"),
-    hasIcon && hasIcon !== "" && `has-icon-${hasIcon}`,
+      formGroup !== '' &&
+      (formGroup === 'desktop' ? 'form-group-desktop' : 'form-group'),
+    hasIcon && hasIcon !== '' && `has-icon-${hasIcon}`,
   );
 
   const classes = classNames(
-    "form-input",
+    'form-input',
     size && `form-input-${size}`,
     status && `form-${status}`,
     className,
   );
 
-  const Component = type === "textarea" ? "textarea" : "input";
+  const Component = type === 'textarea' ? 'textarea' : 'input';
   return (
     <>
       {label && (
@@ -114,13 +114,13 @@ const Input = ({
       <div className={wrapperClasses}>
         <Component
           {...props}
-          type={type !== "textarea" ? type : null}
+          type={type !== 'textarea' ? type : null}
           className={classes}
           name={name}
           disabled={disabled}
           value={value}
           placeholder={placeholder}
-          rows={type === "textarea" ? rows : null}
+          rows={type === 'textarea' ? rows : null}
         />
         {children}
       </div>

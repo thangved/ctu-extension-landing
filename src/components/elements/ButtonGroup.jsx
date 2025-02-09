@@ -1,5 +1,5 @@
-import classNames from "classnames";
-import PropTypes from "prop-types";
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 const propTypes = {
   className: PropTypes.string,
@@ -12,7 +12,7 @@ const propTypes = {
  * @returns {import("react").ReactElement} - The button group component
  */
 const ButtonGroup = ({ className, ...props }) => {
-  const classes = classNames("button-group", className);
+  const classes = classNames('button-group', className);
 
   return <div {...props} className={classes} />;
 };

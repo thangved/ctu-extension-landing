@@ -250,7 +250,7 @@ textarea.form-input {
     &::before {
       background: get-color(light, 1);
       border-radius: 14px;
-      content: "";
+      content: '';
       display: block;
       height: 28px;
       left: 2px;
@@ -290,7 +290,7 @@ textarea.form-input {
     display: block;
   }
 
-  input[type="range"] {
+  input[type='range'] {
     -moz-appearance: none;
     -webkit-appearance: none;
     background: color-bg(range-track);
@@ -435,7 +435,7 @@ textarea.form-input {
   }
 
   .form-slider {
-    input[type="range"] {
+    input[type='range'] {
       background: color-bg(range-track-inverse);
 
       &::-webkit-slider-thumb {
@@ -502,7 +502,7 @@ textarea.form-input {
   margin-top: $form-hint--margin;
 }
 
-@include media("<=medium") {
+@include media('<=medium') {
   .form-group-desktop {
     .form-input {
       margin-bottom: $button-form--group-padding;
@@ -525,7 +525,7 @@ textarea.form-input {
   }
 }
 
-@include media(">medium") {
+@include media('>medium') {
   .form-group-desktop {
     display: flex;
 

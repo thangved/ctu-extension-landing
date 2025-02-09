@@ -1,6 +1,6 @@
-import classNames from "classnames";
-import PropTypes from "prop-types";
-import { useMemo } from "react";
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import { useMemo } from 'react';
 
 const propTypes = {
   className: PropTypes.string,
@@ -33,7 +33,7 @@ const FormLabel = ({ className, children, labelHidden, id, ...props }) => {
   };
 
   const classes = useMemo(
-    () => classNames("form-label", Boolean(labelHidden) && "screen-reader", className),
+    () => classNames('form-label', Boolean(labelHidden) && 'screen-reader', className),
     [labelHidden, className],
   );
 

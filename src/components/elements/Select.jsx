@@ -1,7 +1,7 @@
-import classNames from "classnames";
-import PropTypes from "prop-types";
-import FormHint from "./FormHint";
-import FormLabel from "./FormLabel";
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import FormHint from './FormHint';
+import FormLabel from './FormLabel';
 
 const propTypes = {
   className: PropTypes.string,
@@ -20,13 +20,13 @@ const propTypes = {
 
 const defaultProps = {
   children: null,
-  label: "",
+  label: '',
   labelHidden: false,
   name: undefined,
-  status: "",
+  status: '',
   disabled: false,
   value: undefined,
-  size: "",
+  size: '',
   placeholder: null,
   hint: null,
 };
@@ -62,7 +62,7 @@ const Select = ({
   ...props
 }) => {
   const classes = classNames(
-    "form-select",
+    'form-select',
     size && `form-select-${size}`,
     status && `form-${status}`,
     className,

@@ -1,6 +1,6 @@
-import classNames from "classnames";
-import PropTypes from "prop-types";
-import { SectionProps } from "../../utils/SectionProps";
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import { SectionProps } from '../../utils/SectionProps';
 
 const propTypes = {
   children: PropTypes.node,
@@ -37,18 +37,18 @@ const GenericSection = ({
   ...props
 }) => {
   const outerClasses = classNames(
-    "section",
-    topOuterDivider && "has-top-divider",
-    bottomOuterDivider && "has-bottom-divider",
-    hasBgColor && "has-bg-color",
-    invertColor && "invert-color",
+    'section',
+    topOuterDivider && 'has-top-divider',
+    bottomOuterDivider && 'has-bottom-divider',
+    hasBgColor && 'has-bg-color',
+    invertColor && 'invert-color',
     className,
   );
 
   const innerClasses = classNames(
-    "section-inner",
-    topDivider && "has-top-divider",
-    bottomDivider && "has-bottom-divider",
+    'section-inner',
+    topDivider && 'has-top-divider',
+    bottomDivider && 'has-bottom-divider',
   );
 
   return (

@@ -15,7 +15,7 @@
   padding-right: 16px;
 }
 
-@include media(">medium") {
+@include media('>medium') {
   .cta {
     .form-input {
       min-width: 280px;

@@ -1,6 +1,6 @@
-import classNames from "classnames";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const propTypes = {
   className: PropTypes.string,
@@ -13,7 +13,7 @@ const propTypes = {
  * @returns {import("react").ReactElement} FooterNav component
  */
 const FooterNav = ({ className, ...props }) => {
-  const classes = classNames("footer-nav", className);
+  const classes = classNames('footer-nav', className);
 
   return (
     <nav {...props} className={classes}>

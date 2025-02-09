@@ -1,6 +1,6 @@
-import PropTypes from "prop-types";
-import { useCallback } from "react";
-import { Route } from "react-router-dom";
+import PropTypes from 'prop-types';
+import { useCallback } from 'react';
+import { Route } from 'react-router-dom';
 
 const propTypes = {
   component: PropTypes.func,

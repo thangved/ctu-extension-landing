@@ -1,8 +1,8 @@
-import classNames from "classnames";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-import logo from "../../../assets/images/logo.svg";
-import Image from "../../elements/Image";
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import logo from '../../../assets/images/logo.svg';
+import Image from '../../elements/Image';
 
 const propTypes = {
   className: PropTypes.string,
@@ -15,7 +15,7 @@ const propTypes = {
  * @returns {import("react").ReactElement} - The logo component
  */
 const Logo = ({ className, ...props }) => {
-  const classes = classNames("brand", className);
+  const classes = classNames('brand', className);
 
   return (
     <div {...props} className={classes}>

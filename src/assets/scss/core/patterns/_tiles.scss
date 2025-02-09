@@ -17,7 +17,7 @@
   &.push-left {
     &::after {
       box-sizing: content-box;
-      content: "";
+      content: '';
       flex-basis: $tiles-item--width;
       height: 0;
       max-width: $tiles-item--width;
@@ -47,7 +47,7 @@
 }
 
 @if ($tiles-items--padding__desktop != null) {
-  @include media(">medium") {
+  @include media('>medium') {
     .tiles-wrap {
       margin-left: -($tiles-items--padding__desktop * 0.5);
       margin-right: -($tiles-items--padding__desktop * 0.5);

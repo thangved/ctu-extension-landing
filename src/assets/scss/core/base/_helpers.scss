@@ -500,7 +500,7 @@ img.has-shadow {
   padding-top: 64px;
 }
 
-@include media("<=medium") {
+@include media('<=medium') {
   .ta-l-mobile {
     text-align: left;
   }
@@ -562,7 +562,7 @@ img.has-shadow {
   }
 }
 
-@include media(">medium") {
+@include media('>medium') {
   .ta-l-desktop {
     text-align: left;
   }

@@ -1,7 +1,7 @@
-import classNames from "classnames";
-import PropTypes from "prop-types";
-import { useCallback, useEffect } from "react";
-import ReactPlayer from "react-player";
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import { useCallback, useEffect } from 'react';
+import ReactPlayer from 'react-player';
 
 const propTypes = {
   className: PropTypes.string,
@@ -10,7 +10,7 @@ const propTypes = {
   show: PropTypes.bool,
   closeHidden: PropTypes.bool,
   video: PropTypes.string,
-  videoTag: PropTypes.oneOf(["iframe", "video"]),
+  videoTag: PropTypes.oneOf(['iframe', 'video']),
   subtitle: PropTypes.string,
 };
 
@@ -18,8 +18,8 @@ const defaultProps = {
   children: null,
   show: false,
   closeHidden: false,
-  video: "",
-  videoTag: "iframe",
+  video: '',
+  videoTag: 'iframe',
   subtitle: null,
 };
 
@@ -44,19 +44,19 @@ const Modal = ({ className, children, handleClose, show, closeHidden, video, ...
   }, []);
 
   useEffect(() => {
-    document.addEventListener("keydown", keyPress);
-    document.addEventListener("click", stopPropagation);
+    document.addEventListener('keydown', keyPress);
+    document.addEventListener('click', stopPropagation);
     return () => {
-      document.removeEventListener("keydown", keyPress);
-      document.removeEventListener("click", stopPropagation);
+      document.removeEventListener('keydown', keyPress);
+      document.removeEventListener('click', stopPropagation);
     };
   });
 
   const handleBodyClass = useCallback(() => {
-    if (document.querySelectorAll(".modal.is-active").length) {
-      document.body.classList.add("modal-is-active");
+    if (document.querySelectorAll('.modal.is-active').length) {
+      document.body.classList.add('modal-is-active');
     } else {
-      document.body.classList.remove("modal-is-active");
+      document.body.classList.remove('modal-is-active');
     }
   }, []);
 
@@ -64,7 +64,7 @@ const Modal = ({ className, children, handleClose, show, closeHidden, video, ...
     handleBodyClass();
   }, [props.show]);
 
-  const classes = classNames("modal", show && "is-active", video && "modal-video", className);
+  const classes = classNames('modal', show && 'is-active', video && 'modal-video', className);
 
   return (
     show && (

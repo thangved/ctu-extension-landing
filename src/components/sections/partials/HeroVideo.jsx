@@ -1,6 +1,6 @@
-import { useCallback, useState } from "react";
-import videoPlaceholder from "../../../assets/images/video-placeholder.jpg";
-import Modal from "../../elements/Modal";
+import { useCallback, useState } from 'react';
+import videoPlaceholder from '../../../assets/images/video-placeholder.jpg';
+import Modal from '../../elements/Modal';
 
 /**
  * Hero video
@@ -32,10 +32,10 @@ export default function HeroVideo() {
           aria-hidden
           style={{
             background: `url(${videoPlaceholder}) no-repeat center/cover`,
-            display: "block",
-            width: "100%",
-            aspectRatio: "16/9",
-            cursor: "pointer",
+            display: 'block',
+            width: '100%',
+            aspectRatio: '16/9',
+            cursor: 'pointer',
           }}
           onClick={openModal}
         />

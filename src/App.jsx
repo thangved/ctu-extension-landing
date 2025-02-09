@@ -1,16 +1,16 @@
-import { useEffect, useRef } from "react";
-import ReactGA from "react-ga";
-import { Switch, useLocation } from "react-router-dom";
-import AppRoute from "./utils/AppRoute";
-import ScrollReveal from "./utils/ScrollReveal";
+import { useEffect, useRef } from 'react';
+import ReactGA from 'react-ga';
+import { Switch, useLocation } from 'react-router-dom';
+import AppRoute from './utils/AppRoute';
+import ScrollReveal from './utils/ScrollReveal';
 
 // Layouts
-import LayoutDefault from "./layouts/LayoutDefault";
+import LayoutDefault from './layouts/LayoutDefault';
 
 // Views
-import Docs from "./views/Docs";
-import Home from "./views/Home";
-import Privacy from "./views/Privacy";
+import Docs from './views/Docs';
+import Home from './views/Home';
+import Privacy from './views/Privacy';
 
 ReactGA.initialize(import.meta.env.VITE_APP_GA_CODE);
 
@@ -45,7 +45,7 @@ const App = () => {
 
   useEffect(() => {
     const page = location.pathname;
-    document.body.classList.add("is-loaded");
+    document.body.classList.add('is-loaded');
     childRef.current.init();
     trackPage(page);
   }, [location]);

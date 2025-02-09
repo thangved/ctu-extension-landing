@@ -39,7 +39,7 @@
   }
 }
 
-@include media("<=medium") {
+@include media('<=medium') {
   .split-wrap {
     .split-item {
       .split-item-content {
@@ -62,7 +62,7 @@
   }
 }
 
-@include media(">medium") {
+@include media('>medium') {
   .split-wrap {
     margin-top: -($split-item--padding-v__desktop * 0.5);
 
@@ -124,7 +124,7 @@
   }
 }
 
-@include media(">large") {
+@include media('>large') {
   .container {
     .split-wrap {
       .split-item {

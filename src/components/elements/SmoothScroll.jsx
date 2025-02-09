@@ -1,6 +1,6 @@
-import classNames from "classnames";
-import PropTypes from "prop-types";
-import { useCallback } from "react";
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import { useCallback } from 'react';
 
 const propTypes = {
   children: PropTypes.node,

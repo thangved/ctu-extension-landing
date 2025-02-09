@@ -1,6 +1,6 @@
-import CrIcon from "../../../icons/Cr";
-import Button from "../../elements/Button";
-import ButtonGroup from "../../elements/ButtonGroup";
+import CrIcon from '../../../icons/Cr';
+import Button from '../../elements/Button';
+import ButtonGroup from '../../elements/ButtonGroup';
 
 /**
  * Hero buttons

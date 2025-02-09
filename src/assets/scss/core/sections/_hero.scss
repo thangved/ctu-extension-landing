@@ -22,7 +22,7 @@
   }
 }
 
-@include media("<=medium") {
+@include media('<=medium') {
   .hero {
     .split-wrap {
       .split-item {
@@ -42,7 +42,7 @@
   }
 }
 
-@include media(">medium") {
+@include media('>medium') {
   .hero {
     .section-inner {
       padding-bottom: $hero--padding-b__desktop;

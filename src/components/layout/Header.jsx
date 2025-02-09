@@ -1,7 +1,7 @@
-import classNames from "classnames";
-import PropTypes from "prop-types";
-import HeaderNavbar from "./partials/HeaderNavbar";
-import Logo from "./partials/Logo";
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import HeaderNavbar from './partials/HeaderNavbar';
+import Logo from './partials/Logo';
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -13,7 +13,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  navPosition: "",
+  navPosition: '',
   hideNav: false,
   hideSignin: false,
   bottomOuterDivider: false,
@@ -40,12 +40,12 @@ const Header = ({
   bottomDivider,
   ...props
 }) => {
-  const classes = classNames("site-header", bottomOuterDivider && "has-bottom-divider", className);
+  const classes = classNames('site-header', bottomOuterDivider && 'has-bottom-divider', className);
 
   return (
     <header {...props} className={classes}>
       <div className="container">
-        <div className={classNames("site-header-inner", bottomDivider && "has-bottom-divider")}>
+        <div className={classNames('site-header-inner', bottomDivider && 'has-bottom-divider')}>
           <Logo />
           {!hideNav && <HeaderNavbar navPosition={navPosition} hideSignin={hideSignin} />}
         </div>

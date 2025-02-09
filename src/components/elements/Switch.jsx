@@ -1,5 +1,5 @@
-import classNames from "classnames";
-import PropTypes from "prop-types";
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 const propTypes = {
   children: PropTypes.node,
@@ -33,7 +33,7 @@ const defaultProps = {
  * @returns {import("react").ReactElement} A custom switch element with specified properties.
  */
 const Switch = ({ className, children, name, value, rightLabel, disabled, checked, ...props }) => {
-  const classes = classNames("form-switch", className);
+  const classes = classNames('form-switch', className);
 
   return (
     <label className={classes}>

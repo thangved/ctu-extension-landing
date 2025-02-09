@@ -85,7 +85,7 @@
   display: none;
 }
 
-@include media("<=medium") {
+@include media('<=medium') {
   .header-nav-toggle {
     display: block;
 
@@ -137,7 +137,7 @@
   }
 }
 
-@include media(">medium") {
+@include media('>medium') {
   .site-header {
     + .site-content {
       .section:first-of-type {

@@ -61,7 +61,7 @@
   flex-wrap: wrap;
 }
 
-@include media(">medium") {
+@include media('>medium') {
   .testimonial {
     .section-inner {
       padding-bottom: $testimonial--padding-b__desktop;

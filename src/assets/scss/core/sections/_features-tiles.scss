@@ -51,7 +51,7 @@
   }
 }
 
-@include media(">medium") {
+@include media('>medium') {
   .features-tiles {
     .section-inner {
       padding-bottom: $features-tiles--padding-b__desktop;

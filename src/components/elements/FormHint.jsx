@@ -1,5 +1,5 @@
-import classNames from "classnames";
-import PropTypes from "prop-types";
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 const propTypes = {
   children: PropTypes.node,
@@ -21,7 +21,7 @@ const defaultProps = {
  * @returns {import("react").ReactElement} A div element representing the form hint with specified content and styles.
  */
 const FormHint = ({ children, className, status, ...props }) => {
-  const classes = classNames("form-hint", status && `text-color-${status}`, className);
+  const classes = classNames('form-hint', status && `text-color-${status}`, className);
 
   return (
     <div {...props} className={classes}>

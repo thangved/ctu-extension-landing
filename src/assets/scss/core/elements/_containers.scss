@@ -6,7 +6,7 @@
   padding-right: $container--padding__mobile;
   width: 100%;
 
-  @include media(">small") {
+  @include media('>small') {
     padding-left: $container--padding__desktop;
     padding-right: $container--padding__desktop;
   }
@@ -24,8 +24,8 @@
   max-width: $container--width-xs + ($container--padding__desktop * 2);
 }
 
-[class*="container"] {
-  [class*="container"] {
+[class*='container'] {
+  [class*='container'] {
     padding-left: 0;
     padding-right: 0;
   }

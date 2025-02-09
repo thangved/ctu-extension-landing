@@ -1,7 +1,7 @@
-import classNames from "classnames";
-import PropTypes from "prop-types";
-import { useCallback, useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const propTypes = {
   hideSignin: PropTypes.bool,
@@ -22,13 +22,13 @@ export default function HeaderNavbar({ hideSignin, navPosition }) {
   const nav = useRef(null);
 
   const openMenu = useCallback(() => {
-    document.body.classList.add("off-nav-is-active");
+    document.body.classList.add('off-nav-is-active');
     nav.current.style.maxHeight = `${nav.current.scrollHeight}px`;
     setIsActive(true);
   }, []);
 
   const closeMenu = useCallback(() => {
-    document.body.classList.remove("off-nav-is-active");
+    document.body.classList.remove('off-nav-is-active');
 
     setIsActive(false);
   }, []);
@@ -48,11 +48,11 @@ export default function HeaderNavbar({ hideSignin, navPosition }) {
 
   useEffect(() => {
     isActive && openMenu();
-    document.addEventListener("keydown", keyPress);
-    document.addEventListener("click", clickOutside);
+    document.addEventListener('keydown', keyPress);
+    document.addEventListener('click', clickOutside);
     return () => {
-      document.removeEventListener("keydown", keyPress);
-      document.removeEventListener("click", clickOutside);
+      document.removeEventListener('keydown', keyPress);
+      document.removeEventListener('click', clickOutside);
       closeMenu();
     };
   });
@@ -69,10 +69,10 @@ export default function HeaderNavbar({ hideSignin, navPosition }) {
           <span className="hamburger-inner" />
         </span>
       </button>
-      <nav ref={nav} className={classNames("header-nav", isActive && "is-active")}>
+      <nav ref={nav} className={classNames('header-nav', isActive && 'is-active')}>
         <div className="header-nav-inner">
           <ul
-            className={classNames("list-reset text-xs", navPosition && `header-nav-${navPosition}`)}
+            className={classNames('list-reset text-xs', navPosition && `header-nav-${navPosition}`)}
           >
             <Link to="/docs" onClick={closeMenu}>
               Tài liệu

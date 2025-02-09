@@ -1,6 +1,6 @@
-import { throttle } from "lodash";
-import PropTypes from "prop-types";
-import React, { useEffect, useImperativeHandle, useState } from "react";
+import { throttle } from 'lodash';
+import PropTypes from 'prop-types';
+import React, { useEffect, useImperativeHandle, useState } from 'react';
 
 const ScrollReveal = React.forwardRef(function ScrollReveal(props, ref) {
   const [viewportHeight, setViewportheight] = useState(window.innerHeight);
@@ -11,7 +11,7 @@ const ScrollReveal = React.forwardRef(function ScrollReveal(props, ref) {
    * @returns {boolean} - True if all elements are revealed
    */
   const checkComplete = () => {
-    return revealEl.length <= document.querySelectorAll("[class*=reveal-].is-revealed").length;
+    return revealEl.length <= document.querySelectorAll('[class*=reveal-].is-revealed').length;
   };
 
   /**
@@ -32,20 +32,20 @@ const ScrollReveal = React.forwardRef(function ScrollReveal(props, ref) {
     if (checkComplete()) return;
     for (let i = 0; i < revealEl.length; i++) {
       const el = revealEl[i];
-      const revealDelay = el.getAttribute("data-reveal-delay");
-      const revealOffset = el.getAttribute("data-reveal-offset")
-        ? el.getAttribute("data-reveal-offset")
-        : "200";
-      const listenedEl = el.getAttribute("data-reveal-container")
-        ? el.closest(el.getAttribute("data-reveal-container"))
+      const revealDelay = el.getAttribute('data-reveal-delay');
+      const revealOffset = el.getAttribute('data-reveal-offset')
+        ? el.getAttribute('data-reveal-offset')
+        : '200';
+      const listenedEl = el.getAttribute('data-reveal-container')
+        ? el.closest(el.getAttribute('data-reveal-container'))
         : el;
-      if (elementIsVisible(listenedEl, revealOffset) && !el.classList.contains("is-revealed")) {
+      if (elementIsVisible(listenedEl, revealOffset) && !el.classList.contains('is-revealed')) {
         if (revealDelay && revealDelay !== 0) {
           setTimeout(function () {
-            el.classList.add("is-revealed");
+            el.classList.add('is-revealed');
           }, revealDelay);
         } else {
-          el.classList.add("is-revealed");
+          el.classList.add('is-revealed');
         }
       }
     }
@@ -53,7 +53,7 @@ const ScrollReveal = React.forwardRef(function ScrollReveal(props, ref) {
 
   useImperativeHandle(ref, () => ({
     init() {
-      setRevealel(document.querySelectorAll("[class*=reveal-]"));
+      setRevealel(document.querySelectorAll('[class*=reveal-]'));
     },
   }));
 
@@ -80,15 +80,15 @@ const ScrollReveal = React.forwardRef(function ScrollReveal(props, ref) {
    */
   function handleListeners() {
     if (!checkComplete()) return;
-    window.removeEventListener("scroll", handleScroll);
-    window.removeEventListener("resize", handleResize);
+    window.removeEventListener('scroll', handleScroll);
+    window.removeEventListener('resize', handleResize);
   }
 
   useEffect(() => {
-    if (typeof revealEl !== "undefined" && revealEl.length > 0) {
+    if (typeof revealEl !== 'undefined' && revealEl.length > 0) {
       if (!checkComplete()) {
-        window.addEventListener("scroll", handleScroll);
-        window.addEventListener("resize", handleResize);
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleResize);
       }
       revealElements();
     }

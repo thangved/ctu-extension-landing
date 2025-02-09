@@ -4,7 +4,7 @@
   &::before {
     background: color-bg(footer);
     bottom: 0;
-    content: "";
+    content: '';
     height: 100%;
     left: 0;
     position: absolute;
@@ -152,7 +152,7 @@
   }
 }
 
-@include media("<=medium") {
+@include media('<=medium') {
   .footer-top,
   .footer-bottom {
     > *:not(:last-child) {
@@ -161,7 +161,7 @@
   }
 }
 
-@include media(">medium") {
+@include media('>medium') {
   @if ($footer--padding__mobile != $footer--padding__desktop) {
     .site-footer-inner {
       padding: $footer--padding__desktop 0;

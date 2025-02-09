@@ -153,11 +153,11 @@ blockquote {
   margin-top: $spacing--shared-v;
 
   &::before {
-    content: "\201C";
+    content: '\201C';
   }
 
   &::after {
-    content: "\201D";
+    content: '\201D';
   }
 
   p {
@@ -275,7 +275,7 @@ strong {
   }
 }
 
-@include media("<=medium") {
+@include media('<=medium') {
   .h1-mobile {
     @include font-size(h1);
   }
@@ -301,7 +301,7 @@ strong {
   }
 }
 
-@include media(">medium") {
+@include media('>medium') {
   html {
     @include font-size(base-desktop);
   }

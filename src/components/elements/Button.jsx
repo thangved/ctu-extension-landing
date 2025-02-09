@@ -1,5 +1,5 @@
-import classNames from "classnames";
-import PropTypes from "prop-types";
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 const propTypes = {
   className: PropTypes.string,
@@ -15,9 +15,9 @@ const propTypes = {
 };
 
 const defaultProps = {
-  tag: "button",
-  color: "",
-  size: "",
+  tag: 'button',
+  color: '',
+  size: '',
   loading: false,
   wide: false,
   wideMobile: false,
@@ -53,12 +53,12 @@ const Button = ({
   ...props
 }) => {
   const classes = classNames(
-    "button",
+    'button',
     color && `button-${color}`,
     size && `button-${size}`,
-    loading && "is-loading",
-    wide && "button-block",
-    wideMobile && "button-wide-mobile",
+    loading && 'is-loading',
+    wide && 'button-block',
+    wideMobile && 'button-wide-mobile',
     className,
   );
 

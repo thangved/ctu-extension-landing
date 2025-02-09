@@ -1,7 +1,7 @@
-import classNames from "classnames";
-import PropTypes from "prop-types";
-import FbIcon from "../../../icons/Fb";
-import IgIcon from "../../../icons/Ig";
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import FbIcon from '../../../icons/Fb';
+import IgIcon from '../../../icons/Ig';
 
 const propTypes = {
   className: PropTypes.string,
@@ -14,7 +14,7 @@ const propTypes = {
  * @returns {import("react").ReactElement} - The footer social component
  */
 const FooterSocial = ({ className, ...props }) => {
-  const classes = classNames("footer-social", className);
+  const classes = classNames('footer-social', className);
 
   return (
     <div {...props} className={classes}>

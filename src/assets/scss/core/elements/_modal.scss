@@ -29,7 +29,7 @@
 
   &::before {
     background-color: color-bg(modal-outer);
-    content: "";
+    content: '';
     position: absolute;
   }
 
@@ -83,7 +83,7 @@
   &::after {
     background: color-icon(modal);
     border-radius: $modal-close-icon--radius;
-    content: "";
+    content: '';
     display: block;
     height: $modal-close-icon--thickness;
     left: 50%;
@@ -110,7 +110,7 @@
   }
 }
 
-@include media(">medium") {
+@include media('>medium') {
   .modal-inner {
     margin: 0 auto;
     max-height: calc(100vh - #{$modal--outer-padding-v__desktop} * 2);

@@ -1,7 +1,7 @@
-import classNames from "classnames";
-import { SectionTilesProps } from "../../utils/SectionProps";
-import FeedbackCard from "../elements/FeedbackCard";
-import SectionHeader from "./partials/SectionHeader";
+import classNames from 'classnames';
+import { SectionTilesProps } from '../../utils/SectionProps';
+import FeedbackCard from '../elements/FeedbackCard';
+import SectionHeader from './partials/SectionHeader';
 
 const propTypes = {
   ...SectionTilesProps.types,
@@ -36,25 +36,25 @@ const Testimonial = ({
   ...props
 }) => {
   const outerClasses = classNames(
-    "testimonial section",
-    topOuterDivider && "has-top-divider",
-    bottomOuterDivider && "has-bottom-divider",
-    hasBgColor && "has-bg-color",
-    invertColor && "invert-color",
+    'testimonial section',
+    topOuterDivider && 'has-top-divider',
+    bottomOuterDivider && 'has-bottom-divider',
+    hasBgColor && 'has-bg-color',
+    invertColor && 'invert-color',
     className,
   );
 
   const innerClasses = classNames(
-    "testimonial-inner section-inner",
-    topDivider && "has-top-divider",
-    bottomDivider && "has-bottom-divider",
+    'testimonial-inner section-inner',
+    topDivider && 'has-top-divider',
+    bottomDivider && 'has-bottom-divider',
   );
 
-  const tilesClasses = classNames("tiles-wrap", pushLeft && "push-left");
+  const tilesClasses = classNames('tiles-wrap', pushLeft && 'push-left');
 
   const sectionHeader = {
-    title: "Phản hồi của người dùng",
-    paragraph: "Nhận xét của người dùng về CTU Extension",
+    title: 'Phản hồi của người dùng',
+    paragraph: 'Nhận xét của người dùng về CTU Extension',
   };
 
   return (

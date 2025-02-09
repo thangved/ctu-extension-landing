@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useState } from 'react';
 
 /**
  * Functional component for rendering a banner with dynamic content.
@@ -24,8 +24,8 @@ import { useCallback, useState } from "react";
               rel="noopener noreferrer"
             >
               Download<span className="banner-hide-on-sm"> on GitHub</span>
-            </a>{" "}
-            <span className="banner-separator">or</span>{" "}
+            </a>{' '}
+            <span className="banner-separator">or</span>{' '}
             <a
               className="banner-link banner-link-green"
               href="https://cruip.com/open-pro/"

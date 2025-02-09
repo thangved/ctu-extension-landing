@@ -1,5 +1,5 @@
-import classNames from "classnames";
-import PropTypes from "prop-types";
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 const propTypes = {
   children: PropTypes.node,
@@ -12,7 +12,7 @@ const propTypes = {
 
 const defaultProps = {
   children: null,
-  value: "",
+  value: '',
   disabled: false,
   checked: false,
 };
@@ -29,7 +29,7 @@ const defaultProps = {
  * @returns {import("react").ReactElement} Radio input component with label.
  */
 const Radio = ({ className, children, name, value, disabled, checked, ...props }) => {
-  const classes = classNames("form-radio", className);
+  const classes = classNames('form-radio', className);
 
   return (
     <label className={classes}>

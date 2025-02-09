@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const propTypes = {
-	className: PropTypes.string,
+  className: PropTypes.string,
 };
 
 /**
@@ -13,17 +13,17 @@ const propTypes = {
  * @returns {import("react").ReactElement} FooterNav component
  */
 const FooterNav = ({ className, ...props }) => {
-	const classes = classNames("footer-nav", className);
+  const classes = classNames("footer-nav", className);
 
-	return (
-		<nav {...props} className={classes}>
-			<ul className="list-reset">
-				<li>
-					<Link to="/privacy">Quyền riêng tư</Link>
-				</li>
-			</ul>
-		</nav>
-	);
+  return (
+    <nav {...props} className={classes}>
+      <ul className="list-reset">
+        <li>
+          <Link to="/privacy">Quyền riêng tư</Link>
+        </li>
+      </ul>
+    </nav>
+  );
 };
 
 FooterNav.propTypes = propTypes;

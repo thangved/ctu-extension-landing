@@ -19,8 +19,8 @@ ReactGA.initialize(import.meta.env.VITE_APP_GA_CODE);
  * @param {string} page - The page to track
  */
 const trackPage = (page) => {
-	ReactGA.set({ page });
-	ReactGA.pageview(page);
+  ReactGA.set({ page });
+  ReactGA.pageview(page);
 };
 
 /**
@@ -28,11 +28,11 @@ const trackPage = (page) => {
  * @returns {import("react").ReactElement} App children
  */
 const children = () => (
-	<Switch>
-		<AppRoute exact path="/" component={Home} layout={LayoutDefault} />
-		<AppRoute exact path="/docs" component={Docs} layout={LayoutDefault} />
-		<AppRoute exact path="/privacy" component={Privacy} layout={LayoutDefault} />
-	</Switch>
+  <Switch>
+    <AppRoute exact path="/" component={Home} layout={LayoutDefault} />
+    <AppRoute exact path="/docs" component={Docs} layout={LayoutDefault} />
+    <AppRoute exact path="/privacy" component={Privacy} layout={LayoutDefault} />
+  </Switch>
 );
 
 /**
@@ -40,17 +40,17 @@ const children = () => (
  * @returns {import("react").ReactElement} App component
  */
 const App = () => {
-	const childRef = useRef();
-	const location = useLocation();
+  const childRef = useRef();
+  const location = useLocation();
 
-	useEffect(() => {
-		const page = location.pathname;
-		document.body.classList.add("is-loaded");
-		childRef.current.init();
-		trackPage(page);
-	}, [location]);
+  useEffect(() => {
+    const page = location.pathname;
+    document.body.classList.add("is-loaded");
+    childRef.current.init();
+    trackPage(page);
+  }, [location]);
 
-	return <ScrollReveal ref={childRef}>{children}</ScrollReveal>;
+  return <ScrollReveal ref={childRef}>{children}</ScrollReveal>;
 };
 
 export default App;

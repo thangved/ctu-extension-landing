@@ -5,7 +5,7 @@ import logo from "../../../assets/images/logo.svg";
 import Image from "../../elements/Image";
 
 const propTypes = {
-	className: PropTypes.string,
+  className: PropTypes.string,
 };
 
 /**
@@ -15,17 +15,17 @@ const propTypes = {
  * @returns {import("react").ReactElement} - The logo component
  */
 const Logo = ({ className, ...props }) => {
-	const classes = classNames("brand", className);
+  const classes = classNames("brand", className);
 
-	return (
-		<div {...props} className={classes}>
-			<h1 className="m-0">
-				<Link to="/">
-					<Image src={logo} alt="Open" width={32} height={32} />
-				</Link>
-			</h1>
-		</div>
-	);
+  return (
+    <div {...props} className={classes}>
+      <h1 className="m-0">
+        <Link to="/">
+          <Image src={logo} alt="Open" width={32} height={32} />
+        </Link>
+      </h1>
+    </div>
+  );
 };
 
 Logo.propTypes = propTypes;

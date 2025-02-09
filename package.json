@@ -1,63 +1,63 @@
 {
-	"name": "ctu-extension",
-	"version": "1.2.0",
-	"private": false,
-	"type": "module",
-	"dependencies": {
-		"@vitejs/plugin-react-swc": "^3.7.0",
-		"classnames": "^2.2.6",
-		"lodash": "^4.17.15",
-		"react": "^18.3.1",
-		"react-dom": "^18.3.1",
-		"react-ga": "^3.3.1",
-		"react-player": "^2.16.0",
-		"react-router-dom": "^5.1.2",
-		"sass": "^1.49.7",
-		"vite": "^6.0.0",
-		"vite-plugin-svgr": "^4.2.0",
-		"vite-tsconfig-paths": "^5.0.0"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/thangved/ctu-extension-landing"
-	},
-	"scripts": {
-		"start": "vite",
-		"build": "vite build",
-		"serve": "vite preview",
-		"generate-pwa-assets": "pwa-assets-generator --preset minimal-2023 public/logo.svg",
-		"prepare": "husky",
-		"postbuild": "node ./scripts/postbuild.js"
-	},
-	"browserslist": {
-		"production": [
-			">0.2%",
-			"not dead",
-			"not op_mini all"
-		],
-		"development": [
-			"last 1 chrome version",
-			"last 1 firefox version",
-			"last 1 safari version"
-		]
-	},
-	"devDependencies": {
-		"@commitlint/cli": "^19.4.0",
-		"@commitlint/config-conventional": "^19.2.2",
-		"@eslint/js": "^9.10.0",
-		"@types/history": "5.0.0",
-		"@types/react-router-dom": "5.3.3",
-		"@vite-pwa/assets-generator": "^0.2.4",
-		"cross-env": "^7.0.3",
-		"eslint": "^9.10.0",
-		"eslint-plugin-jsdoc": "^50.2.3",
-		"eslint-plugin-react": "^7.36.1",
-		"globals": "^15.9.0",
-		"husky": "^9.1.4",
-		"lint-staged": "^15.2.10",
-		"prettier": "^3.3.3",
-		"prettier-plugin-organize-imports": "^4.0.0",
-		"vite-imagetools": "^7.0.4"
-	},
-	"packageManager": "npm@11.1.0+sha512.acf301ad9b9ddba948fcb72341e2f0fcae477f56a95cc2a092934d133a7461062633cefbf93d5934a3dc0768674e2edee9f04dcfcc4bb4c327ff0e3a7d552a1b"
+  "name": "ctu-extension",
+  "version": "1.2.0",
+  "private": false,
+  "type": "module",
+  "dependencies": {
+    "@vitejs/plugin-react-swc": "^3.7.0",
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-ga": "^3.3.1",
+    "react-player": "^2.16.0",
+    "react-router-dom": "^5.1.2",
+    "sass": "^1.49.7",
+    "vite": "^6.0.0",
+    "vite-plugin-svgr": "^4.2.0",
+    "vite-tsconfig-paths": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thangved/ctu-extension-landing"
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "generate-pwa-assets": "pwa-assets-generator --preset minimal-2023 public/logo.svg",
+    "prepare": "husky",
+    "postbuild": "node ./scripts/postbuild.js"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.4.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@eslint/js": "^9.10.0",
+    "@types/history": "5.0.0",
+    "@types/react-router-dom": "5.3.3",
+    "@vite-pwa/assets-generator": "^0.2.4",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.10.0",
+    "eslint-plugin-jsdoc": "^50.2.3",
+    "eslint-plugin-react": "^7.36.1",
+    "globals": "^15.9.0",
+    "husky": "^9.1.4",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "prettier-plugin-organize-imports": "^4.0.0",
+    "vite-imagetools": "^7.0.4"
+  },
+  "packageManager": "npm@11.1.0+sha512.acf301ad9b9ddba948fcb72341e2f0fcae477f56a95cc2a092934d133a7461062633cefbf93d5934a3dc0768674e2edee9f04dcfcc4bb4c327ff0e3a7d552a1b"
 }

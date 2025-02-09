@@ -2,18 +2,18 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 
 const propTypes = {
-	data: PropTypes.shape({
-		title: PropTypes.string,
-		paragraph: PropTypes.string,
-	}).isRequired,
-	children: PropTypes.node,
-	tag: PropTypes.oneOf(["h1", "h2", "h3"]),
-	className: PropTypes.string,
+  data: PropTypes.shape({
+    title: PropTypes.string,
+    paragraph: PropTypes.string,
+  }).isRequired,
+  children: PropTypes.node,
+  tag: PropTypes.oneOf(["h1", "h2", "h3"]),
+  className: PropTypes.string,
 };
 
 const defaultProps = {
-	children: null,
-	tag: "h2",
+  children: null,
+  tag: "h2",
 };
 
 /**
@@ -26,25 +26,25 @@ const defaultProps = {
  * @returns {import("react").ReactNode} The rendered section header component.
  */
 const SectionHeader = ({ className, data, children, tag, ...props }) => {
-	const classes = classNames("section-header", className);
+  const classes = classNames("section-header", className);
 
-	const Component = tag;
+  const Component = tag;
 
-	return (
-		(data.title || data.paragraph) && (
-			<div {...props} className={classes}>
-				<div className="container-xs">
-					{children}
-					{data.title && (
-						<Component className={classNames("mt-0", data.paragraph ? "mb-16" : "mb-0")}>
-							{data.title}
-						</Component>
-					)}
-					{data.paragraph && <p className="m-0">{data.paragraph}</p>}
-				</div>
-			</div>
-		)
-	);
+  return (
+    (data.title || data.paragraph) && (
+      <div {...props} className={classes}>
+        <div className="container-xs">
+          {children}
+          {data.title && (
+            <Component className={classNames("mt-0", data.paragraph ? "mb-16" : "mb-0")}>
+              {data.title}
+            </Component>
+          )}
+          {data.paragraph && <p className="m-0">{data.paragraph}</p>}
+        </div>
+      </div>
+    )
+  );
 };
 
 SectionHeader.propTypes = propTypes;

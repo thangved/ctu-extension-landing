@@ -3,9 +3,9 @@ import { useCallback } from "react";
 import { Route } from "react-router-dom";
 
 const propTypes = {
-	component: PropTypes.func,
-	layout: PropTypes.func,
-	children: PropTypes.node,
+  component: PropTypes.func,
+  layout: PropTypes.func,
+  children: PropTypes.node,
 };
 
 /**
@@ -16,18 +16,18 @@ const propTypes = {
  * @returns {import("react").ReactElement} - AppRoute component
  */
 const AppRoute = ({ component: Component, layout: Layout, ...rest }) => {
-	Layout = Layout === undefined ? (props) => props.children : Layout;
+  Layout = Layout === undefined ? (props) => props.children : Layout;
 
-	const renderer = useCallback(
-		(props) => (
-			<Layout>
-				<Component {...props} />
-			</Layout>
-		),
-		[Layout, Component],
-	);
+  const renderer = useCallback(
+    (props) => (
+      <Layout>
+        <Component {...props} />
+      </Layout>
+    ),
+    [Layout, Component],
+  );
 
-	return <Route {...rest} render={renderer} />;
+  return <Route {...rest} render={renderer} />;
 };
 
 AppRoute.propTypes = propTypes;

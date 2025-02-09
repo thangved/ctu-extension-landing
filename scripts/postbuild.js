@@ -9,6 +9,6 @@ const buildDir = path.resolve(__dirname, "../build");
 const indexHtmlPath = path.resolve(buildDir, "index.html");
 
 for (const targetFile of targetFiles) {
-	const targetPath = path.resolve(buildDir, targetFile);
-	fs.copyFileSync(indexHtmlPath, targetPath);
+  const targetPath = path.resolve(buildDir, targetFile);
+  fs.copyFileSync(indexHtmlPath, targetPath);
 }

@@ -2,19 +2,19 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 
 const propTypes = {
-	children: PropTypes.node,
-	name: PropTypes.string.isRequired,
-	value: PropTypes.string,
-	disabled: PropTypes.bool,
-	checked: PropTypes.bool,
-	className: PropTypes.string,
+  children: PropTypes.node,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string,
+  disabled: PropTypes.bool,
+  checked: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 const defaultProps = {
-	children: null,
-	value: "",
-	disabled: false,
-	checked: false,
+  children: null,
+  value: "",
+  disabled: false,
+  checked: false,
 };
 
 /**
@@ -29,21 +29,21 @@ const defaultProps = {
  * @returns {import("react").ReactElement} Radio input component with label.
  */
 const Radio = ({ className, children, name, value, disabled, checked, ...props }) => {
-	const classes = classNames("form-radio", className);
+  const classes = classNames("form-radio", className);
 
-	return (
-		<label className={classes}>
-			<input
-				{...props}
-				type="radio"
-				name={name}
-				value={value}
-				disabled={disabled}
-				checked={checked}
-			/>
-			{children}
-		</label>
-	);
+  return (
+    <label className={classes}>
+      <input
+        {...props}
+        type="radio"
+        name={name}
+        value={value}
+        disabled={disabled}
+        checked={checked}
+      />
+      {children}
+    </label>
+  );
 };
 
 Radio.propTypes = propTypes;

@@ -12,7 +12,7 @@ const history = createBrowserHistory();
 const rootElement = document.getElementById("root");
 
 ReactDOM.createRoot(rootElement).render(
-	<Router history={history}>
-		<App />
-	</Router>,
+  <Router history={history}>
+    <App />
+  </Router>,
 );

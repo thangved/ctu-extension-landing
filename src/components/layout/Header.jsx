@@ -4,20 +4,20 @@ import HeaderNavbar from "./partials/HeaderNavbar";
 import Logo from "./partials/Logo";
 
 const propTypes = {
-	navPosition: PropTypes.string,
-	hideNav: PropTypes.bool,
-	hideSignin: PropTypes.bool,
-	bottomOuterDivider: PropTypes.bool,
-	bottomDivider: PropTypes.bool,
-	className: PropTypes.string,
+  navPosition: PropTypes.string,
+  hideNav: PropTypes.bool,
+  hideSignin: PropTypes.bool,
+  bottomOuterDivider: PropTypes.bool,
+  bottomDivider: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 const defaultProps = {
-	navPosition: "",
-	hideNav: false,
-	hideSignin: false,
-	bottomOuterDivider: false,
-	bottomDivider: false,
+  navPosition: "",
+  hideNav: false,
+  hideSignin: false,
+  bottomOuterDivider: false,
+  bottomDivider: false,
 };
 
 /**
@@ -32,26 +32,26 @@ const defaultProps = {
  * @returns {import("react").ReactElement} Header component
  */
 const Header = ({
-	className,
-	navPosition,
-	hideNav,
-	hideSignin,
-	bottomOuterDivider,
-	bottomDivider,
-	...props
+  className,
+  navPosition,
+  hideNav,
+  hideSignin,
+  bottomOuterDivider,
+  bottomDivider,
+  ...props
 }) => {
-	const classes = classNames("site-header", bottomOuterDivider && "has-bottom-divider", className);
+  const classes = classNames("site-header", bottomOuterDivider && "has-bottom-divider", className);
 
-	return (
-		<header {...props} className={classes}>
-			<div className="container">
-				<div className={classNames("site-header-inner", bottomDivider && "has-bottom-divider")}>
-					<Logo />
-					{!hideNav && <HeaderNavbar navPosition={navPosition} hideSignin={hideSignin} />}
-				</div>
-			</div>
-		</header>
-	);
+  return (
+    <header {...props} className={classes}>
+      <div className="container">
+        <div className={classNames("site-header-inner", bottomDivider && "has-bottom-divider")}>
+          <Logo />
+          {!hideNav && <HeaderNavbar navPosition={navPosition} hideSignin={hideSignin} />}
+        </div>
+      </div>
+    </header>
+  );
 };
 
 Header.propTypes = propTypes;

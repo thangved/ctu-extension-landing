@@ -1,6 +1,5 @@
 {
-	"useTabs": true,
-	"tabWidth": 2,
-	"printWidth": 100,
-	"plugins": ["prettier-plugin-organize-imports"]
+  "tabWidth": 2,
+  "printWidth": 100,
+  "plugins": ["prettier-plugin-organize-imports"]
 }

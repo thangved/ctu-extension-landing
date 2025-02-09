@@ -2,7 +2,7 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 
 const propTypes = {
-	className: PropTypes.string,
+  className: PropTypes.string,
 };
 
 /**
@@ -12,9 +12,9 @@ const propTypes = {
  * @returns {import("react").ReactElement} - The button group component
  */
 const ButtonGroup = ({ className, ...props }) => {
-	const classes = classNames("button-group", className);
+  const classes = classNames("button-group", className);
 
-	return <div {...props} className={classes} />;
+  return <div {...props} className={classes} />;
 };
 
 ButtonGroup.propTypes = propTypes;

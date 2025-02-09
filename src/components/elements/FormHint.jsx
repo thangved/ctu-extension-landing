@@ -2,14 +2,14 @@ import classNames from "classnames";
 import PropTypes from "prop-types";
 
 const propTypes = {
-	children: PropTypes.node,
-	status: PropTypes.string,
-	className: PropTypes.string,
+  children: PropTypes.node,
+  status: PropTypes.string,
+  className: PropTypes.string,
 };
 
 const defaultProps = {
-	children: null,
-	status: false,
+  children: null,
+  status: false,
 };
 
 /**
@@ -21,13 +21,13 @@ const defaultProps = {
  * @returns {import("react").ReactElement} A div element representing the form hint with specified content and styles.
  */
 const FormHint = ({ children, className, status, ...props }) => {
-	const classes = classNames("form-hint", status && `text-color-${status}`, className);
+  const classes = classNames("form-hint", status && `text-color-${status}`, className);
 
-	return (
-		<div {...props} className={classes}>
-			{children}
-		</div>
-	);
+  return (
+    <div {...props} className={classes}>
+      {children}
+    </div>
+  );
 };
 
 FormHint.propTypes = propTypes;

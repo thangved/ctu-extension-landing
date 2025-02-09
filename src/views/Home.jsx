@@ -7,12 +7,12 @@ import Testimonial from "../components/sections/Testimonial";
  * @returns {import("react").ReactElement} JSX element representing the Home component.
  */
 const Home = () => {
-	return (
-		<>
-			<Hero className="illustration-section-01" />
-			<Testimonial />
-		</>
-	);
+  return (
+    <>
+      <Hero className="illustration-section-01" />
+      <Testimonial />
+    </>
+  );
 };
 
 export default Home;

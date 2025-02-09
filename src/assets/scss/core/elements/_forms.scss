@@ -1,8 +1,8 @@
 fieldset {
+  border: 0;
+  margin: 0;
   /* Reset fieldset */
   padding: 0;
-  margin: 0;
-  border: 0;
 }
 
 .form-label,
@@ -23,9 +23,9 @@ fieldset {
   -moz-appearance: none;
   -webkit-appearance: none;
   background-color: color-bg(input);
-  border-width: $button-form--border-width;
-  border-style: $button-form--border-style;
   border-color: color-border(input);
+  border-style: $button-form--border-style;
+  border-width: $button-form--border-width;
 
   &:hover {
     border-color: color-border(input-hover);
@@ -33,15 +33,15 @@ fieldset {
 
   &:active,
   &:focus {
-    outline: none;
-    border-color: color-border(input-focus);
     background-color: color-bg(input-focus);
+    border-color: color-border(input-focus);
+    outline: none;
   }
 
   &[disabled] {
-    cursor: not-allowed;
     background-color: color-bg(input-disabled);
     border-color: color-border(input-disabled);
+    cursor: not-allowed;
   }
 
   &.form-error {
@@ -62,16 +62,16 @@ fieldset {
   @include font-size(input);
   @include font-weight(input);
   & {
+    border-radius: $form--radius;
+    box-shadow: none;
+    color: color(input);
     display: block;
+    height: $button-form--height;
+    max-width: 100%;
     padding: (
         ($button-form--height - get-line-height(input) - ($button-form--border-width * 2)) * 0.5
       )
       ($form--padding-h - $button-form--border-width);
-    height: $button-form--height;
-    border-radius: $form--radius;
-    color: color(input);
-    box-shadow: none;
-    max-width: 100%;
     width: 100%;
   }
 }
@@ -92,7 +92,6 @@ textarea.form-input {
 }
 
 .form-select {
-  padding-right: ($form--padding-h - $button-form--border-width) * 2 + 16;
   background-image: inline-svg(
     '<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 11.4L2.6 6 4 4.6l4 4 4-4L13.4 6 8 11.4z" fill="' +
       color-icon(select-arrow) + '" fill-rule="evenodd"/></svg>'
@@ -100,20 +99,21 @@ textarea.form-input {
   background-position: right ($form--padding-h - $button-form--border-width) center;
   background-repeat: no-repeat;
   background-size: 16px 16px;
+  padding-right: ($form--padding-h - $button-form--border-width) * 2 + 16;
 }
 
 .form-select-sm {
-  padding-right: ($form-sm--padding-h - $button-form--border-width) * 2 + 16;
   background-position: right ($form-sm--padding-h - $button-form--border-width) center;
+  padding-right: ($form-sm--padding-h - $button-form--border-width) * 2 + 16;
 }
 
 .form-select-sm,
 .form-input-sm {
+  height: $button-form-sm--height;
   padding: (
       ($button-form-sm--height - get-line-height(input) - ($button-form--border-width * 2)) * 0.5
     )
     ($form-sm--padding-h - $button-form--border-width);
-  height: $button-form-sm--height;
 }
 
 .has-icon-left,
@@ -185,21 +185,21 @@ textarea.form-input {
 
 .form-checkbox,
 .form-radio {
-  position: relative;
   padding-left: 24px;
+  position: relative;
 
   input {
-    position: absolute;
+    cursor: pointer;
+    height: 16px;
     left: 0;
+    position: absolute;
     top: ((get-line-height(check-radio) - 16) * 0.5) - 1; // -1 is for optical adjustement
     width: 16px;
-    height: 16px;
-    cursor: pointer;
 
     &:checked {
       background-color: color-bg(check-radio-checked) !important;
-      border-color: color-bg(check-radio-checked) !important;
       background-position: 50%;
+      border-color: color-bg(check-radio-checked) !important;
     }
   }
 }
@@ -225,8 +225,8 @@ textarea.form-input {
 }
 
 .form-switch {
-  display: inline-flex;
   align-items: center;
+  display: inline-flex;
   user-select: none;
 
   input {
@@ -239,25 +239,25 @@ textarea.form-input {
   }
 
   .form-switch-icon {
-    display: block;
-    position: relative;
-    min-width: 60px;
-    width: 60px;
-    height: 32px;
-    border-radius: 16px;
     background: color-bg(switch);
+    border-radius: 16px;
+    display: block;
+    height: 32px;
+    min-width: 60px;
+    position: relative;
+    width: 60px;
 
     &::before {
+      background: get-color(light, 1);
+      border-radius: 14px;
       content: "";
       display: block;
+      height: 28px;
+      left: 2px;
       position: absolute;
       top: 2px;
-      left: 2px;
-      width: 28px;
-      height: 28px;
-      border-radius: 14px;
-      background: get-color(light, 1);
       transition: all 0.15s ease-out;
+      width: 28px;
     }
   }
 
@@ -273,13 +273,13 @@ textarea.form-input {
 
   > span {
     &:not(.form-switch-icon) {
-      order: -1;
       margin-right: 12px;
+      order: -1;
 
       &:last-child {
-        order: initial;
         margin-left: 12px;
         margin-right: 0;
+        order: initial;
       }
     }
   }
@@ -296,10 +296,10 @@ textarea.form-input {
     background: color-bg(range-track);
     border-radius: 3px;
     height: 6px;
-    width: 100%;
-    margin-top: ($range-thumb-size - 6px) * 0.5;
     margin-bottom: ($range-thumb-size - 6px) * 0.5;
+    margin-top: ($range-thumb-size - 6px) * 0.5;
     outline: none;
+    width: 100%;
 
     &::-webkit-slider-thumb {
       appearance: none;
@@ -375,8 +375,8 @@ textarea.form-input {
 
     &:active,
     &:focus {
-      border-color: color-border(input-focus-inverse);
       background-color: color-bg(input-focus-inverse);
+      border-color: color-border(input-focus-inverse);
     }
 
     &[disabled] {
@@ -474,20 +474,20 @@ textarea.form-input {
     margin-right: $button-form--group-padding;
 
     @if ($button-form--group-padding == null) {
-      border-top-right-radius: 0;
       border-bottom-right-radius: 0;
       border-right-width: 0;
+      border-top-right-radius: 0;
     }
   }
 
   .button {
+    flex-shrink: 0;
     padding-left: $button-w-form--padding-h;
     padding-right: $button-w-form--padding-h;
-    flex-shrink: 0;
 
     @if ($button-form--group-padding == null) {
-      border-top-left-radius: 0;
       border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
     }
   }
 
@@ -535,20 +535,20 @@ textarea.form-input {
       margin-right: $button-form--group-padding;
 
       @if ($button-form--group-padding == null) {
-        border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         border-right-width: 0;
+        border-top-right-radius: 0;
       }
     }
 
     .button {
+      flex-shrink: 0;
       padding-left: $button-w-form--padding-h;
       padding-right: $button-w-form--padding-h;
-      flex-shrink: 0;
 
       @if ($button-form--group-padding == null) {
-        border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
       }
     }
 

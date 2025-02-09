@@ -6,8 +6,8 @@
 // Font-size + Line-height + Kerning
 @mixin font-size($elem) {
   font-size: get-font-size($elem);
-  line-height: get-line-height($elem);
   letter-spacing: get-kerning($elem);
+  line-height: get-line-height($elem);
 }
 
 // Font Weight
@@ -149,9 +149,9 @@
 
     &::before {
       content: "";
+      left: 0;
       position: absolute;
       top: 0;
-      left: 0;
       width: 100%;
       @include divider-mix($layout);
     }
@@ -159,10 +159,10 @@
     position: relative;
 
     &::after {
-      content: "";
-      position: absolute;
       bottom: 0;
+      content: "";
       left: 0;
+      position: absolute;
       width: 100%;
       @include divider-mix($layout);
     }
@@ -179,13 +179,13 @@
 // $hoffset: horizontal offset
 // $voffset: vertical offset
 @mixin illustration($file, $width, $height, $vpos: null, $hoffset: null, $voffset: null) {
-  content: "";
-  position: absolute;
-  width: $width;
-  max-width: $width;
-  height: $height;
   background-image: url(../../../images/#{$file});
   background-repeat: no-repeat;
+  content: "";
+  height: $height;
+  max-width: $width;
+  position: absolute;
+  width: $width;
   @if (unit($height) == "%") {
     background-size: contain;
   } @else {

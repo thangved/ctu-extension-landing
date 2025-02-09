@@ -1,7 +1,7 @@
 .hero {
   .section-inner {
-    padding-top: $hero--padding-t__mobile;
     padding-bottom: $hero--padding-b__mobile;
+    padding-top: $hero--padding-t__mobile;
   }
 }
 
@@ -14,9 +14,9 @@
 
   > .hero-figure {
     > a {
-      display: inline-flex;
       // prevents stretching
       align-items: center;
+      display: inline-flex;
       vertical-align: top;
     }
   }
@@ -45,8 +45,8 @@
 @include media(">medium") {
   .hero {
     .section-inner {
-      padding-top: $hero--padding-t__desktop;
       padding-bottom: $hero--padding-b__desktop;
+      padding-top: $hero--padding-t__desktop;
     }
   }
 

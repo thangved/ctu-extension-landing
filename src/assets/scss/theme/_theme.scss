@@ -104,8 +104,8 @@
 @import "sections/cta";
 
 .banner {
-  position: fixed;
   bottom: 0;
+  position: fixed;
   right: 0;
   width: 100%;
   z-index: 60;
@@ -118,12 +118,12 @@
 }
 
 .banner-inner {
+  align-items: center;
   background-color: #1e293b;
   color: #f8fafc;
-  padding: 12px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 12px;
 
   @include media(">medium") {
     border-radius: 4px;
@@ -131,8 +131,8 @@
 }
 
 .banner-container {
-  display: inline-flex;
   color: #64748b;
+  display: inline-flex;
 }
 
 .banner-link {
@@ -167,22 +167,22 @@
 .banner-close {
   background: transparent;
   border: 0;
+  border-left: 1px solid #334155;
+  color: #64748b;
+  cursor: pointer;
+  margin-left: 12px;
   outline: 0;
   padding: 0;
-  cursor: pointer;
-  color: #64748b;
   padding-left: 8px;
-  margin-left: 12px;
-  border-left: 1px solid #334155;
 
   &:hover {
     color: #94a3b8;
   }
 
   svg {
-    width: 16px;
-    height: 16px;
     flex-shrink: 0;
+    height: 16px;
+    width: 16px;
     fill: currentColor;
   }
 }

@@ -1,7 +1,7 @@
 .testimonial {
   .section-inner {
-    padding-top: $testimonial--padding-t__mobile;
     padding-bottom: $testimonial--padding-b__mobile;
+    padding-top: $testimonial--padding-t__mobile;
   }
 
   .section-header {
@@ -10,8 +10,8 @@
 
   .tiles-wrap {
     @if ($testimonial-items--padding__mobile != null) {
-      margin-right: -($testimonial-items--padding__mobile * 0.5);
       margin-left: -($testimonial-items--padding__mobile * 0.5);
+      margin-right: -($testimonial-items--padding__mobile * 0.5);
       margin-top: -($testimonial-items--padding__mobile * 0.5);
 
       &:last-of-type {
@@ -44,10 +44,10 @@
   }
 
   .tiles-item-inner {
-    padding-top: $testimonial-item--inner-padding-v;
     padding-bottom: $testimonial-item--inner-padding-v;
     padding-left: $testimonial-item--inner-padding-h;
     padding-right: $testimonial-item--inner-padding-h;
+    padding-top: $testimonial-item--inner-padding-v;
   }
 }
 
@@ -56,16 +56,16 @@
 }
 
 .testimonial-item-source {
+  align-items: center;
   display: inline-flex; // to allow centering when using .content-center on a parent tag
   flex-wrap: wrap;
-  align-items: center;
 }
 
 @include media(">medium") {
   .testimonial {
     .section-inner {
-      padding-top: $testimonial--padding-t__desktop;
       padding-bottom: $testimonial--padding-b__desktop;
+      padding-top: $testimonial--padding-t__desktop;
     }
 
     .section-header {
@@ -74,8 +74,8 @@
 
     @if ($testimonial-items--padding__desktop != null) {
       .tiles-wrap {
-        margin-right: -($testimonial-items--padding__desktop * 0.5);
         margin-left: -($testimonial-items--padding__desktop * 0.5);
+        margin-right: -($testimonial-items--padding__desktop * 0.5);
         margin-top: -($testimonial-items--padding__desktop * 0.5);
 
         &:last-of-type {

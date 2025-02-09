@@ -6,13 +6,13 @@
 }
 
 .cta-inner {
-  padding-left: 16px;
-  padding-right: 16px;
   background-color: get-color(primary, 3);
   background-image: url(../../../images/cta-illustration.svg);
+  background-position: right bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right bottom;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 @include media(">medium") {

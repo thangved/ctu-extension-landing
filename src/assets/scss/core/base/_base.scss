@@ -18,8 +18,8 @@ body {
 hr {
   border: 0;
   @include divider();
-  margin-top: $spacing--shared-v;
   margin-bottom: $spacing--shared-v;
+  margin-top: $spacing--shared-v;
 }
 
 ul,
@@ -48,13 +48,13 @@ li {
 
 li > ul,
 li > ol {
-  margin-top: $spacing--shared-v * 0.5;
   margin-bottom: 0;
+  margin-top: $spacing--shared-v * 0.5;
 }
 
 dl {
-  margin-top: 0;
   margin-bottom: $spacing--shared-v;
+  margin-top: 0;
 }
 
 dt {
@@ -62,8 +62,8 @@ dt {
 }
 
 dd {
-  margin-left: $spacing--shared-h;
   margin-bottom: $spacing--shared-v;
+  margin-left: $spacing--shared-h;
 }
 
 img {

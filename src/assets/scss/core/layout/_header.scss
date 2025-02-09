@@ -1,9 +1,9 @@
 .site-header {
+  background: color-bg(header);
   position: absolute !important;
   top: 0;
   width: 100%;
   z-index: 10 !important;
-  background: color-bg(header);
 
   + .site-content {
     .section:first-of-type {
@@ -17,10 +17,10 @@
 }
 
 .site-header-inner {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+  display: flex;
   height: $header-height__mobile;
+  justify-content: space-between;
 }
 
 .header-nav {
@@ -32,11 +32,11 @@
   }
 
   ul {
-    display: flex;
     align-items: center;
+    display: flex;
     flex-grow: 1;
-    white-space: nowrap;
     margin-bottom: 0;
+    white-space: nowrap;
 
     &:first-of-type {
       flex-wrap: wrap;
@@ -54,8 +54,8 @@
     @include anchor-aspect(header);
     @include font-weight(header-link);
     & {
-      text-transform: $link-header--transform;
       padding: 0 $header-nav--padding-h;
+      text-transform: $link-header--transform;
     }
 
     .invert-color & {
@@ -91,19 +91,19 @@
 
     // Header navigation when the hamburger is a previous sibling
     + .header-nav {
-      flex-direction: column;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 100%;
-      z-index: 9999;
       background: color-bg(menu-mobile);
+      flex-direction: column;
+      left: 0;
       max-height: 0;
       opacity: 0;
       overflow: hidden;
+      position: absolute;
+      right: 0;
+      top: 100%;
       transition:
         max-height 0.25s ease-in-out,
         opacity 0.15s;
+      z-index: 9999;
 
       &.is-active {
         opacity: 1;
@@ -122,16 +122,16 @@
           display: inline-flex;
           @include anchor-aspect(header-mobile);
           & {
-            padding-top: $header-nav--padding-v__mobile * 0.5;
             padding-bottom: $header-nav--padding-v__mobile * 0.5;
+            padding-top: $header-nav--padding-v__mobile * 0.5;
           }
         }
       }
 
       a.button {
+        margin-bottom: $header-nav--padding-v__mobile * 0.5;
         margin-left: 0;
         margin-top: $header-nav--padding-v__mobile * 0.5;
-        margin-bottom: $header-nav--padding-v__mobile * 0.5;
       }
     }
   }

@@ -10,10 +10,10 @@
   }
 
   .split-item {
-    padding-top: $split-item--padding-v__mobile * 0.5;
-    padding-bottom: $split-item--padding-v__mobile * 0.5;
     display: flex;
     flex-direction: column;
+    padding-bottom: $split-item--padding-v__mobile * 0.5;
+    padding-top: $split-item--padding-v__mobile * 0.5;
 
     .split-item-image {
       position: relative;
@@ -22,10 +22,10 @@
       img,
       svg,
       video {
-        width: auto;
         height: auto;
         max-width: 100%;
         overflow: visible;
+        width: auto;
       }
 
       &.split-item-image-fill {
@@ -50,8 +50,8 @@
     &.invert-mobile {
       .split-item {
         .split-item-content {
-          order: 1;
           margin-bottom: 0 !important;
+          order: 1;
         }
 
         .split-item-image {
@@ -75,18 +75,18 @@
     }
 
     .split-item {
-      padding-top: $split-item--padding-v__desktop * 0.5;
-      padding-bottom: $split-item--padding-v__desktop * 0.5;
+      align-items: center;
       flex-direction: row;
       flex-wrap: nowrap;
-      align-items: center;
       justify-content: flex-start;
+      padding-bottom: $split-item--padding-v__desktop * 0.5;
+      padding-top: $split-item--padding-v__desktop * 0.5;
 
       .split-item-content {
         flex-shrink: 0;
-        width: ($container--width-sm * 0.5) - $split-item-content--padding-h;
         margin-bottom: 0;
         margin-right: $split-item--inner-padding-h;
+        width: ($container--width-sm * 0.5) - $split-item-content--padding-h;
       }
 
       .split-item-image {
@@ -99,9 +99,9 @@
       justify-content: flex-end;
 
       .split-item-content {
-        order: 1;
         margin-left: $split-item--inner-padding-h;
         margin-right: 0;
+        order: 1;
       }
     }
 

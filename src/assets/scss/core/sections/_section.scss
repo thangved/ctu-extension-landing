@@ -1,7 +1,7 @@
 .section-inner {
-  position: relative; // To always display inner elements above pseudo decorative stuff
-  padding-top: $section--padding__mobile;
   padding-bottom: $section--padding__mobile;
+  padding-top: $section--padding__mobile;
+  position: relative; // To always display inner elements above pseudo decorative stuff
 }
 
 .section-header {
@@ -10,8 +10,8 @@
 
 @include media(">medium") {
   .section-inner {
-    padding-top: $section--padding__desktop;
     padding-bottom: $section--padding__desktop;
+    padding-top: $section--padding__desktop;
   }
 
   .section-header {

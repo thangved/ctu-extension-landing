@@ -2,13 +2,13 @@
   position: relative;
 
   &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background: color-bg(footer);
+    bottom: 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    width: 100%;
     z-index: -3;
   }
 }
@@ -28,8 +28,8 @@
 .footer-blocks {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -($footer-block--padding_h * 0.5);
   margin-left: -($footer-block--padding_h * 0.5);
+  margin-right: -($footer-block--padding_h * 0.5);
   margin-top: -($footer-block--padding_v * 0.5);
 
   &:last-of-type {
@@ -42,9 +42,9 @@
 }
 
 .footer-block {
-  flex-grow: 1;
-  flex-basis: $footer-block--min-width;
   box-sizing: content-box;
+  flex-basis: $footer-block--min-width;
+  flex-grow: 1;
   padding: $footer-block--padding_v * 0.5 $footer-block--padding_h * 0.5;
 
   * {
@@ -75,8 +75,8 @@
   @include font-weight(block-title);
   & {
     color: color(block-title);
-    text-transform: $footer-block-title--transform;
     margin-bottom: $footer-block-title-padding;
+    text-transform: $footer-block-title--transform;
   }
 
   .invert-color & {
@@ -91,19 +91,19 @@
   }
 
   ul {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    white-space: nowrap;
     margin-bottom: 0;
+    white-space: nowrap;
   }
 }
 
 .footer-social {
   ul {
-    margin-right: -($footer-social--inner-padding + $footer-social--outer-padding-h);
     margin-left: -($footer-social--inner-padding + $footer-social--outer-padding-h);
+    margin-right: -($footer-social--inner-padding + $footer-social--outer-padding-h);
   }
 
   li {
@@ -135,15 +135,15 @@
 }
 
 .footer-nav {
-  margin-right: -$footer-nav--padding-h;
   margin-left: -$footer-nav--padding-h;
+  margin-right: -$footer-nav--padding-h;
 
   a {
     @include anchor-aspect(footer);
     @include font-weight(footer-link);
     & {
-      text-transform: $link-footer--transform;
       padding: 0 $footer-nav--padding-h;
+      text-transform: $link-footer--transform;
     }
 
     .invert-color & {
@@ -171,9 +171,9 @@
   .footer-top,
   .footer-bottom {
     &.space-between {
+      align-items: center;
       display: flex;
       justify-content: space-between;
-      align-items: center;
     }
   }
 

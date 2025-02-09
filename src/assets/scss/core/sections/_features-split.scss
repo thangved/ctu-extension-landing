@@ -1,7 +1,7 @@
 .features-split {
   .section-inner {
-    padding-top: $features-split--padding-t__mobile;
     padding-bottom: $features-split--padding-b__mobile;
+    padding-top: $features-split--padding-t__mobile;
   }
 
   .section-header {
@@ -12,8 +12,8 @@
 @include media(">medium") {
   .features-split {
     .section-inner {
-      padding-top: $features-split--padding-t__desktop;
       padding-bottom: $features-split--padding-b__desktop;
+      padding-top: $features-split--padding-t__desktop;
     }
 
     .section-header {

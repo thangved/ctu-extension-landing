@@ -7,8 +7,8 @@
 }
 
 .modal {
-  display: none;
   align-items: center;
+  display: none;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
@@ -17,8 +17,8 @@
 
   &.modal-video {
     .modal-inner {
-      padding: 0;
       max-width: $modal-video--max-width;
+      padding: 0;
     }
   }
 
@@ -28,9 +28,9 @@
   }
 
   &::before {
+    background-color: color-bg(modal-outer);
     content: "";
     position: absolute;
-    background-color: color-bg(modal-outer);
   }
 
   &.is-active {
@@ -52,15 +52,15 @@
 }
 
 .modal-inner {
+  background: color-bg(modal);
+  margin-left: $container--padding__mobile;
+  margin-right: $container--padding__mobile;
   max-height: calc(100vh - #{$modal--outer-padding-v__mobile} * 2);
+  max-width: $modal--max-width;
+  min-width: $modal--min-width;
   overflow: auto;
   position: relative;
   width: calc(100% - (#{$container--padding__mobile} * 2));
-  min-width: $modal--min-width;
-  max-width: $modal--max-width;
-  margin-left: $container--padding__mobile;
-  margin-right: $container--padding__mobile;
-  background: color-bg(modal);
 }
 
 .modal-content {
@@ -70,28 +70,28 @@
 .modal-close {
   background: transparent;
   border: 0;
+  cursor: pointer;
+  height: $modal-close-icon--size;
   outline: 0;
   padding: 0;
-  cursor: pointer;
   position: absolute;
   right: $modal-close-position;
   top: $modal-close-position;
   width: $modal-close-icon--size;
-  height: $modal-close-icon--size;
 
   &::before,
   &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -($modal-close-icon--thickness * 0.5);
-    margin-left: -($modal-close-icon--size * 0.5);
-    width: $modal-close-icon--size;
-    height: $modal-close-icon--thickness;
     background: color-icon(modal);
     border-radius: $modal-close-icon--radius;
+    content: "";
+    display: block;
+    height: $modal-close-icon--thickness;
+    left: 50%;
+    margin-left: -($modal-close-icon--size * 0.5);
+    margin-top: -($modal-close-icon--thickness * 0.5);
+    position: absolute;
+    top: 50%;
+    width: $modal-close-icon--size;
   }
 
   &::before {
@@ -117,10 +117,10 @@
   }
 
   .modal-content {
-    padding-top: $modal--inner-padding-v__desktop;
     padding-bottom: $modal--inner-padding-v__desktop;
     padding-left: $modal--inner-padding-h__desktop;
     padding-right: $modal--inner-padding-h__desktop;
+    padding-top: $modal--inner-padding-v__desktop;
   }
 }
 

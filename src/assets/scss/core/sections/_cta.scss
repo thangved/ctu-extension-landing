@@ -1,7 +1,7 @@
 .cta {
   .section-inner {
-    padding-top: $cta--padding-t__mobile;
     padding-bottom: $cta--padding-b__mobile;
+    padding-top: $cta--padding-t__mobile;
   }
 }
 
@@ -12,15 +12,15 @@
 @include media(">medium") {
   .cta {
     .section-inner {
-      padding-top: $cta--padding-t__desktop;
       padding-bottom: $cta--padding-b__desktop;
+      padding-top: $cta--padding-t__desktop;
     }
   }
 
   .cta-split {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
 
   .cta-slogan {

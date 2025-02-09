@@ -1,7 +1,7 @@
 .features-tiles {
   .section-inner {
-    padding-top: $features-tiles--padding-t__mobile;
     padding-bottom: $features-tiles--padding-b__mobile;
+    padding-top: $features-tiles--padding-t__mobile;
   }
 
   .section-header {
@@ -10,8 +10,8 @@
 
   .tiles-wrap {
     @if ($features-tiles-items--padding__mobile != null) {
-      margin-right: -($features-tiles-items--padding__mobile * 0.5);
       margin-left: -($features-tiles-items--padding__mobile * 0.5);
+      margin-right: -($features-tiles-items--padding__mobile * 0.5);
       margin-top: -($features-tiles-items--padding__mobile * 0.5);
 
       &:last-of-type {
@@ -44,18 +44,18 @@
   }
 
   .tiles-item-inner {
-    padding-top: $features-tiles-item--inner-padding-v;
     padding-bottom: $features-tiles-item--inner-padding-v;
     padding-left: $features-tiles-item--inner-padding-h;
     padding-right: $features-tiles-item--inner-padding-h;
+    padding-top: $features-tiles-item--inner-padding-v;
   }
 }
 
 @include media(">medium") {
   .features-tiles {
     .section-inner {
-      padding-top: $features-tiles--padding-t__desktop;
       padding-bottom: $features-tiles--padding-b__desktop;
+      padding-top: $features-tiles--padding-t__desktop;
     }
 
     .section-header {
@@ -64,8 +64,8 @@
 
     @if ($features-tiles-items--padding__desktop != null) {
       .tiles-wrap {
-        margin-right: -($features-tiles-items--padding__desktop * 0.5);
         margin-left: -($features-tiles-items--padding__desktop * 0.5);
+        margin-right: -($features-tiles-items--padding__desktop * 0.5);
         margin-top: -($features-tiles-items--padding__desktop * 0.5);
 
         &:last-of-type {

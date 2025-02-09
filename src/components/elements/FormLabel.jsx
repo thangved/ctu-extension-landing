@@ -24,7 +24,7 @@ const defaultProps = {
  * @param {string} props.id - The unique identifier for the label.
  * @returns {import("react").ReactElement} A label element with specified properties.
  */
-const FormLabel = ({ className, children, labelHidden, id, ...props }) => {
+const FormLabel = ({ className, children, labelHidden, id, ...properties }) => {
   FormLabel.propTypes = {
     className: PropTypes.string,
     children: PropTypes.node,
@@ -38,7 +38,7 @@ const FormLabel = ({ className, children, labelHidden, id, ...props }) => {
   );
 
   return (
-    <label {...props} className={classes} htmlFor={id}>
+    <label {...properties} className={classes} htmlFor={id}>
       {children}
     </label>
   );

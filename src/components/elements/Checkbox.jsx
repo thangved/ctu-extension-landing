@@ -29,13 +29,13 @@ const defaultProps = {
  * @param {boolean} props.checked - Indicates if the checkbox is checked by default.
  * @returns {import("react").ReactElement} Checkbox component with label and input.
  */
-const Checkbox = ({ className, children, name, value, disabled, checked, ...props }) => {
+const Checkbox = ({ className, children, name, value, disabled, checked, ...properties }) => {
   const classes = classNames('form-checkbox', className);
 
   return (
     <label className={classes}>
       <input
-        {...props}
+        {...properties}
         type="checkbox"
         name={name}
         value={value}

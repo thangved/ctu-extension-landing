@@ -34,7 +34,7 @@ const defaultProps = {
  * @param {string} props.video - Video URL
  * @returns {import("react").ReactElement} Modal component
  */
-const Modal = ({ className, children, handleClose, show, closeHidden, video, ...props }) => {
+const Modal = ({ className, children, handleClose, show, closeHidden, video, ...properties }) => {
   const stopPropagation = useCallback((e) => {
     e.stopPropagation();
   }, []);
@@ -53,7 +53,7 @@ const Modal = ({ className, children, handleClose, show, closeHidden, video, ...
   });
 
   const handleBodyClass = useCallback(() => {
-    if (document.querySelectorAll('.modal.is-active').length) {
+    if (document.querySelectorAll('.modal.is-active').length > 0) {
       document.body.classList.add('modal-is-active');
     } else {
       document.body.classList.remove('modal-is-active');
@@ -62,13 +62,13 @@ const Modal = ({ className, children, handleClose, show, closeHidden, video, ...
 
   useEffect(() => {
     handleBodyClass();
-  }, [props.show]);
+  }, [properties.show]);
 
   const classes = classNames('modal', show && 'is-active', video && 'modal-video', className);
 
   return (
     show && (
-      <div {...props} className={classes} onClick={handleClose} aria-hidden>
+      <div {...properties} className={classes} onClick={handleClose} aria-hidden>
         <div className="modal-inner" onClick={stopPropagation} aria-hidden>
           {video ? (
             <div className="responsive-video">

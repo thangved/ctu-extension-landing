@@ -1,14 +1,14 @@
 import classNames from 'classnames';
-import { SectionTilesProps } from '../../utils/SectionProps';
+import { SectionTilesProps as SectionTilesProperties } from '../../utils/SectionProps';
 import FeedbackCard from '../elements/FeedbackCard';
 import SectionHeader from './partials/SectionHeader';
 
 const propTypes = {
-  ...SectionTilesProps.types,
+  ...SectionTilesProperties.types,
 };
 
 const defaultProps = {
-  ...SectionTilesProps.defaults,
+  ...SectionTilesProperties.defaults,
 };
 
 /**
@@ -33,7 +33,7 @@ const Testimonial = ({
   hasBgColor,
   invertColor,
   pushLeft,
-  ...props
+  ...properties
 }) => {
   const outerClasses = classNames(
     'testimonial section',
@@ -58,7 +58,7 @@ const Testimonial = ({
   };
 
   return (
-    <section {...props} className={outerClasses}>
+    <section {...properties} className={outerClasses}>
       <div className="container">
         <div className={innerClasses}>
           <SectionHeader data={sectionHeader} className="center-content" />

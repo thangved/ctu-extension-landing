@@ -38,12 +38,12 @@ const Header = ({
   hideSignin,
   bottomOuterDivider,
   bottomDivider,
-  ...props
+  ...properties
 }) => {
   const classes = classNames('site-header', bottomOuterDivider && 'has-bottom-divider', className);
 
   return (
-    <header {...props} className={classes}>
+    <header {...properties} className={classes}>
       <div className="container">
         <div className={classNames('site-header-inner', bottomDivider && 'has-bottom-divider')}>
           <Logo />

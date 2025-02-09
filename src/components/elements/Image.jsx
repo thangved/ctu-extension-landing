@@ -25,12 +25,12 @@ const defaultProps = {
  * @param {string} props.alt - The image alt text
  * @returns {import("react").ReactElement} - The image component
  */
-const Image = ({ className, src, width, height, alt, ...props }) => {
+const Image = ({ className, src, width, height, alt, ...properties }) => {
   const [loaded, setLoaded] = useState(false);
 
   const image = useRef(null);
 
-  const placeholderSrc = useCallback((w, h) => {
+  const placeholderSource = useCallback((w, h) => {
     return `data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}"%3E%3C/svg%3E`;
   }, []);
 
@@ -40,7 +40,7 @@ const Image = ({ className, src, width, height, alt, ...props }) => {
       if (!loaded) {
         img.style.display = 'none';
         img.before(placeholder);
-        placeholder.src = placeholderSrc(
+        placeholder.src = placeholderSource(
           img.getAttribute('width') || 0,
           img.getAttribute('height') || 0,
         );
@@ -52,7 +52,7 @@ const Image = ({ className, src, width, height, alt, ...props }) => {
         img.style.display = '';
       }
     },
-    [placeholderSrc, loaded],
+    [placeholderSource, loaded],
   );
 
   useEffect(() => {
@@ -65,7 +65,7 @@ const Image = ({ className, src, width, height, alt, ...props }) => {
 
   return (
     <img
-      {...props}
+      {...properties}
       ref={image}
       className={className}
       src={src}

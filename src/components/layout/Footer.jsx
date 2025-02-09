@@ -23,7 +23,7 @@ const defaultProps = {
  * @param {boolean} props.topDivider - Whether to include an inner divider at the top.
  * @returns {import("react").ReactElement} Footer component with logo, social links, navigation, and copyright information.
  */
-const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
+const Footer = ({ className, topOuterDivider, topDivider, ...properties }) => {
   const classes = classNames(
     'site-footer center-content-mobile',
     topOuterDivider && 'has-top-divider',
@@ -31,7 +31,7 @@ const Footer = ({ className, topOuterDivider, topDivider, ...props }) => {
   );
 
   return (
-    <footer {...props} className={classes}>
+    <footer {...properties} className={classes}>
       <div className="container">
         <div className={classNames('site-footer-inner', topDivider && 'has-top-divider')}>
           <div className="footer-top space-between text-xxs">

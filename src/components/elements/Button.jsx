@@ -50,7 +50,7 @@ const Button = ({
   disabled,
   icon,
   children,
-  ...props
+  ...properties
 }) => {
   const classes = classNames(
     'button',
@@ -64,7 +64,7 @@ const Button = ({
 
   const Component = tag;
   return (
-    <Component {...props} className={classes} disabled={disabled}>
+    <Component {...properties} className={classes} disabled={disabled}>
       {children} {icon}
     </Component>
   );

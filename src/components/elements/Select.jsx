@@ -59,7 +59,7 @@ const Select = ({
   size,
   placeholder,
   hint,
-  ...props
+  ...properties
 }) => {
   const classes = classNames(
     'form-select',
@@ -71,11 +71,11 @@ const Select = ({
   return (
     <>
       {label && (
-        <FormLabel labelHidden={labelHidden} id={props.id}>
+        <FormLabel labelHidden={labelHidden} id={properties.id}>
           {label}
         </FormLabel>
       )}
-      <select {...props} className={classes} name={name} disabled={disabled} value={value}>
+      <select {...properties} className={classes} name={name} disabled={disabled} value={value}>
         {placeholder && (
           <option hidden value="">
             {placeholder}

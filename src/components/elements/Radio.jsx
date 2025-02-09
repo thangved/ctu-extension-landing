@@ -28,13 +28,13 @@ const defaultProps = {
  * @param {boolean} props.checked - Indicates if the radio input is checked.
  * @returns {import("react").ReactElement} Radio input component with label.
  */
-const Radio = ({ className, children, name, value, disabled, checked, ...props }) => {
+const Radio = ({ className, children, name, value, disabled, checked, ...properties }) => {
   const classes = classNames('form-radio', className);
 
   return (
     <label className={classes}>
       <input
-        {...props}
+        {...properties}
         type="radio"
         name={name}
         value={value}

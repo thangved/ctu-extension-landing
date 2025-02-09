@@ -87,7 +87,7 @@ const Input = ({
   placeholder,
   rows,
   hint,
-  ...props
+  ...properties
 }) => {
   const wrapperClasses = classNames(
     formGroup &&
@@ -107,14 +107,14 @@ const Input = ({
   return (
     <>
       {label && (
-        <FormLabel labelHidden={labelHidden} id={props.id}>
+        <FormLabel labelHidden={labelHidden} id={properties.id}>
           {label}
         </FormLabel>
       )}
       <div className={wrapperClasses}>
         <Component
-          {...props}
-          type={type !== 'textarea' ? type : null}
+          {...properties}
+          type={type === 'textarea' ? null : type}
           className={classes}
           name={name}
           disabled={disabled}

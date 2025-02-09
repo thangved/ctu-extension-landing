@@ -32,13 +32,22 @@ const defaultProps = {
  * @param {boolean} props.checked - Indicates if the switch is checked.
  * @returns {import("react").ReactElement} A custom switch element with specified properties.
  */
-const Switch = ({ className, children, name, value, rightLabel, disabled, checked, ...props }) => {
+const Switch = ({
+  className,
+  children,
+  name,
+  value,
+  rightLabel,
+  disabled,
+  checked,
+  ...properties
+}) => {
   const classes = classNames('form-switch', className);
 
   return (
     <label className={classes}>
       <input
-        {...props}
+        {...properties}
         type="checkbox"
         name={name}
         value={value}

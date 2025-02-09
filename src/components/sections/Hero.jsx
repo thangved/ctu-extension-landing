@@ -1,14 +1,14 @@
 import classNames from 'classnames';
-import { SectionProps } from '../../utils/SectionProps';
+import { SectionProps as SectionProperties } from '../../utils/SectionProps';
 import HeroButtons from './partials/HeroButtons';
 import HeroVideo from './partials/HeroVideo';
 
 const propTypes = {
-  ...SectionProps.types,
+  ...SectionProperties.types,
 };
 
 const defaultProps = {
-  ...SectionProps.defaults,
+  ...SectionProperties.defaults,
 };
 
 /**
@@ -31,7 +31,7 @@ const Hero = ({
   bottomDivider,
   hasBgColor,
   invertColor,
-  ...props
+  ...properties
 }) => {
   const outerClasses = classNames(
     'hero section center-content',
@@ -49,7 +49,7 @@ const Hero = ({
   );
 
   return (
-    <section {...props} className={outerClasses}>
+    <section {...properties} className={outerClasses}>
       <div className="container-sm">
         <div className={innerClasses}>
           <h1 className="mt-0 mb-16 reveal-from-bottom" data-reveal-delay="200">

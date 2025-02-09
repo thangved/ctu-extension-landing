@@ -20,11 +20,11 @@ const defaultProps = {
  * @param {string} props.status - The status of the form hint (e.g., 'success', 'error').
  * @returns {import("react").ReactElement} A div element representing the form hint with specified content and styles.
  */
-const FormHint = ({ children, className, status, ...props }) => {
+const FormHint = ({ children, className, status, ...properties }) => {
   const classes = classNames('form-hint', status && `text-color-${status}`, className);
 
   return (
-    <div {...props} className={classes}>
+    <div {...properties} className={classes}>
       {children}
     </div>
   );

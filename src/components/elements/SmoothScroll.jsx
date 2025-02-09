@@ -11,6 +11,15 @@ const propTypes = {
 };
 
 /**
+ * Quadratic easing function for smooth scrolling animation
+ * @param {number} t - The current progress of the animation
+ * @returns {number} The eased progress of the animation
+ */
+const easeInOutQuad = (t) => {
+  return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+};
+
+/**
  * Smoothly scrolls to a specified element on the page when the component link is clicked.
  * Uses a quadratic easing function for smooth scrolling animation.
  * @param {object} props - Additional props to be spread on the link element.
@@ -21,18 +30,9 @@ const propTypes = {
  * @param {import("react").ReactEventHandler} props.onLinkClick - A function to be executed when the link is clicked.
  * @returns {import("react").ReactElement} A link element that smoothly scrolls to a specified element on the page.
  */
-const SmoothScroll = ({ className, children, to, duration, onLinkClick, ...props }) => {
-  /**
-   * Quadratic easing function for smooth scrolling animation
-   * @param {number} t - The current progress of the animation
-   * @returns {number} The eased progress of the animation
-   */
-  const easeInOutQuad = (t) => {
-    return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-  };
-
-  const scrollToEl = useCallback(
-    (startTime, currentTime, timing, scrollEndElemTop, startScrollOffset) => {
+const SmoothScroll = ({ className, children, to, duration, onLinkClick, ...properties }) => {
+  const scrollToElement = useCallback(
+    (startTime, currentTime, timing, scrollEndElementTop, startScrollOffset) => {
       const runtime = currentTime - startTime;
       let progress = runtime / timing;
 
@@ -40,11 +40,11 @@ const SmoothScroll = ({ className, children, to, duration, onLinkClick, ...props
 
       const ease = easeInOutQuad(progress);
 
-      window.scroll(0, startScrollOffset + scrollEndElemTop * ease);
+      window.scroll(0, startScrollOffset + scrollEndElementTop * ease);
       if (runtime < timing) {
-        window.requestAnimationFrame((timestamp) => {
-          currentTime = timestamp || new Date().getTime();
-          scrollToEl(startTime, currentTime, timing, scrollEndElemTop, startScrollOffset);
+        globalThis.requestAnimationFrame((timestamp) => {
+          currentTime = timestamp || Date.now();
+          scrollToElement(startTime, currentTime, timing, scrollEndElementTop, startScrollOffset);
         });
       }
     },
@@ -56,30 +56,30 @@ const SmoothScroll = ({ className, children, to, duration, onLinkClick, ...props
       e.preventDefault();
 
       const targetId = to;
-      const target = document.getElementById(targetId);
+      const target = document.querySelector(`#${targetId}`);
       const timing = duration || 1000;
 
       if (!target) return;
 
       onLinkClick?.();
 
-      window.requestAnimationFrame((timestamp) => {
-        const stamp = timestamp || new Date().getTime();
+      globalThis.requestAnimationFrame((timestamp) => {
+        const stamp = timestamp || Date.now();
         const start = stamp;
 
         const startScrollOffset = window.pageYOffset;
-        const scrollEndElemTop = target.getBoundingClientRect().top;
+        const scrollEndElementTop = target.getBoundingClientRect().top;
 
-        scrollToEl(start, stamp, timing, scrollEndElemTop, startScrollOffset);
+        scrollToElement(start, stamp, timing, scrollEndElementTop, startScrollOffset);
       });
     },
-    [scrollToEl],
+    [scrollToElement],
   );
 
   const classes = classNames(className);
 
   return (
-    <a {...props} className={classes} href={`#${to}`} onClick={smoothScroll}>
+    <a {...properties} className={classes} href={`#${to}`} onClick={smoothScroll}>
       {children}
     </a>
   );

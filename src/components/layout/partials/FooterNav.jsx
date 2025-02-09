@@ -12,11 +12,11 @@ const propTypes = {
  * @param {string} props.className - Additional classes
  * @returns {import("react").ReactElement} FooterNav component
  */
-const FooterNav = ({ className, ...props }) => {
+const FooterNav = ({ className, ...properties }) => {
   const classes = classNames('footer-nav', className);
 
   return (
-    <nav {...props} className={classes}>
+    <nav {...properties} className={classes}>
       <ul className="list-reset">
         <li>
           <Link to="/privacy">Quyền riêng tư</Link>

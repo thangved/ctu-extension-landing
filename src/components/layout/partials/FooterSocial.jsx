@@ -13,11 +13,11 @@ const propTypes = {
  * @param {string} props.className - The class name
  * @returns {import("react").ReactElement} - The footer social component
  */
-const FooterSocial = ({ className, ...props }) => {
+const FooterSocial = ({ className, ...properties }) => {
   const classes = classNames('footer-social', className);
 
   return (
-    <div {...props} className={classes}>
+    <div {...properties} className={classes}>
       <ul className="list-reset">
         <li>
           <a target="_blank" rel="noopener noreferrer" href="https://facebook.com/thangved">

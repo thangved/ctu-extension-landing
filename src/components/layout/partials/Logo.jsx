@@ -14,11 +14,11 @@ const propTypes = {
  * @param {string} props.className - The class name
  * @returns {import("react").ReactElement} - The logo component
  */
-const Logo = ({ className, ...props }) => {
+const Logo = ({ className, ...properties }) => {
   const classes = classNames('brand', className);
 
   return (
-    <div {...props} className={classes}>
+    <div {...properties} className={classes}>
       <h1 className="m-0">
         <Link to="/">
           <Image src={logo} alt="Open" width={32} height={32} />

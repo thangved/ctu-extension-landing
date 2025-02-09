@@ -25,14 +25,14 @@ const defaultProps = {
  * @param {string} props.tag - The HTML tag to be used for the title.
  * @returns {import("react").ReactNode} The rendered section header component.
  */
-const SectionHeader = ({ className, data, children, tag, ...props }) => {
+const SectionHeader = ({ className, data, children, tag, ...properties }) => {
   const classes = classNames('section-header', className);
 
   const Component = tag;
 
   return (
     (data.title || data.paragraph) && (
-      <div {...props} className={classes}>
+      <div {...properties} className={classes}>
         <div className="container-xs">
           {children}
           {data.title && (

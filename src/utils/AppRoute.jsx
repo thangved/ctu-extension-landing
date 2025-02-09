@@ -16,12 +16,12 @@ const propTypes = {
  * @returns {import("react").ReactElement} - AppRoute component
  */
 const AppRoute = ({ component: Component, layout: Layout, ...rest }) => {
-  Layout = Layout === undefined ? (props) => props.children : Layout;
+  Layout = Layout === undefined ? (properties) => properties.children : Layout;
 
   const renderer = useCallback(
-    (props) => (
+    (properties) => (
       <Layout>
-        <Component {...props} />
+        <Component {...properties} />
       </Layout>
     ),
     [Layout, Component],

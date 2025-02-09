@@ -9,7 +9,7 @@ import './assets/scss/style.scss';
 
 const history = createBrowserHistory();
 
-const rootElement = document.getElementById('root');
+const rootElement = document.querySelector('#root');
 
 ReactDOM.createRoot(rootElement).render(
   <Router history={history}>

@@ -40,17 +40,17 @@ const children = () => (
  * @returns {import("react").ReactElement} App component
  */
 const App = () => {
-  const childRef = useRef();
+  const childReference = useRef();
   const location = useLocation();
 
   useEffect(() => {
     const page = location.pathname;
     document.body.classList.add('is-loaded');
-    childRef.current.init();
+    childReference.current.init();
     trackPage(page);
   }, [location]);
 
-  return <ScrollReveal ref={childRef}>{children}</ScrollReveal>;
+  return <ScrollReveal ref={childReference}>{children}</ScrollReveal>;
 };
 
 export default App;

@@ -4,7 +4,7 @@ import { useCallback, useState } from 'react';
  * Functional component for rendering a banner with dynamic content.
  * @param {object} props - Additional properties to be spread on the banner element.
  * @returns {import("react").ReactElement} Rendered banner component.
- */ const Banner = ({ ...props }) => {
+ */ const Banner = ({ ...properties }) => {
   const [bannerOpen, setBannerOpen] = useState(true);
 
   /**
@@ -14,7 +14,7 @@ import { useCallback, useState } from 'react';
 
   return (
     bannerOpen && (
-      <div {...props} className="banner">
+      <div {...properties} className="banner">
         <div className="banner-inner text-xxs">
           <div className="banner-container">
             <a

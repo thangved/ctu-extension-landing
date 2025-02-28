@@ -2,10 +2,9 @@
 
 ## [1.3.0](https://github.com/thangved/ctu-extension-landing/compare/v1.2.0...v1.3.0) (2025-02-28)
 
-
 ### Features
 
-* **supported-browsers:** update link ms edge ([a36d804](https://github.com/thangved/ctu-extension-landing/commit/a36d804326a31c33d99b349c353e2afa72f453f2))
+- **supported-browsers:** update link ms edge ([a36d804](https://github.com/thangved/ctu-extension-landing/commit/a36d804326a31c33d99b349c353e2afa72f453f2))
 
 ## [1.2.0](https://github.com/thangved/ctu-extension-landing/compare/v1.1.0...v1.2.0) (2024-12-21)
 

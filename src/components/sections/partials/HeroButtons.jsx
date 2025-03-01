@@ -1,22 +1,14 @@
-import { detect } from 'detect-browser';
-import { useMemo } from 'react';
-import CrIcon from '../../../icons/Cr';
-import MsEdgeIcon from '../../../icons/MsEdge';
+import React from 'react';
+import useInstallExtension from '../../../hooks/useInstallExtension';
 import Button from '../../elements/Button';
 import ButtonGroup from '../../elements/ButtonGroup';
-
-/**
- * @type {import("detect-browser").Browser[]}
- */
-const supportedBrowsers = new Set(['chrome', 'edge-chromium']);
 
 /**
  * Hero buttons
  * @returns {import("react").ReactElement} Hero buttons
  */
 export default function HeroButtons() {
-  const browser = useMemo(() => detect(), []);
-  const isSupported = useMemo(() => supportedBrowsers.has(browser.name), [browser.name]);
+  const { isSupported, icon, installUrl } = useInstallExtension();
   return (
     <div
       className="reveal-from-bottom"
@@ -30,26 +22,14 @@ export default function HeroButtons() {
       }}
     >
       <ButtonGroup>
-        {browser.name === 'edge-chromium' && (
+        {isSupported && (
           <Button
             tag="a"
             color="primary"
             wideMobile
-            href="//microsoftedge.microsoft.com/addons/detail/fcgfnlmeeejopomgffffhjklcdfdcmlh"
+            href={installUrl}
             target="_blank"
-            icon={<MsEdgeIcon />}
-          >
-            Cài đặt
-          </Button>
-        )}
-        {browser.name === 'chrome' && (
-          <Button
-            tag="a"
-            color="primary"
-            wideMobile
-            href="//chrome.google.com/webstore/detail/ctu-management-system-ext/lggkifjaacghbpebpcbaneimpogjbnmf"
-            target="_blank"
-            icon={<CrIcon />}
+            icon={React.createElement(icon)}
           >
             Cài đặt
           </Button>

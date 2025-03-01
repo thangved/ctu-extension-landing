@@ -2,11 +2,10 @@
 
 ## [1.4.0](https://github.com/thangved/ctu-extension-landing/compare/v1.3.0...v1.4.0) (2025-03-01)
 
-
 ### Features
 
-* **header:** hide install on not supported browser ([1d5c4e2](https://github.com/thangved/ctu-extension-landing/commit/1d5c4e2acded5c5b6e0a2410fa38f56c99f84de6))
-* **hooks:** add `useInstallExtension` hook ([50628bf](https://github.com/thangved/ctu-extension-landing/commit/50628bfe5ecffa364729eb06d3c96db5daede47f))
+- **header:** hide install on not supported browser ([1d5c4e2](https://github.com/thangved/ctu-extension-landing/commit/1d5c4e2acded5c5b6e0a2410fa38f56c99f84de6))
+- **hooks:** add `useInstallExtension` hook ([50628bf](https://github.com/thangved/ctu-extension-landing/commit/50628bfe5ecffa364729eb06d3c96db5daede47f))
 
 ## [1.3.0](https://github.com/thangved/ctu-extension-landing/compare/v1.2.0...v1.3.0) (2025-02-28)
 

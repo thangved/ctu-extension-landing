@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import useInstallExtension from '../../../hooks/useInstallExtension';
 
 const propTypes = {
   hideSignin: PropTypes.bool,
@@ -15,8 +16,9 @@ const propTypes = {
  * @param {string} props.navPosition - The position of the navbar
  * @returns {import("react").ReactElement} Navbar component
  */
-export default function HeaderNavbar({ hideSignin, navPosition }) {
+export default function HeaderNavbar({ hideSignin: hideInstall, navPosition }) {
   const [isActive, setIsActive] = useState(false);
+  const { isSupported, installUrl } = useInstallExtension();
 
   const hamburger = useRef(null);
   const nav = useRef(null);
@@ -77,9 +79,9 @@ export default function HeaderNavbar({ hideSignin, navPosition }) {
             <Link to="/docs" onClick={closeMenu}>
               Tài liệu
             </Link>
-            {!hideSignin && (
+            {!hideInstall && isSupported && (
               <Link
-                to="//chrome.google.com/webstore/detail/ctu-management-system-ext/lggkifjaacghbpebpcbaneimpogjbnmf"
+                to={installUrl}
                 target="_blank"
                 className="button button-primary button-wide-mobile button-sm"
                 onClick={closeMenu}

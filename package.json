@@ -48,7 +48,7 @@
     "@eslint/js": "^9.10.0",
     "@types/history": "5.0.0",
     "@types/react-router-dom": "5.3.3",
-    "@vite-pwa/assets-generator": "^0.2.4",
+    "@vite-pwa/assets-generator": "^1.0.0",
     "cross-env": "^7.0.3",
     "eslint": "^9.10.0",
     "eslint-plugin-jsdoc": "^50.2.3",

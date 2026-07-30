@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.4.1](https://github.com/thangved/ctu-extension-landing/compare/v1.4.0...v1.4.1) (2026-07-30)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @vitejs/plugin-react-swc to v4 ([0030fa5](https://github.com/thangved/ctu-extension-landing/commit/0030fa53da49d3c3a4b0ea4aee57ee14162c96ea))
+* **deps:** update dependency @vitejs/plugin-react-swc to v4 ([2da7054](https://github.com/thangved/ctu-extension-landing/commit/2da7054a734868e91f3045b7379d8b3080b8c3c7))
+* **deps:** update dependency react-player to v3 ([4d367b0](https://github.com/thangved/ctu-extension-landing/commit/4d367b0f7b294e79e017349a41408078c3bdec66))
+* **deps:** update dependency react-player to v3 ([0d4b445](https://github.com/thangved/ctu-extension-landing/commit/0d4b44563dcb7072dbca26399a691f5206b646e6))
+
 ## [1.4.0](https://github.com/thangved/ctu-extension-landing/compare/v1.3.0...v1.4.0) (2025-03-01)
 
 ### Features

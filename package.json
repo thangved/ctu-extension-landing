@@ -4,14 +4,14 @@
   "private": false,
   "type": "module",
   "dependencies": {
-    "@vitejs/plugin-react-swc": "^3.7.0",
+    "@vitejs/plugin-react-swc": "^4.0.0",
     "classnames": "^2.2.6",
     "detect-browser": "^5.3.0",
     "lodash": "^4.17.15",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-ga": "^3.3.1",
-    "react-player": "^2.16.0",
+    "react-player": "^3.0.0",
     "react-router-dom": "^5.1.2",
     "sass": "^1.49.7",
     "vite": "^6.0.0",
@@ -43,15 +43,15 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.4.0",
-    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/cli": "^21.0.0",
+    "@commitlint/config-conventional": "^21.0.0",
     "@eslint/js": "^9.10.0",
     "@types/history": "5.0.0",
     "@types/react-router-dom": "5.3.3",
     "@vite-pwa/assets-generator": "^0.2.4",
-    "cross-env": "^7.0.3",
+    "cross-env": "^10.0.0",
     "eslint": "^9.10.0",
-    "eslint-plugin-jsdoc": "^50.2.3",
+    "eslint-plugin-jsdoc": "^63.0.0",
     "eslint-plugin-react": "^7.36.1",
     "eslint-plugin-unicorn": "^57.0.0",
     "globals": "^16.0.0",
@@ -63,5 +63,5 @@
     "prettier-plugin-organize-imports": "^4.0.0",
     "vite-imagetools": "^7.0.4"
   },
-  "packageManager": "npm@11.1.0+sha512.acf301ad9b9ddba948fcb72341e2f0fcae477f56a95cc2a092934d133a7461062633cefbf93d5934a3dc0768674e2edee9f04dcfcc4bb4c327ff0e3a7d552a1b"
+  "packageManager": "npm@11.19.0+sha512.48377f8478372aa1c4e47b763475b135836da82436a5700f2e5e8eb5084fc840f93c7b117eb3ad3b5f7d3194c81b6710a10d59448f6ddbcb21ac3fb672bdc003"
 }
